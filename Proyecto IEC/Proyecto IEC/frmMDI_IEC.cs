@@ -27,5 +27,16 @@ namespace Proyecto_IEC
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
+
+        private void importarDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmImportarArchivo form = new frmImportarArchivo();
+                form.MdiParent = this;
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
     }
 }

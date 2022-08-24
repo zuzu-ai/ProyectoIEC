@@ -12,3 +12,19 @@ C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csp
 C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.CopyComplete
 C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.exe
 C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.pdb
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\Proyecto IEC.exe.config
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\Proyecto IEC.exe
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\Proyecto IEC.pdb
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaNavegador.dll
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaNavegador.pdb
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.AssemblyReference.cache
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmImportarArchivo.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmMDI_IEC.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmEmpleado.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Properties.Resources.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.GenerateResource.cache
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.CoreCompileInputs.cache
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.CopyComplete
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.exe
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.pdb
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.ResolveComReference.cache
