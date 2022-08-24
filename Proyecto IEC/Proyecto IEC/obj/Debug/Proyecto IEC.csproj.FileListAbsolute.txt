@@ -1,0 +1,14 @@
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\bin\Debug\Proyecto IEC.exe.config
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\bin\Debug\Proyecto IEC.exe
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\bin\Debug\Proyecto IEC.pdb
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaNavegador.dll
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaNavegador.pdb
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.AssemblyReference.cache
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmMDI_IEC.resources
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmEmpleado.resources
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Properties.Resources.resources
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.GenerateResource.cache
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.CopyComplete
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.exe
+C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.pdb
