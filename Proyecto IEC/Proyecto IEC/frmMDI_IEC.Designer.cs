@@ -59,13 +59,13 @@ namespace Proyecto_IEC
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // catálogosToolStripMenuItem
@@ -83,32 +83,32 @@ namespace Proyecto_IEC
             // puestoToolStripMenuItem
             // 
             this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
-            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.puestoToolStripMenuItem.Text = "Puesto";
             // 
             // empleadoToolStripMenuItem
             // 
             this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
-            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.empleadoToolStripMenuItem.Text = "Empleado";
             this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click);
             // 
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.usuarioToolStripMenuItem.Text = "Usuario";
             // 
             // dispositivoToolStripMenuItem
             // 
             this.dispositivoToolStripMenuItem.Name = "dispositivoToolStripMenuItem";
-            this.dispositivoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dispositivoToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.dispositivoToolStripMenuItem.Text = "Dispositivo";
             // 
             // gestiónToolStripMenuItem
             // 
             this.gestiónToolStripMenuItem.Name = "gestiónToolStripMenuItem";
-            this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.gestiónToolStripMenuItem.Text = "Gestión";
             // 
             // procesosToolStripMenuItem
@@ -125,6 +125,7 @@ namespace Proyecto_IEC
             this.importarDatosToolStripMenuItem.Name = "importarDatosToolStripMenuItem";
             this.importarDatosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.importarDatosToolStripMenuItem.Text = "Importar Datos";
+            this.importarDatosToolStripMenuItem.Click += new System.EventHandler(this.importarDatosToolStripMenuItem_Click);
             // 
             // calculoDeHorasToolStripMenuItem
             // 
