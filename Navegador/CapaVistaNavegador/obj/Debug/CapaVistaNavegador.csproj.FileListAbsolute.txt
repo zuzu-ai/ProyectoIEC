@@ -1,0 +1,9 @@
+C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\bin\Debug\CapaVistaNavegador.dll
+C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\bin\Debug\CapaVistaNavegador.pdb
+C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.csproj.AssemblyReference.cache
+C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.NavegadorMantenimientos.resources
+C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.Properties.Resources.resources
+C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.csproj.GenerateResource.cache
+C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.dll
+C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.pdb
