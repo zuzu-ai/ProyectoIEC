@@ -1,0 +1,9 @@
+F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaContoladorProyectoIEC.dll
+F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaContoladorProyectoIEC.pdb
+F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CoreCompileInputs.cache
+F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.dll
+F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.pdb
+F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.AssemblyReference.cache
+F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CopyComplete
