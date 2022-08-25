@@ -31,9 +31,26 @@ namespace CapaModeloProyectoIEC
             }
             return dt;
         }
+        public void comprobarIdEncabezado(string tabla, string campoB, string nombre)
+        {
+            string idEmpleado = BuscaDato("empleado","pkid","nombre",nombre);
+            int IdE = idEncabezadoActual(tabla, campoB);
+            if (IdE == 0)
+            {
+                int IdS = idSiguienteDeNuevoIngreso("datosE", "pkid");
+                //iii
+
+            }
+            else if (IdE!=0)
+            { 
+                string IDEmpleadoEncabe = BuscaDato("datosE","pkid","fkempleado",idEmpleado);
+                
+            }
+        }
         public void guardarTablaBdEncabezadoSentencias(string fkempleado, string fkdispositivo, string estado)
         {
             int IdS = idSiguienteDeNuevoIngreso("datosD", "pkid");
+            //string IDEmpleado = BuscaDato();
             try
             {
                 string cadena = "INSERT INTO datosE VALUES ('" + IdS + "','" + fkempleado + "','" + fkdispositivo + "'," + estado + "');";
@@ -107,10 +124,10 @@ namespace CapaModeloProyectoIEC
             }
             catch (OdbcException ex)
             { MessageBox.Show("Error al cargar los datos" + ex.Message); }
-            finally
+            //finally
             { cn.desconexion(conect); }
-            if (enteroSumado == 0)
-            { enteroSumado = 1; }
+           // if (enteroSumado == 0)
+           // { enteroSumado = 1; }
             return enteroSumado;
         }
         public int idSiguienteDeNuevoIngreso(string tabla, string campoB)
