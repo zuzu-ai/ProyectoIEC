@@ -84,7 +84,7 @@ namespace Proyecto_IEC
                     estado = table.Rows[i]["Estado"].ToString();
                     dispositivos = table.Rows[i]["Dispositivos"].ToString();
                     tipoResgistro= table.Rows[i]["Tipo de Registro"].ToString();
-                   // cn.guardarTablaBdEncabezadoControlador( string fkempleado, string fkdispositivo, string estado)
+                    //cn.guardarTablaBdEncabezadoControlador( string fkempleado, string fkdispositivo, string estado)
                     cn.guardarTablaBdDetalleControlador(tiempo, estado, dispositivos, tipoResgistro);
                     
                     
