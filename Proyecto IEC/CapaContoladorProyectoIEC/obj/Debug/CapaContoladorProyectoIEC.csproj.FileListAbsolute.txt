@@ -7,3 +7,12 @@ F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyec
 F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
 F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.AssemblyReference.cache
 F:\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CopyComplete
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaContoladorProyectoIEC.dll
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaContoladorProyectoIEC.pdb
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.AssemblyReference.cache
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CoreCompileInputs.cache
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CopyComplete
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.dll
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.pdb
