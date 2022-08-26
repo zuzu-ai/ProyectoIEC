@@ -31,60 +31,99 @@ namespace CapaModeloProyectoIEC
             }
             return dt;
         }
-        public void comprobarIdEncabezado(string tabla, string campoB, string nombre)
+        public void comprobarIdEncabezado(string tabla, string campoB, string nombre, string nombredisp)
         {
+            MessageBox.Show("Se llego a comprobar en sentencias el ID");
             string idEmpleado = BuscaDato("empleado","pkid","nombre",nombre);
             int IdE = idEncabezadoActual(tabla, campoB);
             if (IdE == 0)
             {
                 int IdS = idSiguienteDeNuevoIngreso("datosE", "pkid");
-                //iii
-
+                int idNuevoEnca = idSiguienteDeNuevoIngreso("datosE", "pkid");
+                string dispositivo = BuscaDato("dispositivo", "pkid", "nombre", nombredisp);
+                string estado = "1";
+                string IDEmpleadoEncabe = BuscaDato("datosE", "pkid", "fkempleado", idEmpleado);
+                guardarTablaBdEncabezadoSentencias(idNuevoEnca.ToString(), idEmpleado, dispositivo, estado);
+                MessageBox.Show("Se añadió un encabezado porque esta vacía la tabla");
             }
-            else if (IdE!=0)
-            { 
-                string IDEmpleadoEncabe = BuscaDato("datosE","pkid","fkempleado",idEmpleado);
-                
+            else if (IdE != 0)
+            {
+                string IDEmpleadoEncabe = BuscaDato("datosE", "pkid", "fkempleado", idEmpleado);
+
+                if (IDEmpleadoEncabe == "" || IDEmpleadoEncabe == null)
+                {
+                    int idNuevoEnca = idSiguienteDeNuevoIngreso("datosE", "pkid");
+                    string dispositivo = BuscaDato("dispositivo", "pkid", "nombre", nombredisp);
+                    string estado = "1";
+                    try
+                    {
+                        guardarTablaBdEncabezadoSentencias(idNuevoEnca.ToString(), idEmpleado, dispositivo, estado);
+                        MessageBox.Show("Se añadió un encabezado más para un nuevo empleado");
+                    }
+                    catch (Exception e) { MessageBox.Show("No fue posible ingresar el nuevo encabezado o detalle (sentencias)"); }
+
+                }
+                else if (IDEmpleadoEncabe != "")
+                {
+                    MessageBox.Show("Se encontró un encabezado para el empleado actual");
+                }
             }
         }
-        public void guardarTablaBdEncabezadoSentencias(string fkempleado, string fkdispositivo, string estado)
+        public void guardarTablaBdEncabezadoSentencias(string IdS, string fkempleado, string fkdispositivo, string estado)
         {
-            int IdS = idSiguienteDeNuevoIngreso("datosD", "pkid");
+            // int IdS = idSiguienteDeNuevoIngreso("datosD", "pkid");
             //string IDEmpleado = BuscaDato();
+            MessageBox.Show(IdS + " " + fkempleado + " " + fkdispositivo + " " + estado);
             try
             {
-                string cadena = "INSERT INTO datosE VALUES ('" + IdS + "','" + fkempleado + "','" + fkdispositivo + "'," + estado + "');";
+                string cadena = "INSERT INTO datosE VALUES ('" + IdS + "','" + fkempleado + "','" + fkdispositivo + "','" + estado + "');";
+                MessageBox.Show(cadena);
                 OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
                 consulta.ExecuteNonQuery();
+                MessageBox.Show("Se añadió el encabezado");
             }
 
             catch (OdbcException ex)
             {
-                MessageBox.Show("Error al añadir póliza por venta: " + ex.Message);
+                MessageBox.Show("Error al añadir encabezado (sentencias): " + ex.Message);
             }
         }
-        public void guardarTablaBdDetalleSentencias(string tiempo, string fkgestion, string tipoReg, string estado)
+        public void guardarTablaBdDetalleSentencias(string tiempo, string tipoReg, string nombregestion)
         {
-            int IdE = idEncabezadoActual("datosE","pkid");
-            int IdS = idSiguienteDeNuevoIngreso("datosD","pkid");
+            int IDdatosE = idEncabezadoActual("datosE","pkid");
+            int IdSiguienteDet = idSiguienteDeNuevoIngreso("datosD","pkid");
+
+            string newtime = tiempo.Remove(tiempo.Length - 5, 5);
+            MessageBox.Show(newtime);
+            DateTime dt = Convert.ToDateTime(newtime);
+            MessageBox.Show(dt.ToString());
+            string horario = "";
+            horario = dt.ToString("yyyy-MM-dd HH:mm:ss");
+            MessageBox.Show(horario);
+            string IdGestion = BuscaDato("gestion", "pkid", "nombre", nombregestion);
+            string estado = "1";
+            MessageBox.Show(IDdatosE + " " + IdSiguienteDet + " " + IdGestion + " " + estado);
             try
             {
-                string cadena = "INSERT INTO datosD VALUES ('" + IdS + "','" + IdE + "','" + tiempo + "'," + fkgestion + "," + tipoReg + "," + estado + "');";
+                string cadena = "INSERT INTO datosD VALUES ('" + IdSiguienteDet + "','" + IDdatosE + "','" + horario + "','" + IdGestion + "','" + tipoReg + "','" + estado + "');";
+                MessageBox.Show(cadena);
                 OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
                 consulta.ExecuteNonQuery();
+                MessageBox.Show("Se añadió el detalle en sentencias");
             }
 
             catch (OdbcException ex)
             {
-                MessageBox.Show("Error al añadir el detalle de nomina: " + ex.Message);
+                MessageBox.Show("Error al añadir el detalle de horas (sentencias): " + ex.Message);
             }
         }
-        public string BuscaDato(string tabla, string campo, string id, string buscarid)
+        public string BuscaDato(string tabla, string campo, string campobuscado, string datoreferencia)
         {
             string dato = "";
             try
             {
-                string insertQuery = "SELECT * FROM " + tabla + " WHERE " + buscarid + " ='" + id + "';";
+                string insertQuery = "SELECT * FROM " + tabla + " WHERE " + campobuscado + " = '" + datoreferencia + "';";
+                MessageBox.Show(insertQuery);
                 OdbcConnection conect = cn.conexion();
                 OdbcCommand command = new OdbcCommand(insertQuery, conect);
                 command.ExecuteNonQuery(); OdbcDataReader busquedac;
@@ -102,7 +141,7 @@ namespace CapaModeloProyectoIEC
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al optener " + dato + ".    " + ex);
+                MessageBox.Show("Error al obtener " + dato + ".    " + ex);
                 return dato;
             }
         }

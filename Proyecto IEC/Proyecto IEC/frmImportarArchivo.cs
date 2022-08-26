@@ -27,7 +27,6 @@ namespace Proyecto_IEC
         private void btnImportar_Click(object sender, EventArgs e)
         {
             NombreHoja = txtNombreHoja.Text.Trim();
-            MessageBox.Show(NombreHoja);
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 Filter = "Excel | *.xls;*xlsx;",
@@ -59,35 +58,41 @@ namespace Proyecto_IEC
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-            respuesta = MessageBox.Show("Realmente desea importar la tabla", "Imporat Tabla",
+            table = (DataTable)dgvVistaPrevia.DataSource;
+            respuesta = MessageBox.Show("Realmente desea importar la tabla", "Importar Tabla",
             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
-                GuardarTablaBdDetalle();
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    cn.comprobarIdEncabezado("datosE", "pkid", table.Rows[i]["Nombre"].ToString(), table.Rows[i]["Dispositivos"].ToString());
+                    MessageBox.Show("Se comprobó el encabezado");
+                    GuardarTablaBdDetalle();
+                    MessageBox.Show("Se ingreso el detalle");
+                }
             }
             else { }
         }
         
         void GuardarTablaBdDetalle()
         {
-            string numero = "", nombre = "", tiempo = "", estado = "",dispositivos="", tipoResgistro;
+            string tiempo, tipoResgistro, nombregestion;
             try
             {
                 //Se guarda el encabezado generado.
                 table= (DataTable)dgvVistaPrevia.DataSource;
-                
+                MessageBox.Show(table.Rows.Count.ToString());
                 for (int i = 0; i < table.Rows.Count; i++)
                 {
-                    numero = table.Rows[i]["Número"].ToString();
-                    nombre = table.Rows[i]["Nombre"].ToString();
                     tiempo = table.Rows[i]["Tiempo"].ToString();
-                    estado = table.Rows[i]["Estado"].ToString();
-                    dispositivos = table.Rows[i]["Dispositivos"].ToString();
                     tipoResgistro= table.Rows[i]["Tipo de Registro"].ToString();
+                    nombregestion = table.Rows[i]["Estado"].ToString();
+                    MessageBox.Show("Se obtuvieron los datos");
+                    MessageBox.Show(tiempo + " " + tipoResgistro + " " + nombregestion);
                     //cn.guardarTablaBdEncabezadoControlador( string fkempleado, string fkdispositivo, string estado)
-                    cn.guardarTablaBdDetalleControlador(tiempo, estado, dispositivos, tipoResgistro);
-                    
-                    
+                    cn.guardarTablaBdDetalleControlador(tiempo, tipoResgistro, nombregestion);
+                    MessageBox.Show("Se guardó un detalle");
+
                 }
                 MessageBox.Show("Nomina Guardada correctamente.");
             }

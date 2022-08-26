@@ -25,13 +25,19 @@ namespace CapaContoladorProyectoIEC
             }
             return table;
         }
-        public void guardarTablaBdDetalleControlador(string tiempo,string estado,string dispositivos,string tipoResgistro)
+        public void guardarTablaBdDetalleControlador(string tiempo, string tipoResgistro, string nombregestion)
         {
-            sn.guardarTablaBdDetalleSentencias( tiempo, estado, dispositivos, tipoResgistro);
+            sn.guardarTablaBdDetalleSentencias(tiempo, tipoResgistro, nombregestion);
+            MessageBox.Show("Se trasladó el detalle a controlador");
         }
-        public void guardarTablaBdEncabezadoControlador(string fkempleado, string fkdispositivo, string estado)
+        public void guardarTablaBdEncabezadoControlador(string ids, string fkempleado, string fkdispositivo, string estado)
         {
-            sn.guardarTablaBdEncabezadoSentencias(fkempleado, fkdispositivo, estado);
+            sn.guardarTablaBdEncabezadoSentencias(ids, fkempleado, fkdispositivo, estado);
+        }
+        public void comprobarIdEncabezado(string tabla, string campoB, string nombre, string nombredisp)
+        {
+            sn.comprobarIdEncabezado(tabla, campoB, nombre, nombredisp);
+            MessageBox.Show("Se comprobó el encabezado en controlador");
         }
     }
 }
