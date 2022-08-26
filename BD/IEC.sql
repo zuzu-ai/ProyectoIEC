@@ -1,3 +1,4 @@
+-- drop database IEC;
 -- CREACIÓN DE BD
 create database IEC;
 use IEC;
@@ -11,8 +12,7 @@ estado varchar(1)
 create table empleado(
 pkid varchar(4) primary key,
 fkpuesto varchar(4) not null,
-nombre varchar(50) not null,
-apellido varchar(50) not null,
+nombre varchar(60) not null,
 DPI varchar(13) not null,
 contratacion date,
 despido date,
@@ -56,8 +56,7 @@ foreign key (fkdispositivo) references dispositivo(pkid)
 create table datosD(
 pkid varchar(4) primary key,
 fkdatosE varchar(4) not null,
-fecha date not null,
-hora time not null,
+tiempo datetime not null,
 fkgestion varchar(1) not null,
 tiporeg varchar(1) not null,
 estado varchar(1) not null,
