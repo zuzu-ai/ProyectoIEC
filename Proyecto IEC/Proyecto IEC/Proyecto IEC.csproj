@@ -68,6 +68,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCalculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalculos.Designer.cs">
+      <DependentUpon>frmCalculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmImportarArchivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCalculos.resx">
+      <DependentUpon>frmCalculos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmImportarArchivo.resx">
       <DependentUpon>frmImportarArchivo.cs</DependentUpon>
     </EmbeddedResource>

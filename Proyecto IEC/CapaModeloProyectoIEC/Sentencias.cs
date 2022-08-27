@@ -25,26 +25,22 @@ namespace CapaModeloProyectoIEC
 
                 myDataAdapter.Fill(dt);
             }
-             catch (Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error al consultar archivo de Excel (sentencias).");
             }
             return dt;
         }
-        public void comprobarIdEncabezado(string tabla, string campoB, string nombre, string nombredisp)
+        public void comprobarIdEncabezado(string tabla, string campoB, string nombre, string nombredisp, string tiempo, string tipoReg, string nombregestion)
         {
-            MessageBox.Show("Se llego a comprobar en sentencias el ID");
-            string idEmpleado = BuscaDato("empleado","pkid","nombre",nombre);
+            string idEmpleado = BuscaDato("empleado", "pkid", "nombre", nombre);
             int IdE = idEncabezadoActual(tabla, campoB);
             if (IdE == 0)
             {
-                int IdS = idSiguienteDeNuevoIngreso("datosE", "pkid");
                 int idNuevoEnca = idSiguienteDeNuevoIngreso("datosE", "pkid");
                 string dispositivo = BuscaDato("dispositivo", "pkid", "nombre", nombredisp);
                 string estado = "1";
-                string IDEmpleadoEncabe = BuscaDato("datosE", "pkid", "fkempleado", idEmpleado);
-                guardarTablaBdEncabezadoSentencias(idNuevoEnca.ToString(), idEmpleado, dispositivo, estado);
-                MessageBox.Show("Se añadió un encabezado porque esta vacía la tabla");
+                guardarTablaBdEncabezadoSentencias(idNuevoEnca.ToString(), idEmpleado, dispositivo, estado, tiempo, tipoReg, nombregestion);
             }
             else if (IdE != 0)
             {
@@ -57,59 +53,48 @@ namespace CapaModeloProyectoIEC
                     string estado = "1";
                     try
                     {
-                        guardarTablaBdEncabezadoSentencias(idNuevoEnca.ToString(), idEmpleado, dispositivo, estado);
-                        MessageBox.Show("Se añadió un encabezado más para un nuevo empleado");
+                        guardarTablaBdEncabezadoSentencias(idNuevoEnca.ToString(), idEmpleado, dispositivo, estado, tiempo, tipoReg, nombregestion);
                     }
                     catch (Exception e) { MessageBox.Show("No fue posible ingresar el nuevo encabezado o detalle (sentencias)"); }
 
                 }
                 else if (IDEmpleadoEncabe != "")
                 {
-                    MessageBox.Show("Se encontró un encabezado para el empleado actual");
+                    guardarTablaBdDetalleSentencias(tiempo, tipoReg, nombregestion);
                 }
             }
         }
-        public void guardarTablaBdEncabezadoSentencias(string IdS, string fkempleado, string fkdispositivo, string estado)
+        public void guardarTablaBdEncabezadoSentencias(string IdS, string fkempleado, string fkdispositivo, string estado, string tiempo, string tipoReg, string nombregestion)
         {
-            // int IdS = idSiguienteDeNuevoIngreso("datosD", "pkid");
-            //string IDEmpleado = BuscaDato();
-            MessageBox.Show(IdS + " " + fkempleado + " " + fkdispositivo + " " + estado);
             try
             {
                 string cadena = "INSERT INTO datosE VALUES ('" + IdS + "','" + fkempleado + "','" + fkdispositivo + "','" + estado + "');";
-                MessageBox.Show(cadena);
                 OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
                 consulta.ExecuteNonQuery();
-                MessageBox.Show("Se añadió el encabezado");
             }
 
             catch (OdbcException ex)
             {
                 MessageBox.Show("Error al añadir encabezado (sentencias): " + ex.Message);
             }
+            guardarTablaBdDetalleSentencias(tiempo, tipoReg, nombregestion);
         }
         public void guardarTablaBdDetalleSentencias(string tiempo, string tipoReg, string nombregestion)
         {
-            int IDdatosE = idEncabezadoActual("datosE","pkid");
-            int IdSiguienteDet = idSiguienteDeNuevoIngreso("datosD","pkid");
+            int IDdatosE = idEncabezadoActual("datosE", "pkid");
+            int IdSiguienteDet = idSiguienteDeNuevoIngreso("datosD", "pkid");
 
             string newtime = tiempo.Remove(tiempo.Length - 5, 5);
-            MessageBox.Show(newtime);
             DateTime dt = Convert.ToDateTime(newtime);
-            MessageBox.Show(dt.ToString());
             string horario = "";
             horario = dt.ToString("yyyy-MM-dd HH:mm:ss");
-            MessageBox.Show(horario);
             string IdGestion = BuscaDato("gestion", "pkid", "nombre", nombregestion);
             string estado = "1";
-            MessageBox.Show(IDdatosE + " " + IdSiguienteDet + " " + IdGestion + " " + estado);
             try
             {
                 string cadena = "INSERT INTO datosD VALUES ('" + IdSiguienteDet + "','" + IDdatosE + "','" + horario + "','" + IdGestion + "','" + tipoReg + "','" + estado + "');";
-                MessageBox.Show(cadena);
                 OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
                 consulta.ExecuteNonQuery();
-                MessageBox.Show("Se añadió el detalle en sentencias");
             }
 
             catch (OdbcException ex)
@@ -123,14 +108,13 @@ namespace CapaModeloProyectoIEC
             try
             {
                 string insertQuery = "SELECT * FROM " + tabla + " WHERE " + campobuscado + " = '" + datoreferencia + "';";
-                MessageBox.Show(insertQuery);
                 OdbcConnection conect = cn.conexion();
                 OdbcCommand command = new OdbcCommand(insertQuery, conect);
                 command.ExecuteNonQuery(); OdbcDataReader busquedac;
                 busquedac = command.ExecuteReader();
                 if (!busquedac.HasRows)
                 {
-                    throw new Exception("No hay dato guardado.");
+                    // throw new Exception("No hay dato guardado.");
                 }
                 if (busquedac.Read())
                 {
@@ -141,7 +125,58 @@ namespace CapaModeloProyectoIEC
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener " + dato + ".    " + ex);
+                return dato;
+            }
+        }
+        public string BuscarEntrada(string tabla, string campo, string campobuscado1, string datoreferencia1, string campobuscado2, string datoreferencia2)
+        {
+            string dato = "";
+            try
+            {
+                string insertQuery = "SELECT * FROM " + tabla + " WHERE " + campobuscado1 + " = '" + datoreferencia1 + "' AND " + campobuscado2 + " = '" + datoreferencia2 + "';";
+                OdbcConnection conect = cn.conexion();
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                command.ExecuteNonQuery(); OdbcDataReader busquedac;
+                busquedac = command.ExecuteReader();
+                if (!busquedac.HasRows)
+                {
+                    // throw new Exception("No hay dato guardado.");
+                }
+                if (busquedac.Read())
+                {
+                    dato = busquedac[campo].ToString();
+                }
+                cn.desconexion(conect);
+                return dato;
+            }
+            catch (Exception ex)
+            {
+                return dato;
+            }
+        }
+        public string BuscarSalida(string tabla, string campo, string campobuscado1, string datoreferencia1, string campobuscado2, string datoreferencia2, string campoentrada, string entrada)
+        {
+            string dato = "";
+            try
+            {
+                string insertQuery = "SELECT * FROM " + tabla + " WHERE " + campobuscado1 + " = '" + datoreferencia1 + "' AND " + campobuscado2 + " = '" + datoreferencia2 + " AND " + campoentrada + " LIKE '" + entrada + "%';";
+                OdbcConnection conect = cn.conexion();
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                command.ExecuteNonQuery(); OdbcDataReader busquedac;
+                busquedac = command.ExecuteReader();
+                if (!busquedac.HasRows)
+                {
+                    // throw new Exception("No hay dato guardado.");
+                }
+                if (busquedac.Read())
+                {
+                    dato = busquedac[campo].ToString();
+                }
+                cn.desconexion(conect);
+                return dato;
+            }
+            catch (Exception ex)
+            {
                 return dato;
             }
         }
@@ -157,16 +192,12 @@ namespace CapaModeloProyectoIEC
                 while (leer.Read())
                 {
                     ultimoEntero = leer.GetString(0);
-                    //enteroSumado += ultimoEntero; 
-                    enteroSumado = int.Parse(ultimoEntero) ;
+                    enteroSumado = int.Parse(ultimoEntero);
                 }
             }
             catch (OdbcException ex)
             { MessageBox.Show("Error al cargar los datos" + ex.Message); }
-            //finally
             { cn.desconexion(conect); }
-           // if (enteroSumado == 0)
-           // { enteroSumado = 1; }
             return enteroSumado;
         }
         public int idSiguienteDeNuevoIngreso(string tabla, string campoB)
@@ -181,7 +212,6 @@ namespace CapaModeloProyectoIEC
                 while (leer.Read())
                 {
                     ultimoEntero = leer.GetString(0);
-                    //enteroSumado += ultimoEntero; 
                     enteroSumado = int.Parse(ultimoEntero) + 1;
                 }
             }
@@ -193,6 +223,117 @@ namespace CapaModeloProyectoIEC
             { enteroSumado = 1; }
 
             return enteroSumado;
+        }
+        public int idEncabezadosxEmpleado(string tabla, string campoB, string campoC, string condicion)
+        {
+            string ultimoEntero = ""; int enteroSumado = 0; OdbcDataReader leer = null;
+            string sql = "select" + " " + "(" + campoB + "*1" + ")" + " " + "as" + " " + campoB + " " + "FROM" + " " + tabla + " " + "WHERE" + " " + campoC + " =" + condicion + " " + "ORDER BY" + " " + campoB + " " + "DESC Limit 1";
+            OdbcConnection conect = cn.conexion();
+            try
+            {
+                OdbcCommand comando = new OdbcCommand(sql, conect);
+                leer = comando.ExecuteReader();
+                while (leer.Read())
+                {
+                    ultimoEntero = leer.GetString(0);
+                    enteroSumado = int.Parse(ultimoEntero);
+                }
+            }
+            catch (OdbcException ex)
+            { MessageBox.Show("Error al cargar los datos" + ex.Message); }
+            { cn.desconexion(conect); }
+            return enteroSumado;
+        }
+
+        //REALIZACION DE CALCULOS PARA EL REPORTE DE HORAS
+        public DataTable obtenerDatos()
+        {
+            DataTable tablainicial = new DataTable();
+            int cantidadEmpleados = idEncabezadoActual("empleado", "pkid");
+
+            tablainicial.Columns.Add("ID");
+            tablainicial.Columns.Add("Nombre");
+            tablainicial.Columns.Add("Entrada");
+            tablainicial.Columns.Add("Salida");
+            tablainicial.Columns.Add("Horas Trabajadas");
+            tablainicial.Columns.Add("Horas Descontadas");
+            tablainicial.Columns.Add("Ausencias");
+            tablainicial.Columns.Add("Horas Extras");
+            tablainicial.Columns.Add("Pago de Comidas");
+            tablainicial.Columns.Add("Pago de Combustible");
+            tablainicial.Columns.Add("Observaciones");
+            //BUSCAR LA INFORMACIÓN DE LOS EMPLEADOS
+            for (int i = 1; i <= cantidadEmpleados; i++)
+            {
+                DataRow row = tablainicial.NewRow();
+                row["ID"] = BuscaDato("empleado", "pkid", "pkid", i.ToString());
+                row["Nombre"] = BuscaDato("empleado", "nombre", "pkid", i.ToString());
+
+                //BUSCAR LAS HORAS DE EMPLEADOS POR DÍA
+                string encabezado = BuscaDato("datosE", "pkid", "fkempleado", i.ToString());
+                int cantidadDetalles = idEncabezadosxEmpleado("datosD", "pkid", "fkdatosE", encabezado);
+
+
+                string IDentrada = BuscaDato("gestion", "pkid", "nombre", "Entrada");
+                string IDsalida = BuscaDato("gestion", "pkid", "nombre", "Salida");
+                string entrada, salida;
+                //BUSCAR HORAS POR EMPLEADO
+                for (int j = 1; j <= (cantidadDetalles / 2); j++)
+                {
+                    string horaEntrada = BuscarEntrada("datosD", "tiempo", "fkgestion", IDentrada, "fkdatosE", encabezado);
+                    DateTime dtEntrada = Convert.ToDateTime(horaEntrada);
+                    string fecha = dtEntrada.ToString("yyyy-MM-dd");
+                    string tiemposalida = "";
+                    string horaSalida = BuscarSalida("datosD", "tiempo", "fkgestion", IDsalida, "fkdatosE", encabezado, "tiempo", tiemposalida);
+                    DateTime dtSalida = Convert.ToDateTime(horaSalida);
+
+                    //CALCULO DE HORAS TRABAJADAS
+                    string hentrada = dtEntrada.ToString("HH:mm:ss");
+                    string hsalida = dtSalida.ToString("HH:mm:ss");
+                    DateTime horaentrada = Convert.ToDateTime(hentrada);
+                    DateTime horasalida = Convert.ToDateTime(hsalida);
+                    var horastrabajadas = (horasalida - horaentrada).TotalSeconds;
+
+                    //CALCULO DIFERENCIA DE HORAS
+                    string inicioJornada = "07:00:00";
+                    string finJornada = "17:00:00";
+                    DateTime iJornada = Convert.ToDateTime(inicioJornada);
+                    DateTime fJornada = Convert.ToDateTime(finJornada);
+                    var horastotales = (fJornada - iJornada).TotalMinutes;
+                    var diferenciahoras = (horastotales - horastrabajadas);
+                    string horasExtra, horasDescontadas;
+
+                    // HORAS DESCONTADAS O EXTRAS
+
+                    if (diferenciahoras == 0)
+                    {
+                        horasExtra = "00:00";
+                        horasDescontadas = "00:00";
+                    }
+                    else if (diferenciahoras != 0)
+                    {
+                        if (horastotales > horastrabajadas)
+                        {
+                            horasDescontadas = diferenciahoras.ToString();
+                            horasExtra = "00:00";
+                        }
+                        else if (horastotales < horastrabajadas)
+                        {
+                            horasDescontadas = "00:00";
+                            horasExtra = diferenciahoras.ToString();
+                        }
+                    }
+
+                    //BUSQUEDA DE AUSENCIAS Y SUSPENCIONES
+
+                    //BUSQUEDA DE PAGO DE COMIDA
+
+                    //BUSQUEDA DE PAGO DE COMBUSTIBLE
+
+                    //BUSQUEDA DE SUSPENCIONES
+                }
+            }
+            return tablainicial;
         }
     }
 }
