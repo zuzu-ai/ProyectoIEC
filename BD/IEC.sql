@@ -43,6 +43,43 @@ pkid varchar(4) primary key,
 nombre varchar(30) not null,
 estado varchar(1) not null
 )engine=InnoDB DEFAULT CHARSET=latin1;
+-- TABLA TIPO AUSENCIA
+create table tipoAusencia(
+pkid varchar(4) primary key,
+nombre varchar(30) not null,
+estado varchar(1) not null
+)engine=InnoDB DEFAULT CHARSET=latin1;
+-- TABLA AUSENCIA
+create table ausencia(
+pkid varchar(4) primary key,
+fkempleado varchar(4) not null,
+tipoausencia varchar(4) not null,
+fecha date not null,
+detalles varchar(400) null,
+estado varchar(1) not null,
+
+foreign key (fkempleado) references empleado(pkid),
+foreign key (tipoausencia) references tipoausencia(pkid)
+)engine=InnoDB DEFAULT CHARSET=latin1;
+-- TABLA TIPO PAGO
+create table tipoPago(
+pkid varchar(4) primary key,
+nombre varchar(30) not null,
+estado varchar(1) not null
+)engine=InnoDB DEFAULT CHARSET=latin1;
+-- TABLA PAGOEMPLEADO
+create table pagoEmpleado(
+pkid varchar(4) primary key,
+fkempleado varchar(4) not null,
+tipopago varchar(4) not null,
+fecha date not null,
+monto double not null,
+detalles varchar(400) null,
+estado varchar(1) not null,
+
+foreign key (fkempleado) references empleado(pkid),
+foreign key (tipopago) references tipopago(pkid)
+)engine=InnoDB DEFAULT CHARSET=latin1;
 -- TABLA DATOSE
 create table datosE(
 pkid varchar(4) primary key,
@@ -63,3 +100,4 @@ estado varchar(1) not null,
 foreign key (fkdatosE) references datosE(pkid),
 foreign key (fkgestion) references gestion(pkid)
 )engine=InnoDB DEFAULT CHARSET=latin1;
+

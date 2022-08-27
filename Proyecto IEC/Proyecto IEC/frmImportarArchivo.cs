@@ -17,6 +17,7 @@ namespace Proyecto_IEC
     public partial class frmImportarArchivo : Form
     {
         private Controlador cn = new Controlador();
+        private Global datos = new Global();
         public frmImportarArchivo()
         {
             InitializeComponent();
@@ -34,18 +35,22 @@ namespace Proyecto_IEC
             };
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string NombreArcivo = openFileDialog.FileName.ToString();
+                string NombreArchivo = openFileDialog.FileName.ToString();
+                string NombreHoja = "Sheet";
+                txtNombreHoja.Text = NombreHoja;
+                txtRuta.Text = NombreArchivo;
+                
                 try 
                 {
-                    dgvVistaPrevia.DataSource = cn.EncontrarArchivoExcelControlador(NombreArcivo,NombreHoja);
+                    dgvVistaPrevia.DataSource = cn.EncontrarArchivoExcelControlador(NombreArchivo,NombreHoja);
 
-                }catch (Exception ex) { MessageBox.Show("Error al ceragar archivo." + ex); }
+                }catch (Exception ex) { MessageBox.Show("Error al cargar archivo." + ex); }
             }
         }
 
         private void btnCnacelar_Click(object sender, EventArgs e)
         {
-            respuesta = MessageBox.Show("Realmente desea borrar la tabla", "Imporat Tabla",
+            respuesta = MessageBox.Show("Realmente desea borrar la tabla", "Borrar Tabla",
             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(respuesta==DialogResult.Yes)
             {
@@ -65,38 +70,42 @@ namespace Proyecto_IEC
             {
                 for (int i = 0; i < table.Rows.Count; i++)
                 {
-                    cn.comprobarIdEncabezado("datosE", "pkid", table.Rows[i]["Nombre"].ToString(), table.Rows[i]["Dispositivos"].ToString());
-                    MessageBox.Show("Se comprobó el encabezado");
-                    GuardarTablaBdDetalle();
-                    MessageBox.Show("Se ingreso el detalle");
+                    try
+                    {
+                        string tiempo, tipoRegistro, nombregestion;
+                        tiempo = table.Rows[i]["Tiempo"].ToString();
+                        tipoRegistro = table.Rows[i]["Tipo de Registro"].ToString();
+                        nombregestion = table.Rows[i]["Estado"].ToString();
+                        cn.comprobarIdEncabezado("datosE", "pkid", table.Rows[i]["Nombre"].ToString(), table.Rows[i]["Dispositivos"].ToString(), tiempo, tipoRegistro, nombregestion);
+                    }
+                    catch (Exception exep) { }
                 }
+                MessageBox.Show("Importación Exitosa");
+                datos.obtenertabla = table;
+                //llamar a la forma de calculo
+                try
+                {
+                    frmCalculos form = new frmCalculos();
+                    form.Show();
+                }
+                catch (Exception ex) { MessageBox.Show("Error: " + ex); }
             }
             else { }
         }
-        
-        void GuardarTablaBdDetalle()
+
+        public void refrescar()
         {
-            string tiempo, tipoResgistro, nombregestion;
             try
             {
-                //Se guarda el encabezado generado.
-                table= (DataTable)dgvVistaPrevia.DataSource;
-                MessageBox.Show(table.Rows.Count.ToString());
-                for (int i = 0; i < table.Rows.Count; i++)
-                {
-                    tiempo = table.Rows[i]["Tiempo"].ToString();
-                    tipoResgistro= table.Rows[i]["Tipo de Registro"].ToString();
-                    nombregestion = table.Rows[i]["Estado"].ToString();
-                    MessageBox.Show("Se obtuvieron los datos");
-                    MessageBox.Show(tiempo + " " + tipoResgistro + " " + nombregestion);
-                    //cn.guardarTablaBdEncabezadoControlador( string fkempleado, string fkdispositivo, string estado)
-                    cn.guardarTablaBdDetalleControlador(tiempo, tipoResgistro, nombregestion);
-                    MessageBox.Show("Se guardó un detalle");
+                dgvVistaPrevia.DataSource = cn.EncontrarArchivoExcelControlador(txtRuta.Text, txtNombreHoja.Text);
 
-                }
-                MessageBox.Show("Nomina Guardada correctamente.");
             }
-            catch (Exception ex) { MessageBox.Show("No fue posible guardar el encabezado de la nómina " + ex); }
+            catch (Exception ex) { MessageBox.Show("Error al cargar archivo." + ex); }
         }
-    }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+            refrescar();
+		}
+	}
 }
