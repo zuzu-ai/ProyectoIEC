@@ -47,11 +47,11 @@ namespace Proyecto_IEC
 			this.dgvVistaPrevia.AllowUserToDeleteRows = false;
 			this.dgvVistaPrevia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvVistaPrevia.Location = new System.Drawing.Point(12, 62);
+			this.dgvVistaPrevia.Location = new System.Drawing.Point(12, 63);
 			this.dgvVistaPrevia.Name = "dgvVistaPrevia";
 			this.dgvVistaPrevia.ReadOnly = true;
 			this.dgvVistaPrevia.RowHeadersWidth = 51;
-			this.dgvVistaPrevia.Size = new System.Drawing.Size(709, 401);
+			this.dgvVistaPrevia.Size = new System.Drawing.Size(709, 413);
 			this.dgvVistaPrevia.TabIndex = 100;
 			// 
 			// btnImportar
@@ -61,7 +61,7 @@ namespace Proyecto_IEC
 			this.btnImportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.btnImportar.FlatAppearance.BorderSize = 0;
 			this.btnImportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnImportar.Location = new System.Drawing.Point(506, 9);
+			this.btnImportar.Location = new System.Drawing.Point(503, 9);
 			this.btnImportar.Margin = new System.Windows.Forms.Padding(0);
 			this.btnImportar.Name = "btnImportar";
 			this.btnImportar.Size = new System.Drawing.Size(50, 50);
@@ -76,7 +76,7 @@ namespace Proyecto_IEC
 			this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.btnExportar.FlatAppearance.BorderSize = 0;
 			this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnExportar.Location = new System.Drawing.Point(656, 9);
+			this.btnExportar.Location = new System.Drawing.Point(653, 9);
 			this.btnExportar.Margin = new System.Windows.Forms.Padding(0);
 			this.btnExportar.Name = "btnExportar";
 			this.btnExportar.Size = new System.Drawing.Size(50, 50);
@@ -86,7 +86,8 @@ namespace Proyecto_IEC
 			// 
 			// txtNombreHoja
 			// 
-			this.txtNombreHoja.Location = new System.Drawing.Point(190, 26);
+			this.txtNombreHoja.Enabled = false;
+			this.txtNombreHoja.Location = new System.Drawing.Point(187, 36);
 			this.txtNombreHoja.Name = "txtNombreHoja";
 			this.txtNombreHoja.Size = new System.Drawing.Size(301, 20);
 			this.txtNombreHoja.TabIndex = 103;
@@ -95,7 +96,7 @@ namespace Proyecto_IEC
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(62, 26);
+			this.label1.Location = new System.Drawing.Point(59, 36);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(122, 16);
 			this.label1.TabIndex = 104;
@@ -108,7 +109,7 @@ namespace Proyecto_IEC
 			this.btnCnacelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.btnCnacelar.FlatAppearance.BorderSize = 0;
 			this.btnCnacelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnCnacelar.Location = new System.Drawing.Point(606, 10);
+			this.btnCnacelar.Location = new System.Drawing.Point(603, 10);
 			this.btnCnacelar.Margin = new System.Windows.Forms.Padding(0);
 			this.btnCnacelar.Name = "btnCnacelar";
 			this.btnCnacelar.Size = new System.Drawing.Size(50, 50);
@@ -118,7 +119,7 @@ namespace Proyecto_IEC
 			// 
 			// txtRuta
 			// 
-			this.txtRuta.Location = new System.Drawing.Point(190, 3);
+			this.txtRuta.Location = new System.Drawing.Point(187, 13);
 			this.txtRuta.Name = "txtRuta";
 			this.txtRuta.Size = new System.Drawing.Size(301, 20);
 			this.txtRuta.TabIndex = 105;
@@ -131,7 +132,7 @@ namespace Proyecto_IEC
 			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.button1.FlatAppearance.BorderSize = 0;
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Location = new System.Drawing.Point(556, 9);
+			this.button1.Location = new System.Drawing.Point(553, 9);
 			this.button1.Margin = new System.Windows.Forms.Padding(0);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(50, 50);
@@ -143,7 +144,7 @@ namespace Proyecto_IEC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(733, 475);
+			this.ClientSize = new System.Drawing.Size(733, 486);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.txtRuta);
 			this.Controls.Add(this.label1);
