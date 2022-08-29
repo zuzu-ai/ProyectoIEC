@@ -58,7 +58,7 @@ namespace Proyecto_IEC
                 dt.Clear();
                 dgvVistaPrevia.DataSource = dt;
             }
-            else { }                          
+            else { }
         }
 
         private void btnExportar_Click(object sender, EventArgs e)
@@ -81,7 +81,14 @@ namespace Proyecto_IEC
                     catch (Exception exep) { }
                 }
                 MessageBox.Show("Importación Exitosa");
+                string fechaglobal = table.Rows[0]["Tiempo"].ToString();
+                string fechatrabajada = fechaglobal.Remove(fechaglobal.Length - 14, 14);
+                DateTime dtt = Convert.ToDateTime(fechatrabajada);
+                string fechat = dtt.ToString("yyyy-MM-dd");
+                
                 datos.obtenertabla = table;
+                datos.fechatrabajada = fechat;
+               
                 //llamar a la forma de calculo
                 try
                 {
@@ -106,6 +113,6 @@ namespace Proyecto_IEC
 		private void button1_Click(object sender, EventArgs e)
 		{
             refrescar();
-		}
+        }
 	}
 }

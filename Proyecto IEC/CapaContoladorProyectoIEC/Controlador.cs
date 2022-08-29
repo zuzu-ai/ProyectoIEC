@@ -25,9 +25,9 @@ namespace CapaContoladorProyectoIEC
             }
             return table;
         }
-        public void guardarTablaBdDetalleControlador(string tiempo, string tipoResgistro, string nombregestion)
+        public void guardarTablaBdDetalleControlador(string tiempo, string tipoResgistro, string nombregestion, string idempleadoencabe)
         {
-            sn.guardarTablaBdDetalleSentencias(tiempo, tipoResgistro, nombregestion);
+            sn.guardarTablaBdDetalleSentencias(tiempo, tipoResgistro, nombregestion, idempleadoencabe);
         }
         public void guardarTablaBdEncabezadoControlador(string ids, string fkempleado, string fkdispositivo, string estado, string tiempo, string tipoReg, string nombregestion)
         {
@@ -41,6 +41,21 @@ namespace CapaContoladorProyectoIEC
         {
             int id = sn.idEncabezadoActual(tabla, campoB);
             return id;
+        }
+        public DataTable obtenerDatos(string fechatrabajada)
+        {
+            DataTable tabla = new DataTable();
+            tabla = sn.obtenerDatos(fechatrabajada);
+            return tabla;
+        }
+        public int idSiguienteDeNuevoIngreso(string tabla, string campoB)
+        {
+            int id = sn.idSiguienteDeNuevoIngreso(tabla, campoB);
+            return id;
+        }
+        public void guardarEncabezadoDiarios(string id, string fecha, string estado)
+        {
+            sn.guardarEncabezadoDiarios(id, fecha, estado);
         }
     }
 }

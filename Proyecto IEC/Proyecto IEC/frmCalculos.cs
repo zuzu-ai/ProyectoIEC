@@ -22,20 +22,39 @@ namespace Proyecto_IEC
 		{
 			InitializeComponent();
 			tabla = datos.obtenertabla;
-			//dgvVistaPrevia.DataSource = tabla;
-
+			txtFechatrabajada.Text = datos.fechatrabajada;
+			int id = cn.idSiguienteDeNuevoIngreso("diariosE","pkid");
+			txtID.Text = id.ToString();
 			//llamada a funcion;
 			CalcularHoras();
 		}
 
 		private void btnExportar_Click(object sender, EventArgs e)
 		{
-
+			try
+			{
+				cn.guardarEncabezadoDiarios(txtID.Text, txtFechatrabajada.Text, "1");
+				MessageBox.Show("Diarios añadidos para la fecha: " + txtFechatrabajada.Text);
+			}
+			catch (Exception ex) { MessageBox.Show("No se puieron añadir los diarios."); }
 		}
 
 		public void CalcularHoras()
 		{
-			//cn.CalcularHoras();
+			DataTable tablafinal = cn.obtenerDatos(datos.fechatrabajada);
+			dgvVistaPrevia.DataSource = tablafinal;
+			dgvVistaPrevia.Columns[0].ReadOnly = true;
+			dgvVistaPrevia.Columns[1].ReadOnly = true;
+			dgvVistaPrevia.Columns[2].ReadOnly = true;
+			dgvVistaPrevia.Columns[3].ReadOnly = true;
+			dgvVistaPrevia.Columns[4].ReadOnly = true;
+			dgvVistaPrevia.Columns[5].ReadOnly = true;
+			dgvVistaPrevia.Columns[6].ReadOnly = true;
+			dgvVistaPrevia.Columns[7].ReadOnly = true;
+			dgvVistaPrevia.Columns[8].ReadOnly = true;
+			dgvVistaPrevia.Columns[9].ReadOnly = true;
+			dgvVistaPrevia.Columns[10].ReadOnly = true;
+			dgvVistaPrevia.Columns[11].ReadOnly = true;
 		}
 	}
 }

@@ -32,6 +32,10 @@ namespace Proyecto_IEC
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCalculos));
 			this.btnExportar = new System.Windows.Forms.Button();
 			this.dgvVistaPrevia = new System.Windows.Forms.DataGridView();
+			this.label1 = new System.Windows.Forms.Label();
+			this.txtFechatrabajada = new System.Windows.Forms.TextBox();
+			this.txtID = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -58,16 +62,51 @@ namespace Proyecto_IEC
 			this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvVistaPrevia.Location = new System.Drawing.Point(12, 51);
 			this.dgvVistaPrevia.Name = "dgvVistaPrevia";
-			this.dgvVistaPrevia.ReadOnly = true;
 			this.dgvVistaPrevia.RowHeadersWidth = 51;
 			this.dgvVistaPrevia.Size = new System.Drawing.Size(776, 387);
 			this.dgvVistaPrevia.TabIndex = 103;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(12, 28);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(40, 13);
+			this.label1.TabIndex = 105;
+			this.label1.Text = "Fecha:";
+			// 
+			// txtFechatrabajada
+			// 
+			this.txtFechatrabajada.Location = new System.Drawing.Point(58, 25);
+			this.txtFechatrabajada.Name = "txtFechatrabajada";
+			this.txtFechatrabajada.Size = new System.Drawing.Size(155, 20);
+			this.txtFechatrabajada.TabIndex = 106;
+			// 
+			// txtID
+			// 
+			this.txtID.Location = new System.Drawing.Point(58, 1);
+			this.txtID.Name = "txtID";
+			this.txtID.Size = new System.Drawing.Size(155, 20);
+			this.txtID.TabIndex = 108;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(12, 4);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(21, 13);
+			this.label2.TabIndex = 107;
+			this.label2.Text = "ID:";
 			// 
 			// frmCalculos
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.txtID);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.txtFechatrabajada);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnExportar);
 			this.Controls.Add(this.dgvVistaPrevia);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -77,6 +116,7 @@ namespace Proyecto_IEC
 			this.Text = "Calcular Horas";
 			((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -84,5 +124,9 @@ namespace Proyecto_IEC
 
 		private System.Windows.Forms.Button btnExportar;
 		private System.Windows.Forms.DataGridView dgvVistaPrevia;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.TextBox txtFechatrabajada;
+		private System.Windows.Forms.TextBox txtID;
+		private System.Windows.Forms.Label label2;
 	}
 }
