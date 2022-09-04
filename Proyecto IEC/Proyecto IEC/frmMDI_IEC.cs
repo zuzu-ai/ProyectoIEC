@@ -38,5 +38,16 @@ namespace Proyecto_IEC
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
-    }
+
+		private void calculoMensualToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            try
+            {
+                frmCalculoMensual form = new frmCalculoMensual();
+                form.MdiParent = this;
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+	}
 }

@@ -57,5 +57,16 @@ namespace CapaContoladorProyectoIEC
         {
             sn.guardarEncabezadoDiarios(id, fecha, estado);
         }
+        public void guardarDetalleDiarios(int idD, string idE, string empleado, string entrada, string salida, string htrabajadas, string hdescontadas, string ausencias, string hextras, string pcomidas, string pcombustible, string pviaticos, string potros, string observaciones)
+        {
+            sn.guardarDetalleDiarios(idD, idE, empleado, entrada, salida, htrabajadas, hdescontadas, ausencias, hextras, pcomidas, pcombustible, pviaticos, potros, observaciones);
+        }
+        public DataTable CalculosMes(string ultimafecha)
+        {
+            DataTable tabla = new DataTable();
+            tabla = sn.CalculosMes(ultimafecha);
+
+            return tabla;
+        }
     }
 }
