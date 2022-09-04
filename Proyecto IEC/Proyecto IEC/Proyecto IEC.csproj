@@ -68,6 +68,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCalculoMensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalculoMensual.Designer.cs">
+      <DependentUpon>frmCalculoMensual.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCalculos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCalculoMensual.resx">
+      <DependentUpon>frmCalculoMensual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCalculos.resx">
       <DependentUpon>frmCalculos.cs</DependentUpon>
     </EmbeddedResource>

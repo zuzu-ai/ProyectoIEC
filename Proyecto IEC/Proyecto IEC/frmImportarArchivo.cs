@@ -94,6 +94,10 @@ namespace Proyecto_IEC
                 {
                     frmCalculos form = new frmCalculos();
                     form.Show();
+
+                    DataTable dt = new DataTable();
+                    dt.Clear();
+                    dgvVistaPrevia.DataSource = dt;
                 }
                 catch (Exception ex) { MessageBox.Show("Error: " + ex); }
             }

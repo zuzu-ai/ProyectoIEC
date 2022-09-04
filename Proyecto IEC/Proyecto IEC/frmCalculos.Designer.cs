@@ -46,7 +46,7 @@ namespace Proyecto_IEC
 			this.btnExportar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.btnExportar.FlatAppearance.BorderSize = 0;
 			this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnExportar.Location = new System.Drawing.Point(733, -2);
+			this.btnExportar.Location = new System.Drawing.Point(1265, 1);
 			this.btnExportar.Margin = new System.Windows.Forms.Padding(0);
 			this.btnExportar.Name = "btnExportar";
 			this.btnExportar.Size = new System.Drawing.Size(50, 50);
@@ -63,7 +63,7 @@ namespace Proyecto_IEC
 			this.dgvVistaPrevia.Location = new System.Drawing.Point(12, 51);
 			this.dgvVistaPrevia.Name = "dgvVistaPrevia";
 			this.dgvVistaPrevia.RowHeadersWidth = 51;
-			this.dgvVistaPrevia.Size = new System.Drawing.Size(776, 387);
+			this.dgvVistaPrevia.Size = new System.Drawing.Size(1300, 387);
 			this.dgvVistaPrevia.TabIndex = 103;
 			// 
 			// label1
@@ -77,6 +77,7 @@ namespace Proyecto_IEC
 			// 
 			// txtFechatrabajada
 			// 
+			this.txtFechatrabajada.Enabled = false;
 			this.txtFechatrabajada.Location = new System.Drawing.Point(58, 25);
 			this.txtFechatrabajada.Name = "txtFechatrabajada";
 			this.txtFechatrabajada.Size = new System.Drawing.Size(155, 20);
@@ -84,6 +85,7 @@ namespace Proyecto_IEC
 			// 
 			// txtID
 			// 
+			this.txtID.Enabled = false;
 			this.txtID.Location = new System.Drawing.Point(58, 1);
 			this.txtID.Name = "txtID";
 			this.txtID.Size = new System.Drawing.Size(155, 20);
@@ -102,7 +104,7 @@ namespace Proyecto_IEC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(1324, 450);
 			this.Controls.Add(this.txtID);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.txtFechatrabajada);

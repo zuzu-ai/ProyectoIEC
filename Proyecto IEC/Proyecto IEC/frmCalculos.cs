@@ -13,6 +13,7 @@ namespace Proyecto_IEC
 {
 	public partial class frmCalculos : Form
 	{
+		DataTable table = new DataTable();
 		private Controlador cn = new Controlador();
 		DataTable tabla = new DataTable();
 		DataTable tablacalculo = new DataTable();
@@ -31,12 +32,38 @@ namespace Proyecto_IEC
 
 		private void btnExportar_Click(object sender, EventArgs e)
 		{
+			table = (DataTable)dgvVistaPrevia.DataSource;
+			int contador = dgvVistaPrevia.Rows.Count;
 			try
 			{
 				cn.guardarEncabezadoDiarios(txtID.Text, txtFechatrabajada.Text, "1");
-				MessageBox.Show("Diarios añadidos para la fecha: " + txtFechatrabajada.Text);
+
+				try
+				{
+					for (int i = 0; i < contador; i++)
+					{
+						int idD = cn.idSiguienteDeNuevoIngreso("diariosD", "pkid");
+						string idE = table.Rows[i]["ID"].ToString();
+						string entrada = table.Rows[i]["Entrada"].ToString();
+						string salida = table.Rows[i]["Salida"].ToString();
+						string htrabajadas = table.Rows[i]["Horas Trabajadas"].ToString();
+						string hdescontadas = table.Rows[i]["Horas Descontadas"].ToString();
+						string ausencias = table.Rows[i]["Ausencias"].ToString();
+						string hextras = table.Rows[i]["Horas Extras"].ToString();
+						string pcomidas = table.Rows[i]["Pago de Comidas"].ToString();
+						string pcombustible = table.Rows[i]["Pago de Combustible"].ToString();
+						string pviaticos = table.Rows[i]["Pago de Viáticos"].ToString();
+						string potros = table.Rows[i]["Otros Pagos"].ToString();
+						string observaciones = table.Rows[i]["Observaciones"].ToString();
+						cn.guardarDetalleDiarios(idD, txtID.Text,idE,entrada,salida,htrabajadas,hdescontadas,ausencias,hextras,pcomidas,pcombustible,pviaticos,potros,observaciones);
+
+					}
+				}
+				catch (Exception ex) { MessageBox.Show("No se puieron añadir los detalles de diario."); }
+				MessageBox.Show("Se añadieron los diarios correctamente.");
 			}
 			catch (Exception ex) { MessageBox.Show("No se puieron añadir los diarios."); }
+			this.Close();
 		}
 
 		public void CalcularHoras()

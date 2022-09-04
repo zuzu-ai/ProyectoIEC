@@ -64,3 +64,4 @@ C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\CapaModeloProyectoIEC.
 C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.CopyComplete
 C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmCalculos.resources
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmCalculoMensual.resources
