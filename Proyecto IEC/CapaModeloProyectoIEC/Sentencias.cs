@@ -134,6 +134,7 @@ namespace CapaModeloProyectoIEC
             try
             {
                 string insertQuery = "SELECT * FROM " + tabla + " WHERE " + campobuscado + " = '" + datoreferencia + "';";
+                MessageBox.Show(insertQuery);
                 OdbcConnection conect = cn.conexion();
                 OdbcCommand command = new OdbcCommand(insertQuery, conect);
                 command.ExecuteNonQuery(); OdbcDataReader busquedac;
@@ -159,7 +160,8 @@ namespace CapaModeloProyectoIEC
             string dato = "";
             try
             {
-                string insertQuery = "SELECT * FROM " + tabla + " WHERE " + campobuscado + " = '" + datoreferencia + " AND " + campobuscado2 + " = '" + datoreferencia2 + "';";
+                string insertQuery = "SELECT * FROM " + tabla + " WHERE " + campobuscado + " = '" + datoreferencia + "' AND " + campobuscado2 + " = '" + datoreferencia2 + "';";
+                MessageBox.Show(insertQuery);
                 OdbcConnection conect = cn.conexion();
                 OdbcCommand command = new OdbcCommand(insertQuery, conect);
                 command.ExecuteNonQuery(); OdbcDataReader busquedac;
@@ -520,29 +522,40 @@ namespace CapaModeloProyectoIEC
         //CALCULO MENSUAL
         public (string, string, string, string, string, string, string, string) obtenerDatosMes(string fechatrabajada, string empleado)
         {
+            MessageBox.Show(fechatrabajada+"  "+ empleado);
 
             //CALCULO DE HORAS TRABAJADAS AL MES
             //BUSCAMOS EL ENCABEZADO DE DIARIO SEGÚN LA FECHA
             string diariose = Buscadiario("diariose", "pkid", "fkempleado", empleado, "fecha", fechatrabajada);
+            MessageBox.Show("diariose" + diariose);
             //BUSCAMOS LAS HORAS TRABAJADAS ESE DÍA
             string horastrab = BuscaDato("diariosd", "htrabajadas", "fkdiariose", diariose);
+            MessageBox.Show("horastrab" + horastrab);
             //BUSCAMOS LAS HORAS DESCONTADAS ESE DIA
             string horasdesc = BuscaDato("diariosd", "hdescontadas", "fkdiariose", diariose);
+            MessageBox.Show("horasdesc" + horasdesc);
             //BUSCAR AUSENCIAS DEL DIA
             string ausencias = BuscaDato("diariosd", "ausencias", "fkdiariose", diariose);
+            MessageBox.Show("ausencias" + ausencias);
             //BUSCAMOS HORAS EXTRAS DEL DIA
             string horasext = BuscaDato("diariosd", "hextras", "fkdiariose", diariose);
+            MessageBox.Show("horasext" + horasext);
             //PAGOS DE COMIDA DEL DIA
             string comidas = BuscaDato("diariosd", "pcomidas", "fkdiariose", diariose);
+            MessageBox.Show("comidas" + comidas);
             //PAGOS DE COMBUSTIBLE DEL DIA -- COMBUSTILE
             string combustible = BuscaDato("diariosd", "pcombustile", "fkdiariose", diariose);
+            MessageBox.Show("combustible" + combustible);
             //PAGO DE VIATICOS DEL DIA
             string viaticos = BuscaDato("diariosd", "pviaticos", "fkdiariose", diariose);
+            MessageBox.Show("viaticos" + viaticos);
             //OTROS PAGOS DEL DIA
             string otros = BuscaDato("diariosd", "potros", "fkdiariose", diariose);
-            
+            MessageBox.Show("otros" + otros);
+            MessageBox.Show("dato1= " + horastrab + " dato2= " + horasdesc + " dato3= " + ausencias + " dato4= " + horasext + " dato5= " + comidas + " dato6=" + combustible + " dato7= " + viaticos + " dato8= " + otros);
+
             return (horastrab, horasdesc, ausencias, horasext, comidas, combustible, viaticos, otros);
-        }
+             }
 
         public DataTable CalculosMes(string ultimafecha)
         {
@@ -573,24 +586,32 @@ namespace CapaModeloProyectoIEC
                 string dias = uf.ToString("dd");
                 int diasc = Int32.Parse(dias);
                 string mes = uf.ToString("MM");
-                string anio = uf.ToString("YYYY");
+                string anio = uf.ToString("yyyy");
                 var horast = 0; var horasd = 0; var ausencias = 0; var horase = 0; double pcomidas = 0; double pcomb = 0; double pviat = 0; double otp = 0;
                 for (int j = 1; j <= diasc; j++)
                 {
-                    string fechaenviada = anio + "-" + mes + "-" + j.ToString();
+                    DateTime diactual = Convert.ToDateTime(j.ToString());
+                    string dia = diactual.ToString("dd");
+                    string fechaenviada = anio + "-" + mes + "-" + dia;
 
                     //BUSCAMOS LOS DATOS POR DIA HASTA COMPLETAR EL MES
                     var (dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8) = obtenerDatosMes(fechaenviada,i.ToString());
-
-                    //SUMAMOS RESULTADOS DE TODOS LOS DIAS
-                    horast = horast + Int32.Parse(dato1);
-                    horasd = horasd + Int32.Parse(dato2);
-                    ausencias = ausencias + Int32.Parse(dato3);
-                    horase= horase + Int32.Parse(dato4);
-                    pcomidas = pcomidas + Double.Parse(dato5);
-                    pcomb = pcomb + Double.Parse(dato6);
-                    pviat = pviat + Double.Parse(dato7);
-                    otp = otp + Double.Parse(dato8);
+                    try
+                    {
+                        //SUMAMOS RESULTADOS DE TODOS LOS DIAS
+                        horast = horast + Int32.Parse(dato1);
+                        horasd = horasd + Int32.Parse(dato2);
+                        ausencias = ausencias + Int32.Parse(dato3);
+                        horase = horase + Int32.Parse(dato4);
+                        pcomidas = pcomidas + Double.Parse(dato5);
+                        pcomb = pcomb + Double.Parse(dato6);
+                        pviat = pviat + Double.Parse(dato7);
+                        otp = otp + Double.Parse(dato8);
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.ToString());
+                    }
                 }
                 //CONVERTIMOS LAS HORAS
                 TimeSpan ht = new TimeSpan(

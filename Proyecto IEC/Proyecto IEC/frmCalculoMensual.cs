@@ -40,8 +40,6 @@ namespace Proyecto_IEC
 			dgvVistaPrevia.Columns[7].ReadOnly = true;
 			dgvVistaPrevia.Columns[8].ReadOnly = true;
 			dgvVistaPrevia.Columns[9].ReadOnly = true;
-			dgvVistaPrevia.Columns[10].ReadOnly = true;
-			dgvVistaPrevia.Columns[11].ReadOnly = true;
 		}
 
 		private void dtpInicio_ValueChanged(object sender, EventArgs e)
