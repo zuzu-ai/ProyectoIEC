@@ -9,7 +9,6 @@ namespace CapaModeloNavegador
 {
     class Conexion
     {
-
         public OdbcConnection conexion()
         {
             //creacion de la conexion via ODBC
@@ -25,7 +24,6 @@ namespace CapaModeloNavegador
             }
             return conn;
         }
-
         //metodo para cerrar la conexion
         public void desconexion(OdbcConnection conn)
         {

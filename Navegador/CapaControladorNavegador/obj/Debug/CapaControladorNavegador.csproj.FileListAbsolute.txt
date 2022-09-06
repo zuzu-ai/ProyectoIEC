@@ -4,3 +4,12 @@ C:\Users\Kevin\source\repos\Navegador\CapaControladorNavegador\obj\Debug\CapaCon
 C:\Users\Kevin\source\repos\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CoreCompileInputs.cache
 C:\Users\Kevin\source\repos\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.dll
 C:\Users\Kevin\source\repos\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.dll
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.AssemblyReference.cache
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CoreCompileInputs.cache
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.dll
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.dll
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CopyComplete

@@ -7,3 +7,17 @@ C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNave
 C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.csproj.CoreCompileInputs.cache
 C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.dll
 C:\Users\Kevin\source\repos\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\bin\Debug\CapaVistaNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.csproj.AssemblyReference.cache
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.NavegadorMantenimientos.resources
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.Properties.Resources.resources
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.csproj.GenerateResource.cache
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.csproj.CoreCompileInputs.cache
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.csproj.CopyComplete
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.dll
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\bin\Debug\CapaVistaNavegador.dll
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\bin\Debug\CapaControladorNavegador.dll
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\bin\Debug\CapaControladorNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\bin\Debug\CapaModeloNavegador.dll
+F:\ProyectoIEC\Navegador\CapaVistaNavegador\bin\Debug\CapaModeloNavegador.pdb
