@@ -42,6 +42,7 @@ namespace CapaVistaNavegador
             this.btnFinal = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnIngresar
@@ -57,6 +58,7 @@ namespace CapaVistaNavegador
             this.btnIngresar.Size = new System.Drawing.Size(50, 50);
             this.btnIngresar.TabIndex = 0;
             this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // btnEditar
             // 
@@ -71,6 +73,7 @@ namespace CapaVistaNavegador
             this.btnEditar.Size = new System.Drawing.Size(50, 50);
             this.btnEditar.TabIndex = 0;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnGuardar
             // 
@@ -85,6 +88,7 @@ namespace CapaVistaNavegador
             this.btnGuardar.Size = new System.Drawing.Size(50, 50);
             this.btnGuardar.TabIndex = 0;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -99,6 +103,7 @@ namespace CapaVistaNavegador
             this.btnCancelar.Size = new System.Drawing.Size(50, 50);
             this.btnCancelar.TabIndex = 0;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnImprimir
             // 
@@ -107,7 +112,7 @@ namespace CapaVistaNavegador
             this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnImprimir.FlatAppearance.BorderSize = 0;
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Location = new System.Drawing.Point(200, 0);
+            this.btnImprimir.Location = new System.Drawing.Point(250, 0);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(0);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(50, 50);
@@ -121,12 +126,13 @@ namespace CapaVistaNavegador
             this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnActualizar.FlatAppearance.BorderSize = 0;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Location = new System.Drawing.Point(250, 0);
+            this.btnActualizar.Location = new System.Drawing.Point(300, 0);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(0);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(50, 50);
             this.btnActualizar.TabIndex = 0;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnAnterior
             // 
@@ -135,12 +141,13 @@ namespace CapaVistaNavegador
             this.btnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAnterior.FlatAppearance.BorderSize = 0;
             this.btnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnterior.Location = new System.Drawing.Point(350, 0);
+            this.btnAnterior.Location = new System.Drawing.Point(400, 0);
             this.btnAnterior.Margin = new System.Windows.Forms.Padding(0);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(50, 50);
             this.btnAnterior.TabIndex = 0;
             this.btnAnterior.UseVisualStyleBackColor = false;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnInicio
             // 
@@ -149,12 +156,13 @@ namespace CapaVistaNavegador
             this.btnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnInicio.FlatAppearance.BorderSize = 0;
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Location = new System.Drawing.Point(300, 0);
+            this.btnInicio.Location = new System.Drawing.Point(350, 0);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(0);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(50, 50);
             this.btnInicio.TabIndex = 0;
             this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // btnSiguiente
             // 
@@ -163,12 +171,13 @@ namespace CapaVistaNavegador
             this.btnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSiguiente.FlatAppearance.BorderSize = 0;
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSiguiente.Location = new System.Drawing.Point(400, 0);
+            this.btnSiguiente.Location = new System.Drawing.Point(450, 0);
             this.btnSiguiente.Margin = new System.Windows.Forms.Padding(0);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(50, 50);
             this.btnSiguiente.TabIndex = 0;
             this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // btnFinal
             // 
@@ -177,12 +186,13 @@ namespace CapaVistaNavegador
             this.btnFinal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFinal.FlatAppearance.BorderSize = 0;
             this.btnFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinal.Location = new System.Drawing.Point(450, 0);
+            this.btnFinal.Location = new System.Drawing.Point(500, 0);
             this.btnFinal.Margin = new System.Windows.Forms.Padding(0);
             this.btnFinal.Name = "btnFinal";
             this.btnFinal.Size = new System.Drawing.Size(50, 50);
             this.btnFinal.TabIndex = 0;
             this.btnFinal.UseVisualStyleBackColor = false;
+            this.btnFinal.Click += new System.EventHandler(this.btnFinal_Click);
             // 
             // btnAyuda
             // 
@@ -191,7 +201,7 @@ namespace CapaVistaNavegador
             this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAyuda.FlatAppearance.BorderSize = 0;
             this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.Location = new System.Drawing.Point(500, 0);
+            this.btnAyuda.Location = new System.Drawing.Point(550, 0);
             this.btnAyuda.Margin = new System.Windows.Forms.Padding(0);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(50, 50);
@@ -205,12 +215,28 @@ namespace CapaVistaNavegador
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Location = new System.Drawing.Point(550, 0);
+            this.btnSalir.Location = new System.Drawing.Point(600, 0);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 50);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Location = new System.Drawing.Point(200, 0);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(50, 50);
+            this.btnEliminar.TabIndex = 0;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // NavegadorMantenimientos
             // 
@@ -225,13 +251,14 @@ namespace CapaVistaNavegador
             this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnIngresar);
             this.Name = "NavegadorMantenimientos";
-            this.Size = new System.Drawing.Size(610, 53);
+            this.Size = new System.Drawing.Size(658, 49);
             this.ResumeLayout(false);
 
         }
@@ -250,5 +277,6 @@ namespace CapaVistaNavegador
         private System.Windows.Forms.Button btnFinal;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

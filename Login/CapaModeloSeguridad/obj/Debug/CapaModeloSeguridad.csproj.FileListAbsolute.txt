@@ -1,0 +1,6 @@
+C:\Users\Kevin\source\repos\Login\CapaModeloSeguridad\bin\Debug\CapaModeloSeguridad.dll
+C:\Users\Kevin\source\repos\Login\CapaModeloSeguridad\bin\Debug\CapaModeloSeguridad.pdb
+C:\Users\Kevin\source\repos\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\source\repos\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.dll
+C:\Users\Kevin\source\repos\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.pdb
+C:\Users\Kevin\source\repos\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.AssemblyReference.cache
