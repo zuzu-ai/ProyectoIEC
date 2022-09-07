@@ -21,3 +21,17 @@ F:\ProyectoIEC\Navegador\CapaVistaNavegador\bin\Debug\CapaControladorNavegador.d
 F:\ProyectoIEC\Navegador\CapaVistaNavegador\bin\Debug\CapaControladorNavegador.pdb
 F:\ProyectoIEC\Navegador\CapaVistaNavegador\bin\Debug\CapaModeloNavegador.dll
 F:\ProyectoIEC\Navegador\CapaVistaNavegador\bin\Debug\CapaModeloNavegador.pdb
+F:\IEC\Navegador\CapaVistaNavegador\bin\Debug\CapaVistaNavegador.dll
+F:\IEC\Navegador\CapaVistaNavegador\bin\Debug\CapaVistaNavegador.pdb
+F:\IEC\Navegador\CapaVistaNavegador\bin\Debug\CapaControladorNavegador.dll
+F:\IEC\Navegador\CapaVistaNavegador\bin\Debug\CapaModeloNavegador.dll
+F:\IEC\Navegador\CapaVistaNavegador\bin\Debug\CapaControladorNavegador.pdb
+F:\IEC\Navegador\CapaVistaNavegador\bin\Debug\CapaModeloNavegador.pdb
+F:\IEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.csproj.AssemblyReference.cache
+F:\IEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.NavegadorMantenimientos.resources
+F:\IEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.Properties.Resources.resources
+F:\IEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.csproj.GenerateResource.cache
+F:\IEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.csproj.CoreCompileInputs.cache
+F:\IEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.csproj.CopyComplete
+F:\IEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.dll
+F:\IEC\Navegador\CapaVistaNavegador\obj\Debug\CapaVistaNavegador.pdb

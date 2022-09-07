@@ -148,7 +148,7 @@ foreign key (fkdatosE) references datosE(pkid),
 foreign key (fkgestion) references gestion(pkid)
 )engine=InnoDB DEFAULT CHARSET=latin1;
 -- TABLA DIARIOSE
-create table diariosD(
+create table diariosE(
 pkid varchar(4) primary key,
 fechatrabajada date not null,
 estado varchar(1) not null
