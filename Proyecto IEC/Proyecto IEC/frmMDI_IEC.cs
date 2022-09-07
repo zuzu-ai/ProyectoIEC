@@ -49,5 +49,16 @@ namespace Proyecto_IEC
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
-	}
+
+        private void puestoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmPuesto form = new frmPuesto();
+                form.MdiParent = this;
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+    }
 }
