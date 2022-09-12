@@ -41,9 +41,10 @@ namespace Proyecto_IEC
 			this.gestiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.importarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.calculoMensualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-			this.calculoMensualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -115,7 +116,8 @@ namespace Proyecto_IEC
 			// 
 			this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importarDatosToolStripMenuItem,
-            this.calculoMensualToolStripMenuItem});
+            this.calculoMensualToolStripMenuItem,
+            this.consultasToolStripMenuItem});
 			this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
 			this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
 			this.procesosToolStripMenuItem.Text = "Procesos";
@@ -126,6 +128,13 @@ namespace Proyecto_IEC
 			this.importarDatosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.importarDatosToolStripMenuItem.Text = "Importar Datos";
 			this.importarDatosToolStripMenuItem.Click += new System.EventHandler(this.importarDatosToolStripMenuItem_Click);
+			// 
+			// calculoMensualToolStripMenuItem
+			// 
+			this.calculoMensualToolStripMenuItem.Name = "calculoMensualToolStripMenuItem";
+			this.calculoMensualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.calculoMensualToolStripMenuItem.Text = "Calculo Mensual";
+			this.calculoMensualToolStripMenuItem.Click += new System.EventHandler(this.calculoMensualToolStripMenuItem_Click);
 			// 
 			// ayudaToolStripMenuItem
 			// 
@@ -146,12 +155,12 @@ namespace Proyecto_IEC
 			this.menuStrip1.TabIndex = 1;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
-			// calculoMensualToolStripMenuItem
+			// consultasToolStripMenuItem
 			// 
-			this.calculoMensualToolStripMenuItem.Name = "calculoMensualToolStripMenuItem";
-			this.calculoMensualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.calculoMensualToolStripMenuItem.Text = "Calculo Mensual";
-			this.calculoMensualToolStripMenuItem.Click += new System.EventHandler(this.calculoMensualToolStripMenuItem_Click);
+			this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+			this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.consultasToolStripMenuItem.Text = "Consultas";
+			this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
 			// 
 			// frmMDI_IEC
 			// 
@@ -190,6 +199,7 @@ namespace Proyecto_IEC
 		private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem calculoMensualToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
 	}
 }
 
