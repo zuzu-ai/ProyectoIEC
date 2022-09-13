@@ -85,7 +85,7 @@ namespace Proyecto_IEC
             this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
             this.puestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.puestoToolStripMenuItem.Text = "Puesto";
-            this.puestoToolStripMenuItem.Click += new System.EventHandler(this.puestoToolStripMenuItem_Click);
+           // this.puestoToolStripMenuItem.Click += new System.EventHandler(this.puestoToolStripMenuItem_Click);
             // 
             // empleadoToolStripMenuItem
             // 
@@ -117,63 +117,61 @@ namespace Proyecto_IEC
             this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importarDatosToolStripMenuItem,
             this.calculoMensualToolStripMenuItem});
-            this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
-            this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.procesosToolStripMenuItem.Text = "Procesos";
-            // 
-            // importarDatosToolStripMenuItem
-            // 
-            this.importarDatosToolStripMenuItem.Name = "importarDatosToolStripMenuItem";
-            this.importarDatosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.importarDatosToolStripMenuItem.Text = "Importar Datos";
-            this.importarDatosToolStripMenuItem.Click += new System.EventHandler(this.importarDatosToolStripMenuItem_Click);
-            // 
-            // calculoMensualToolStripMenuItem
-            // 
-            this.calculoMensualToolStripMenuItem.Name = "calculoMensualToolStripMenuItem";
-            this.calculoMensualToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.calculoMensualToolStripMenuItem.Text = "Calculo Mensual";
-            this.calculoMensualToolStripMenuItem.Click += new System.EventHandler(this.calculoMensualToolStripMenuItem_Click);
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
+			this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+			this.procesosToolStripMenuItem.Text = "Procesos";
+			// 
+			// importarDatosToolStripMenuItem
+			// 
+			this.importarDatosToolStripMenuItem.Name = "importarDatosToolStripMenuItem";
+			this.importarDatosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.importarDatosToolStripMenuItem.Text = "Importar Datos";
+			this.importarDatosToolStripMenuItem.Click += new System.EventHandler(this.importarDatosToolStripMenuItem_Click);
+			// 
+			// ayudaToolStripMenuItem
+			// 
+			this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+			this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+			this.ayudaToolStripMenuItem.Text = "Ayuda";
+			// 
+			// menuStrip1
+			// 
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inicioToolStripMenuItem,
             this.catálogosToolStripMenuItem,
             this.procesosToolStripMenuItem,
             this.ayudaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // frmMDI_IEC
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmMDI_IEC";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Horas";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+			this.menuStrip1.TabIndex = 1;
+			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// calculoMensualToolStripMenuItem
+			// 
+			this.calculoMensualToolStripMenuItem.Name = "calculoMensualToolStripMenuItem";
+			this.calculoMensualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.calculoMensualToolStripMenuItem.Text = "Calculo Mensual";
+			this.calculoMensualToolStripMenuItem.Click += new System.EventHandler(this.calculoMensualToolStripMenuItem_Click);
+			// 
+			// frmMDI_IEC
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.DimGray;
+			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.menuStrip1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.IsMdiContainer = true;
+			this.MainMenuStrip = this.menuStrip1;
+			this.Name = "frmMDI_IEC";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "Sistema de Horas";
+			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -193,6 +191,7 @@ namespace Proyecto_IEC
 		private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem calculoMensualToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
 	}
 }
 

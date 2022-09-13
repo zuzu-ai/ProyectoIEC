@@ -134,7 +134,7 @@ namespace CapaModeloProyectoIEC
             try
             {
                 string insertQuery = "SELECT * FROM " + tabla + " WHERE " + campobuscado + " = '" + datoreferencia + "';";
-                MessageBox.Show(insertQuery);
+                //MessageBox.Show(insertQuery);
                 OdbcConnection conect = cn.conexion();
                 OdbcCommand command = new OdbcCommand(insertQuery, conect);
                 command.ExecuteNonQuery(); OdbcDataReader busquedac;
@@ -508,7 +508,7 @@ namespace CapaModeloProyectoIEC
             try
             {
                 string cadena = "INSERT INTO diariosD VALUES ('" + idD + "','" + idE + "','" + empleado + "','" + entrada + "','" + salida + "','" + htrabajadas + "','" + hdescontadas + "','" + ausencias + "','" + hextras + "','" + pcomidas + "','" + pcombustible + "','" + pviaticos + "','" + potros + "','" + observaciones + "', '1');";
-                MessageBox.Show(cadena);
+                //MessageBox.Show(cadena);
                 OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
                 consulta.ExecuteNonQuery();
             }
