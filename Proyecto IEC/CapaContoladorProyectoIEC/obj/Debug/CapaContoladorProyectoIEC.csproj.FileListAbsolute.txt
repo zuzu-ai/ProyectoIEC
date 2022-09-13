@@ -25,3 +25,12 @@ F:\IEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIE
 F:\IEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CopyComplete
 F:\IEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.dll
 F:\IEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.pdb
+C:\Users\Kevin\Desktop\Conf\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaContoladorProyectoIEC.dll
+C:\Users\Kevin\Desktop\Conf\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaContoladorProyectoIEC.pdb
+C:\Users\Kevin\Desktop\Conf\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+C:\Users\Kevin\Desktop\Conf\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\Kevin\Desktop\Conf\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.AssemblyReference.cache
+C:\Users\Kevin\Desktop\Conf\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Desktop\Conf\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CopyComplete
+C:\Users\Kevin\Desktop\Conf\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.dll
+C:\Users\Kevin\Desktop\Conf\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.pdb
