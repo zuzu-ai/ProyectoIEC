@@ -335,16 +335,16 @@ namespace CapaVistaNavegador
         {
             try
             {
-                //int entero = control.idSiguienteDeNuevoIngreso(tablas);
+                int entero = control.idSiguienteDeNuevoIngreso(tablas);
                 int cantidadCampos = campos.Length;
-                //campos[0].Text = entero.ToString();
+                campos[0].Text = entero.ToString();
                 foreach (Control ctr in controles.Controls)
                 {
                     if (ctr is TextBox)
                     {
                         if (ctr.Tag.ToString() == campos[0].Tag.ToString())
                         {
-                            ctr.Enabled = true;
+                            ctr.Enabled = false;
                         }
                         else
                         {
