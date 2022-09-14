@@ -10,14 +10,13 @@ using System.Windows.Forms;
 
 namespace Proyecto_IEC
 {
-    public partial class frmPuesto : Form
+    public partial class frmTipoPago : Form
     {
-        public frmPuesto()
+        public frmTipoPago()
         {
             InitializeComponent();
-
 			TextBox[] alias = navegadorMantenimientos1.ClasificaTextboxsegunParent(this);
-			navegadorMantenimientos1.ObtenerCamposdeTabla(alias, "puesto", "IEC");
+			navegadorMantenimientos1.ObtenerCamposdeTabla(alias, "tipopago", "IEC");
 			navegadorMantenimientos1.MetodoSalirVista(this);
 			//navegador1.LlenarCombobox(cbxIDPuesto, "puesto", "pkIdPuesto", "nombre", "estado");
 			//navegador1.LlenarCombobox(cbxIDEmpresa, "empresa", "idEmpresa", "nombre", "estatus");
