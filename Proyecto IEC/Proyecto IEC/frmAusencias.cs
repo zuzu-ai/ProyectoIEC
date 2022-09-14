@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace Proyecto_IEC
 {
-    public partial class frmPuesto : Form
+    public partial class frmAusencias : Form
     {
-        public frmPuesto()
+        public frmAusencias()
         {
             InitializeComponent();
-
 			TextBox[] alias = navegadorMantenimientos1.ClasificaTextboxsegunParent(this);
-			navegadorMantenimientos1.ObtenerCamposdeTabla(alias, "puesto", "IEC");
+			navegadorMantenimientos1.ObtenerCamposdeTabla(alias, "ausencia", "IEC");
 			navegadorMantenimientos1.MetodoSalirVista(this);
-			//navegador1.LlenarCombobox(cbxIDPuesto, "puesto", "pkIdPuesto", "nombre", "estado");
-			//navegador1.LlenarCombobox(cbxIDEmpresa, "empresa", "idEmpresa", "nombre", "estatus");
+			navegadorMantenimientos1.LlenarCombobox(cbxIdEmpleado, "empleado", "pkid", "nombre", "estado");
+			navegadorMantenimientos1.LlenarCombobox(cbxIdTipoAusencia, "tipoausencia", "pkid", "nombre", "estado");
 
 			//inicio de elementos para dar de baja
 			navegadorMantenimientos1.campoEstado = "estado";
@@ -68,5 +67,46 @@ namespace Proyecto_IEC
 			navegadorMantenimientos1.SelecciondeFilaDGV(dgvVistaPrevia);
 
 		}
-	}
+
+        private void txtIdEmpleado_TextChanged(object sender, EventArgs e)
+        {
+			navegadorMantenimientos1.SeleccionarElementosenCombo(cbxIdEmpleado, txtIdEmpleado);
+		}
+
+        private void txtIdTipoAusencia_TextChanged(object sender, EventArgs e)
+        {
+			navegadorMantenimientos1.SeleccionarElementosenCombo(cbxIdTipoAusencia, txtIdTipoAusencia);
+		}
+
+        private void cbxIdEmpleado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			navegadorMantenimientos1.EnviarDatoComboaTextbox(cbxIdEmpleado, txtIdEmpleado);
+		}
+
+        private void cbxIdTipoAusencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			navegadorMantenimientos1.EnviarDatoComboaTextbox(cbxIdTipoAusencia, txtIdTipoAusencia);
+		}
+
+        private void txtFecha_TextChanged(object sender, EventArgs e)
+        {
+			try
+			{
+				navegadorMantenimientos1.SeleccionarFechaDTP(dtpFecha, txtFecha);
+				navegadorMantenimientos1.CambiarFormatoFecha(dtpFecha, txtFecha);
+			}
+			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+		}
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+			try
+			{
+
+				navegadorMantenimientos1.CambiarFormatoFecha(dtpFecha, txtFecha);
+				navegadorMantenimientos1.SeleccionarFechaDTP(dtpFecha, txtFecha);
+			}
+			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+		}
+    }
 }

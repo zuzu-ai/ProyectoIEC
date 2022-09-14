@@ -38,8 +38,8 @@ namespace Proyecto_IEC
             this.label2 = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rbnInactivo = new System.Windows.Forms.RadioButton();
-            this.rbnActivo = new System.Windows.Forms.RadioButton();
+            this.rbnEstatusimodulo = new System.Windows.Forms.RadioButton();
+            this.rbnEstatusamodulo = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
             this.panel1.SuspendLayout();
@@ -52,6 +52,7 @@ namespace Proyecto_IEC
             this.dgvVistaPrevia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvVistaPrevia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVistaPrevia.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVistaPrevia.Location = new System.Drawing.Point(12, 178);
@@ -60,6 +61,7 @@ namespace Proyecto_IEC
             this.dgvVistaPrevia.RowHeadersWidth = 51;
             this.dgvVistaPrevia.Size = new System.Drawing.Size(633, 271);
             this.dgvVistaPrevia.TabIndex = 100;
+            this.dgvVistaPrevia.SelectionChanged += new System.EventHandler(this.dgvVistaPrevia_SelectionChanged);
             // 
             // txtID
             // 
@@ -116,42 +118,45 @@ namespace Proyecto_IEC
             this.txtEstado.TabIndex = 108;
             this.txtEstado.Tag = "estado";
             this.txtEstado.Visible = false;
+            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.rbnInactivo);
-            this.panel1.Controls.Add(this.rbnActivo);
+            this.panel1.Controls.Add(this.rbnEstatusimodulo);
+            this.panel1.Controls.Add(this.rbnEstatusamodulo);
             this.panel1.Location = new System.Drawing.Point(152, 129);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 28);
             this.panel1.TabIndex = 107;
             // 
-            // rbnInactivo
+            // rbnEstatusimodulo
             // 
-            this.rbnInactivo.AutoSize = true;
-            this.rbnInactivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbnInactivo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.rbnInactivo.Location = new System.Drawing.Point(104, 1);
-            this.rbnInactivo.Name = "rbnInactivo";
-            this.rbnInactivo.Size = new System.Drawing.Size(72, 20);
-            this.rbnInactivo.TabIndex = 3;
-            this.rbnInactivo.TabStop = true;
-            this.rbnInactivo.Text = "Inactivo";
-            this.rbnInactivo.UseVisualStyleBackColor = true;
+            this.rbnEstatusimodulo.AutoSize = true;
+            this.rbnEstatusimodulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbnEstatusimodulo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.rbnEstatusimodulo.Location = new System.Drawing.Point(104, 1);
+            this.rbnEstatusimodulo.Name = "rbnEstatusimodulo";
+            this.rbnEstatusimodulo.Size = new System.Drawing.Size(72, 20);
+            this.rbnEstatusimodulo.TabIndex = 3;
+            this.rbnEstatusimodulo.TabStop = true;
+            this.rbnEstatusimodulo.Text = "Inactivo";
+            this.rbnEstatusimodulo.UseVisualStyleBackColor = true;
+            this.rbnEstatusimodulo.TextChanged += new System.EventHandler(this.rbnEstatusimodulo_CheckedChanged);
             // 
-            // rbnActivo
+            // rbnEstatusamodulo
             // 
-            this.rbnActivo.AutoSize = true;
-            this.rbnActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbnActivo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.rbnActivo.Location = new System.Drawing.Point(31, 1);
-            this.rbnActivo.Name = "rbnActivo";
-            this.rbnActivo.Size = new System.Drawing.Size(63, 20);
-            this.rbnActivo.TabIndex = 2;
-            this.rbnActivo.TabStop = true;
-            this.rbnActivo.Text = "Activo";
-            this.rbnActivo.UseVisualStyleBackColor = true;
+            this.rbnEstatusamodulo.AutoSize = true;
+            this.rbnEstatusamodulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbnEstatusamodulo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.rbnEstatusamodulo.Location = new System.Drawing.Point(31, 1);
+            this.rbnEstatusamodulo.Name = "rbnEstatusamodulo";
+            this.rbnEstatusamodulo.Size = new System.Drawing.Size(63, 20);
+            this.rbnEstatusamodulo.TabIndex = 2;
+            this.rbnEstatusamodulo.TabStop = true;
+            this.rbnEstatusamodulo.Text = "Activo";
+            this.rbnEstatusamodulo.UseVisualStyleBackColor = true;
+            this.rbnEstatusamodulo.CheckedChanged += new System.EventHandler(this.rbnEstatusamodulo_CheckedChanged);
             // 
             // label8
             // 
@@ -203,8 +208,8 @@ namespace Proyecto_IEC
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton rbnInactivo;
-        private System.Windows.Forms.RadioButton rbnActivo;
+        private System.Windows.Forms.RadioButton rbnEstatusimodulo;
+        private System.Windows.Forms.RadioButton rbnEstatusamodulo;
         private System.Windows.Forms.Label label8;
     }
 }

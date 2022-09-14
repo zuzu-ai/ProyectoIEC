@@ -132,3 +132,17 @@ C:\Users\Kevin\Desktop\Conf\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csp
 C:\Users\Kevin\Desktop\Conf\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.CopyComplete
 C:\Users\Kevin\Desktop\Conf\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.exe
 C:\Users\Kevin\Desktop\Conf\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.pdb
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaControladorNavegador.dll
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaModeloNavegador.dll
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaControladorNavegador.pdb
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaModeloNavegador.pdb
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmCalculoMensual.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmCalculos.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmConsulta.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmPuesto.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmDispositivo.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmGestion.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmTipoAusencia.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmTipoPago.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmAusencias.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmJornada.resources
