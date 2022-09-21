@@ -22,6 +22,12 @@ estado varchar(1) not null
 )engine=InnoDB DEFAULT CHARSET=latin1;
 insert into jornada values ("1","Área Técnica", "07:00:00","17:00:00","1");
 insert into jornada values ("2","Área Administrativa", "08:00:00","16:30:00","1");
+-- TABLA FOTO
+create table foto (
+pkId varchar(15) primary key,
+fotografia LONGBLOB
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 -- TABLA EMPLEADO
 create table empleado(
 pkid varchar(4) primary key,
@@ -31,10 +37,11 @@ DPI varchar(13) not null,
 fkjornada varchar(4) not null,
 contratacion date,
 despido date,
-foto blob,
+foto varchar(15)null,
 estado varchar(1),
 foreign key (fkpuesto) references puesto(pkid),
-foreign key (fkjornada) references jornada(pkid)
+foreign key (fkjornada) references jornada(pkid),
+foreign key (foto) references foto(pkid)
 )engine=InnoDB DEFAULT CHARSET=latin1;
 
 insert into empleado values ("1","1", "José René Quemé Hervías","2145896250101","1",null,null,null,"1");

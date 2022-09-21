@@ -68,5 +68,21 @@ namespace CapaContoladorProyectoIEC
 
             return tabla;
         }
+
+
+        //Foto
+        public byte[] obtenerByte(string id)
+        {
+            byte[] imagen = sn.obtenerByte(id);
+            return imagen;
+        }
+        public void insertaNuevaFoto(string id, byte[] foto)
+        {
+            sn.insertaNuevaFoto(id, foto);
+        }
+        public void insertaFoto(string id, byte[] foto)
+        {
+            sn.insertaFoto(id, foto);
+        }
     }
 }
