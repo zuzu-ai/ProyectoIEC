@@ -645,5 +645,80 @@ namespace CapaModeloProyectoIEC
             return tablainicial;
         }
 
+
+        //Foto
+        public byte[] obtenerByte(string id)
+        {
+            int bufferSize = 100; byte[] bytefoto = new byte[bufferSize];
+            byte[] binary = null;
+            try
+            {
+                string insertQuery = "SELECT * FROM foto WHERE pkId ='" + id + "';";
+                OdbcConnection conect = cn.conexion();
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                command.ExecuteNonQuery(); OdbcDataReader busquedac;
+                busquedac = command.ExecuteReader();
+                if (!busquedac.HasRows)
+                {
+                    throw new Exception("No hay fotografia guardada.");
+                }
+                if (busquedac.Read())
+                {
+                    binary = (byte[])busquedac["fotografia"];
+                }
+                cn.desconexion(conect);
+                return binary;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar imagen" + ex);
+                return null;
+            }
+        }
+
+        public void insertaNuevaFoto(string id, byte[] foto)
+        {
+            try
+            {
+                string insertQuery = "INSERT INTO foto VALUES ('" + id + "',?);";
+                OdbcConnection conect = cn.conexion(); //conect.Open();
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                OdbcParameter prm = new OdbcParameter("@img", OdbcType.Binary, foto.Length, ParameterDirection.Input, false, 0, 0, null, DataRowVersion.Current, foto);
+                command.Parameters.Add(prm);
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Foto cargada", "Aviso");
+                }
+                cn.desconexion(conect);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar imagen" + ex);
+            }
+        }
+
+        public void insertaFoto(string id, byte[] foto)
+        {
+            try
+            {
+                string insertQuery = "UPDATE foto SET fotografia=? where pkId='" + id + "';";
+                OdbcConnection conect = cn.conexion(); //conect.Open();
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                OdbcParameter prm = new OdbcParameter("@img", OdbcType.Binary, foto.Length, ParameterDirection.Input, false, 0, 0, null, DataRowVersion.Current, foto);
+                command.Parameters.Add(prm);
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Foto cargada","Aviso");
+                }
+                cn.desconexion(conect);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar imagen" + ex);
+            }
+        }
+
     }
 }

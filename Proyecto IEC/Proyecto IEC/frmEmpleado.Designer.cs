@@ -248,7 +248,7 @@ namespace Proyecto_IEC
             this.txtIdFoto.Size = new System.Drawing.Size(32, 20);
             this.txtIdFoto.TabIndex = 95;
             this.txtIdFoto.Tag = "foto";
-            this.txtIdFoto.Visible = false;
+            this.txtIdFoto.TextChanged += new System.EventHandler(this.txtIdFoto_TextChanged);
             // 
             // pbFoto
             // 
@@ -262,6 +262,7 @@ namespace Proyecto_IEC
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbFoto.TabIndex = 96;
             this.pbFoto.TabStop = false;
+            this.pbFoto.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.pbFoto_LoadCompleted);
             // 
             // btnAyuda
             // 
@@ -276,11 +277,13 @@ namespace Proyecto_IEC
             this.btnAyuda.Size = new System.Drawing.Size(50, 50);
             this.btnAyuda.TabIndex = 98;
             this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnFoto_Click);
             // 
             // dgvVistaPrevia
             // 
             this.dgvVistaPrevia.AllowUserToAddRows = false;
             this.dgvVistaPrevia.AllowUserToDeleteRows = false;
+            this.dgvVistaPrevia.AllowUserToResizeRows = false;
             this.dgvVistaPrevia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
