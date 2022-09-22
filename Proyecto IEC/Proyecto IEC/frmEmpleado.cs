@@ -60,13 +60,13 @@ namespace Proyecto_IEC
 
 		private void rbnEstatusamodulo_CheckedChanged(object sender, EventArgs e)
 		{
-
+			navegadorMantenimientos1.CambioEstadoTextbox(txtEstado,rbnEstatusamodulo,"1");
         }
 
         private void rbnEstatusimodulo_CheckedChanged(object sender, EventArgs e)
 		{
-
-        }
+			navegadorMantenimientos1.CambioEstadoTextbox(txtEstado, rbnEstatusimodulo, "0");
+		}
 
         private void dgvVistaPrevia_SelectionChanged(object sender, EventArgs e)
 		{
@@ -87,12 +87,18 @@ namespace Proyecto_IEC
 
         private void dtpContratacion_ValueChanged(object sender, EventArgs e)
         {
-			try
+			if (chbxNoContratacion.Checked == false)
 			{
-				navegadorMantenimientos1.CambiarFormatoFecha(dtpContratacion, txtContratacion);
-				navegadorMantenimientos1.SeleccionarFechaDTP(dtpContratacion, txtContratacion);
+				try
+				{
+					navegadorMantenimientos1.CambiarFormatoFecha(dtpContratacion, txtContratacion);
+					navegadorMantenimientos1.SeleccionarFechaDTP(dtpContratacion, txtContratacion);
+				}
+				catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 			}
-			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+			else if (chbxNoContratacion.Checked == true) {
+				txtContratacion.Text = "";
+			}
 		}
 
         private void txtDespido_TextChanged(object sender, EventArgs e)
@@ -107,12 +113,19 @@ namespace Proyecto_IEC
 
         private void dtpDespido_ValueChanged(object sender, EventArgs e)
         {
-			try
+			if (chbxNoDespido.Checked == false)
 			{
-				navegadorMantenimientos1.CambiarFormatoFecha(dtpDespido, txtDespido);
-				navegadorMantenimientos1.SeleccionarFechaDTP(dtpDespido, txtDespido);
+				try
+				{
+					navegadorMantenimientos1.CambiarFormatoFecha(dtpDespido, txtDespido);
+					navegadorMantenimientos1.SeleccionarFechaDTP(dtpDespido, txtDespido);
+				}
+				catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 			}
-			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+			else if (chbxNoDespido.Checked==true)
+			{
+				txtDespido.Text = "";
+			}
 		}
 
         private void txtIdPuesto_TextChanged(object sender, EventArgs e)
@@ -209,5 +222,51 @@ namespace Proyecto_IEC
         {
 			guardarfoto();
         }
-    }
+
+		private void chbxNoContratacion_CheckedChanged(object sender, EventArgs e)
+		{
+			if (chbxNoContratacion.Checked == true)
+			{
+				dtpContratacion.Enabled = false;
+			}
+			else if (chbxNoContratacion.Checked == false)
+			{
+				dtpContratacion.Enabled = true;
+				try
+				{
+					navegadorMantenimientos1.CambiarFormatoFecha(dtpContratacion, txtContratacion);
+					navegadorMantenimientos1.SeleccionarFechaDTP(dtpContratacion, txtContratacion);
+				}
+				catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+			}
+		}
+
+		private void chbxNoDespido_CheckedChanged(object sender, EventArgs e)
+		{
+			if (chbxNoDespido.Checked == true)
+			{
+				dtpDespido.Enabled = false;
+			}
+			else if (chbxNoDespido.Checked == false)
+			{
+				dtpDespido.Enabled = true;
+				try
+				{
+					navegadorMantenimientos1.CambiarFormatoFecha(dtpDespido, txtDespido);
+					navegadorMantenimientos1.SeleccionarFechaDTP(dtpDespido, txtDespido);
+				}
+				catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+			}
+		}
+
+		private void cbxPuesto_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			navegadorMantenimientos1.EnviarDatoComboaTextbox(cbxPuesto, txtIdPuesto);
+		}
+
+		private void cbxJornada_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			navegadorMantenimientos1.EnviarDatoComboaTextbox(cbxJornada, txtJornada);
+		}
+	}
 }

@@ -4,7 +4,6 @@ F:\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIE
 F:\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
 F:\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
 F:\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
-C:\Users\ZUZU\Desktop\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
 C:\Users\ZUZU\Desktop\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
 C:\Users\ZUZU\Desktop\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
 C:\Users\ZUZU\Desktop\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
@@ -16,3 +15,4 @@ F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj
 F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
 F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
 F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
