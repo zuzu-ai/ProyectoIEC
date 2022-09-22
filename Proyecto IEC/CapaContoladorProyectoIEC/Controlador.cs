@@ -84,5 +84,18 @@ namespace CapaContoladorProyectoIEC
         {
             sn.insertaFoto(id, foto);
         }
+
+        //FORMA CONSULTAS
+        public void SeleccionaDatoFecha(ComboBox cbx, string value, string display, string partefecha, string tabla)
+        {
+            try
+            {
+                sn.SeleccionaDatoFecha(cbx, value, display, partefecha, tabla);
+            }
+            catch
+            {
+                MessageBox.Show("Error en la capa controlador, metodo llenar combo");
+            }
+        }
     }
 }

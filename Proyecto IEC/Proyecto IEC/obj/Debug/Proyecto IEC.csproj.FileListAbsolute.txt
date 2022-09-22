@@ -56,12 +56,9 @@ C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\SpreadsheetLight.dll
 C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\System.Drawing.Common.dll
 C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\System.IO.Packaging.dll
 C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\CapaModeloProyectoIEC.dll
-C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\CapaContoladorProyectoIEC.pdb
-C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaNavegador.pdb
 C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\System.IO.Packaging.xml
 C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\CapaModeloProyectoIEC.pdb
-C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.CopyComplete
 C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmCalculos.resources
 C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmCalculoMensual.resources
@@ -146,3 +143,17 @@ F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmTipoAusencia.
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmTipoPago.resources
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmAusencias.resources
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmJornada.resources
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmAusencias.resources
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmConsulta.resources
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmDispositivo.resources
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmGestion.resources
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmJornada.resources
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmPuesto.resources
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmTipoAusencia.resources
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmTipoPago.resources
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaNavegador.dll
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\CapaControladorNavegador.dll
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\CapaModeloNavegador.dll
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaNavegador.pdb
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\CapaControladorNavegador.pdb
+C:\Users\ZUZU\Desktop\Proyecto IEC\Proyecto IEC\bin\Debug\CapaModeloNavegador.pdb

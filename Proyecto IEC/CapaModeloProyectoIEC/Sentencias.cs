@@ -522,7 +522,7 @@ namespace CapaModeloProyectoIEC
         //CALCULO MENSUAL
         public (string, string, string, string, string, string, string, string) obtenerDatosMes(string fechatrabajada, string empleado)
         {
-            MessageBox.Show(fechatrabajada+"  "+ empleado);
+            MessageBox.Show(fechatrabajada + "  " + empleado);
 
             //CALCULO DE HORAS TRABAJADAS AL MES
             //BUSCAMOS EL ENCABEZADO DE DIARIO SEGÚN LA FECHA
@@ -555,7 +555,7 @@ namespace CapaModeloProyectoIEC
             MessageBox.Show("dato1= " + horastrab + " dato2= " + horasdesc + " dato3= " + ausencias + " dato4= " + horasext + " dato5= " + comidas + " dato6=" + combustible + " dato7= " + viaticos + " dato8= " + otros);
 
             return (horastrab, horasdesc, ausencias, horasext, comidas, combustible, viaticos, otros);
-             }
+        }
 
         public DataTable CalculosMes(string ultimafecha)
         {
@@ -595,7 +595,7 @@ namespace CapaModeloProyectoIEC
                     string fechaenviada = anio + "-" + mes + "-" + dia;
 
                     //BUSCAMOS LOS DATOS POR DIA HASTA COMPLETAR EL MES
-                    var (dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8) = obtenerDatosMes(fechaenviada,i.ToString());
+                    var (dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8) = obtenerDatosMes(fechaenviada, i.ToString());
                     try
                     {
                         //SUMAMOS RESULTADOS DE TODOS LOS DIAS
@@ -710,13 +710,46 @@ namespace CapaModeloProyectoIEC
 
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Foto cargada","Aviso");
+                    MessageBox.Show("Foto cargada", "Aviso");
                 }
                 cn.desconexion(conect);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al guardar imagen" + ex);
+            }
+        }
+
+        //FORMA DE CONSULTA
+        public void SeleccionaDatoFecha(ComboBox cbx, string value, string display, string partefecha, string tabla)
+        {
+            try
+            {
+                cbx.DataSource = null; cbx.Items.Clear();
+                String psql = "SELECT DISTINCT date_format(fechatrabajada, '%" + partefecha + "') FROM " + tabla + " WHERE estado = '1'";
+                OdbcConnection conect = cn.conexion();
+                try
+                {
+                    OdbcCommand comando = new OdbcCommand(psql, conect);
+                    OdbcDataAdapter data = new OdbcDataAdapter(comando);
+                    DataTable dt = new DataTable();
+                    data.Fill(dt);
+                    cbx.ValueMember = value;
+                    cbx.DisplayMember = display;
+                    cbx.DataSource = dt;
+                }
+                catch (OdbcException ex)
+                {
+                    MessageBox.Show("Error al leer los datos " + ex.Message);
+                }
+                finally
+                {
+                    cn.desconexion(conect);
+                }
+            }
+            catch (OdbcException ex)
+            {
+                MessageBox.Show("Error al leer los datos " + ex.Message);
             }
         }
 
