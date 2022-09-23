@@ -86,16 +86,29 @@ namespace CapaContoladorProyectoIEC
         }
 
         //FORMA CONSULTAS
-        public void SeleccionaDatoFecha(ComboBox cbx, string value, string display, string partefecha, string tabla)
+        public void LlenarCombo(ComboBox cbx, string tabla, string campobuscado)
         {
             try
             {
-                sn.SeleccionaDatoFecha(cbx, value, display, partefecha, tabla);
+                sn.LlenarCombo(cbx, tabla, campobuscado);
             }
             catch
             {
-                MessageBox.Show("Error en la capa controlador, metodo llenar combo");
+                MessageBox.Show("Error en la capa controlador, revisar la funcion metodoLlenarCombo");
             }
+        }
+        public string BuscaDato(string tabla, string campo, string campobuscado, string datoreferencia)
+        {
+            string dato = "";
+            dato = sn.BuscaDato(tabla, campo, campobuscado, datoreferencia);
+            return dato;
+        }
+        public DataTable ConsultaDiarios(string fechatrabajada, string empleado)
+        {
+            DataTable tablainicial = new DataTable();
+            tablainicial = sn.ConsultaDiarios(fechatrabajada, empleado);
+
+            return tablainicial;
         }
     }
 }
