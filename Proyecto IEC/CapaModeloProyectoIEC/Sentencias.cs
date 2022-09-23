@@ -756,19 +756,29 @@ namespace CapaModeloProyectoIEC
 
             try
             {
-                string consultatodostodos= "select distinct diariosd.pkid as 'ID',diariosd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',diariosd.entrada as 'Hora Entrada', diariosd.salida as 'Hora Salida', diariosd.htrabajadas as 'Horas Trabajadas', diariosd.hdescontadas as 'Horas Descontadas', diariosd.ausencias as 'Ausensias', diariosd.hextras as 'Horas Extras', diariosd.pcomidas as 'Pago de Comidas', diariosd.pcombustible as 'Pago de Combustible', diariosd.pviaticos as 'Pago de Viáticos', diariosd.potros as 'Otros Pagos', diariosd.observaciones as 'Observaciones' from diariosd, empleado where diariosd.fkempleado = empleado.pkid order by diariosd.fkempleado;";
+                string consultatodostodos= "select distinct diariosd.pkid as 'ID',diariosd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',diariose.fechatrabajada as 'Fecha', diariosd.entrada as 'Hora Entrada', diariosd.salida as 'Hora Salida', diariosd.htrabajadas as 'Horas Trabajadas', diariosd.hdescontadas as 'Horas Descontadas', diariosd.ausencias as 'Ausensias', diariosd.hextras as 'Horas Extras', diariosd.pcomidas as 'Pago de Comidas', diariosd.pcombustible as 'Pago de Combustible', diariosd.pviaticos as 'Pago de Viáticos', diariosd.potros as 'Otros Pagos', diariosd.observaciones as 'Observaciones' from diariose, diariosd, empleado where diariosd.fkempleado = empleado.pkid and diariosd.fkdiariosE = diariose.pkid order by diariosd.fkempleado;";
+                string consultatodosfecha = "select distinct diariosd.pkid as 'ID',diariosd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',diariose.fechatrabajada as 'Fecha', diariosd.entrada as 'Hora Entrada', diariosd.salida as 'Hora Salida', diariosd.htrabajadas as 'Horas Trabajadas', diariosd.hdescontadas as 'Horas Descontadas', diariosd.ausencias as 'Ausensias', diariosd.hextras as 'Horas Extras', diariosd.pcomidas as 'Pago de Comidas', diariosd.pcombustible as 'Pago de Combustible', diariosd.pviaticos as 'Pago de Viáticos', diariosd.potros as 'Otros Pagos', diariosd.observaciones as 'Observaciones' from diariose, diariosd, empleado where diariosd.fkempleado = empleado.pkid and diariosd.fkdiariosE = diariose.pkid and diariose.fechatrabajada = '" + fechatrabajada + "' order by diariosd.fkempleado;";
+                string consultaempleadotodos= "select distinct diariosd.pkid as 'ID',diariosd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',diariose.fechatrabajada as 'Fecha', diariosd.entrada as 'Hora Entrada', diariosd.salida as 'Hora Salida', diariosd.htrabajadas as 'Horas Trabajadas', diariosd.hdescontadas as 'Horas Descontadas', diariosd.ausencias as 'Ausensias', diariosd.hextras as 'Horas Extras', diariosd.pcomidas as 'Pago de Comidas', diariosd.pcombustible as 'Pago de Combustible', diariosd.pviaticos as 'Pago de Viáticos', diariosd.potros as 'Otros Pagos', diariosd.observaciones as 'Observaciones' from diariose, diariosd, empleado where diariosd.fkempleado = empleado.pkid and diariosd.fkdiariosE = diariose.pkid and diariosd.fkempleado = '" + empleado + "' order by diariose.fechatrabajada;";
+                string consultaempleadofecha= "select distinct diariosd.pkid as 'ID',diariosd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',diariose.fechatrabajada as 'Fecha', diariosd.entrada as 'Hora Entrada', diariosd.salida as 'Hora Salida', diariosd.htrabajadas as 'Horas Trabajadas', diariosd.hdescontadas as 'Horas Descontadas', diariosd.ausencias as 'Ausensias', diariosd.hextras as 'Horas Extras', diariosd.pcomidas as 'Pago de Comidas', diariosd.pcombustible as 'Pago de Combustible', diariosd.pviaticos as 'Pago de Viáticos', diariosd.potros as 'Otros Pagos', diariosd.observaciones as 'Observaciones' from diariose, diariosd, empleado where diariosd.fkempleado = empleado.pkid and diariosd.fkdiariosE = diariose.pkid and diariosd.fkempleado = '" + empleado + "' and diariose.fechatrabajada = '" + fechatrabajada + "' order by diariose.fechatrabajada;";
+                string insertQuery = "";
 
-                string insertQuery="";
+
                 if (fechatrabajada == "*" && empleado == "*")
                 {
                     insertQuery = consultatodostodos;
-                    MessageBox.Show(insertQuery);
                 }
-                else
+                else if (fechatrabajada != "*" && empleado == "*")
                 {
-                    MessageBox.Show("función inhabilitada");
+                    insertQuery = consultatodosfecha;
                 }
-
+                else if (fechatrabajada == "*" && empleado != "*")
+                {
+                    insertQuery = consultaempleadotodos;
+                }
+                else if (fechatrabajada != "*" && empleado != "*")
+                {
+                    insertQuery = consultaempleadofecha;
+                }
                 //MessageBox.Show(insertQuery);
                 OdbcConnection conect = cn.conexion();
                 OdbcDataAdapter adapter = new OdbcDataAdapter(insertQuery, conect);
@@ -779,7 +789,6 @@ namespace CapaModeloProyectoIEC
             {
             }
             
-
             return tablainicial;
         }
     }

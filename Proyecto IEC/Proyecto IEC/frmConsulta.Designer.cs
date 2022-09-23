@@ -131,6 +131,7 @@ namespace Proyecto_IEC
 			this.mtxtDia.Size = new System.Drawing.Size(100, 20);
 			this.mtxtDia.TabIndex = 115;
 			this.mtxtDia.ValidatingType = typeof(System.DateTime);
+			this.mtxtDia.TextChanged += new System.EventHandler(this.mtxtDia_TextChanged);
 			// 
 			// label2
 			// 

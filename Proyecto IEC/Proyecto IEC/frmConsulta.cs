@@ -57,9 +57,7 @@ namespace Proyecto_IEC
 			if (cbxEmpleado.Text == "Seleccione un elemento...")
 			{
 				txtEmpleado.Text = "";
-				mtxtDia.Text = "";
-				chbxTodos.Checked = false;
-				dgvVistaPrevia.Rows.Clear();
+				dgvVistaPrevia.DataSource = limpiadata;
 			}
 			else if (cbxEmpleado.Text == "Todos")
 			{
@@ -100,11 +98,44 @@ namespace Proyecto_IEC
 		private void btnConsultar_Click(object sender, EventArgs e)
 		{
 			DataTable tablaconsulta = new DataTable();
-			if (txtEmpleado.Text == "*" && chbxTodos.Checked == true)
+			if (txtEmpleado.Text == "" && chbxTodos.Checked == false && mtxtDia.Text == "    -  -")
+			{
+				MessageBox.Show("Debe rellenar los cambios para realizar una búsqueda.");
+			}
+			else if (txtEmpleado.Text == "" && chbxTodos.Checked == false && mtxtDia.Text != "    -  -")
+			{
+				MessageBox.Show("Debe elegir un empleado.");
+			}
+			else if (txtEmpleado.Text != "" && chbxTodos.Checked == false && mtxtDia.Text == "    -  -")
+			{
+				MessageBox.Show("Debe ingresar una fecha.");
+			}
+			else if (txtEmpleado.Text == "*" && chbxTodos.Checked == true)
 			{
 				tablaconsulta = controlador.ConsultaDiarios("*", txtEmpleado.Text);
 			}
+			else if (txtEmpleado.Text == "*" && chbxTodos.Checked == false && mtxtDia.Text != "    -  -")
+			{
+				tablaconsulta = controlador.ConsultaDiarios(mtxtDia.Text, txtEmpleado.Text);
+			}
+			else if (txtEmpleado.Text != "*" && chbxTodos.Checked == true)
+			{
+				tablaconsulta = controlador.ConsultaDiarios("*", txtEmpleado.Text);
+			}
+			else if (txtEmpleado.Text != "*" && mtxtDia.Text != "    -  -")
+			{
+				tablaconsulta = controlador.ConsultaDiarios(mtxtDia.Text, txtEmpleado.Text);
+			}
+
 			dgvVistaPrevia.DataSource = tablaconsulta;
+		}
+
+		private void mtxtDia_TextChanged(object sender, EventArgs e)
+		{
+			if (mtxtDia.Text == "    -  -")
+			{
+				dgvVistaPrevia.DataSource = limpiadata;
+			}
 		}
 	}
 }
