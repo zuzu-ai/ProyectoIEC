@@ -17,45 +17,23 @@ namespace Proyecto_IEC
 		public frmConsulta()
 		{
 			InitializeComponent();
-			cbxAnio.Enabled = false;
-			cbxMes.Enabled = false;
-			cbxDia.Enabled = false;
-			cbxEmpleado.Enabled = false;
 
-			//cbxAnio.SelectedIndex = 0;
-			//cbxMes.SelectedIndex = 0;
-			//cbxDia.SelectedIndex = 0;
-			//cbxEmpleado.SelectedIndex = 0;
+			LlenarCombo(cbxEmpleado, "empleado", "nombre");
+			cbxEmpleado.SelectedIndex = 0;
 		}
 		Controlador controlador = new Controlador();
-		ArrayList referencia0 = new ArrayList();
-		ArrayList referencia1 = new ArrayList();
-		ArrayList referencia2 = new ArrayList();
-		public void SeleccionaDatoFecha(ComboBox cbx, string value, string display, string partefecha, string tabla)
+		DataTable limpiadata = new DataTable();
+
+		public void LlenarCombo(ComboBox cbx, string tabla, string campobuscado)
 		{
-				try
-				{
-					referencia1.Add(value);
-					referencia2.Add(display);
-					referencia0.Add(cbx);
-					controlador.SeleccionaDatoFecha(cbx, value, display,partefecha,tabla);
-				}
-				catch
-				{
+			try
+			{
+				controlador.LlenarCombo(cbx, tabla, campobuscado);
+			}
+			catch
+			{
 
-
-
-				}
-		}
-
-		private void radioButton6_CheckedChanged(object sender, EventArgs e)
-		{
-			
-		}
-
-		private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
+			}
 		}
 
 		private void rbnDiarios_CheckedChanged(object sender, EventArgs e)
@@ -74,98 +52,89 @@ namespace Proyecto_IEC
 			}
 		}
 
-		private void cbxMes_SelectedIndexChanged(object sender, EventArgs e)
+		private void cbxEmpleado_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (cbxMes.Text == "")
+			if (cbxEmpleado.Text == "Seleccione un elemento...")
 			{
-				txtMes.Text = "";
+				txtEmpleado.Text = "";
+				dgvVistaPrevia.DataSource = limpiadata;
 			}
-			else if (cbxMes.Text == "enero")
+			else if (cbxEmpleado.Text == "Todos")
 			{
-				txtMes.Text = "01";
-			}
-			else if (cbxMes.Text == "febrero")
-			{
-				txtMes.Text = "02";
-			}
-			else if (cbxMes.Text == "marzo")
-			{
-				txtMes.Text = "03";
-			}
-			else if (cbxMes.Text == "abril")
-			{
-				txtMes.Text = "04";
-			}
-			else if (cbxMes.Text == "mayo")
-			{
-				txtMes.Text = "05";
-			}
-			else if (cbxMes.Text == "junio")
-			{
-				txtMes.Text = "06";
-			}
-			else if (cbxMes.Text == "julio")
-			{
-				txtMes.Text = "07";
-			}
-			else if (cbxMes.Text == "agosto")
-			{
-				txtMes.Text = "08";
-			}
-			else if (cbxMes.Text == "septiembre")
-			{
-				txtMes.Text = "09";
-			}
-			else if (cbxMes.Text == "octubre")
-			{
-				txtMes.Text = "10";
-			}
-			else if (cbxMes.Text == "noviembre")
-			{
-				txtMes.Text = "11";
-			}
-			else if (cbxMes.Text == "diciembre")
-			{
-				txtMes.Text = "12";
-			}
-		}
-
-		private void chbxAnio_CheckedChanged(object sender, EventArgs e)
-		{
-			if (chbxAnio.Checked == true && rbnDiarios.Checked == true)
-			{
-				cbxAnio.Enabled = true;
-				SeleccionaDatoFecha(cbxAnio, "fechatrabajada", "date_format(fechatrabajada, '%Y')", "Y","diariose");
+				txtEmpleado.Text = "*";
 			}
 			else
 			{
-				cbxAnio.Enabled = false;
+				txtEmpleado.Text = controlador.BuscaDato("empleado", "pkid", "nombre", cbxEmpleado.Text.Trim());
 			}
 		}
 
-		private void chbxMes_CheckedChanged(object sender, EventArgs e)
+		private void chbxTodos_CheckedChanged(object sender, EventArgs e)
 		{
-			if (chbxMes.Checked == true && rbnDiarios.Checked == true)
+			if (chbxTodos.Checked == true && txtEmpleado.Text == "")
 			{
-				cbxMes.Enabled = true;
-				SeleccionaDatoFecha(cbxMes, "fechatrabajada", "date_format(fechatrabajada, '%M')", "m","diariose");
+				MessageBox.Show("Debe seleccionar una opción para empleado");
+				chbxTodos.Checked = false;
 			}
-			else
+			else if (chbxTodos.Checked == true && txtEmpleado.Text == "*")
 			{
-				cbxMes.Enabled = false;
+				mtxtDia.Clear();
+				mtxtDia.Enabled = false;
+				//LLAMADA AL METODO PARA BUSCAR TODOS LOS EMPLEADOS EN TODOS LOS DÍAS
+			}
+			else if (chbxTodos.Checked == true && txtEmpleado.Text != "" && txtEmpleado.Text != "*")
+			{
+				mtxtDia.Clear();
+				mtxtDia.Enabled = false;
+				//LLAMADA AL METODO PARA BUSCAR UN SOLO EMPLEADO EN TODOS LOS DIAS
+			}
+			else if (chbxTodos.Checked == false)
+			{
+				mtxtDia.Enabled = true;
+				dgvVistaPrevia.DataSource = limpiadata;
 			}
 		}
 
-		private void chbxDia_CheckedChanged(object sender, EventArgs e)
+		private void btnConsultar_Click(object sender, EventArgs e)
 		{
-			if (chbxDia.Checked == true && rbnDiarios.Checked == true)
+			DataTable tablaconsulta = new DataTable();
+			if (txtEmpleado.Text == "" && chbxTodos.Checked == false && mtxtDia.Text == "    -  -")
 			{
-				cbxDia.Enabled = true;
-				SeleccionaDatoFecha(cbxDia, "fechatrabajada", "date_format(fechatrabajada, '%d')","d", "diariose");
+				MessageBox.Show("Debe rellenar los cambios para realizar una búsqueda.");
 			}
-			else
+			else if (txtEmpleado.Text == "" && chbxTodos.Checked == false && mtxtDia.Text != "    -  -")
 			{
-				cbxDia.Enabled = false;
+				MessageBox.Show("Debe elegir un empleado.");
+			}
+			else if (txtEmpleado.Text != "" && chbxTodos.Checked == false && mtxtDia.Text == "    -  -")
+			{
+				MessageBox.Show("Debe ingresar una fecha.");
+			}
+			else if (txtEmpleado.Text == "*" && chbxTodos.Checked == true)
+			{
+				tablaconsulta = controlador.ConsultaDiarios("*", txtEmpleado.Text);
+			}
+			else if (txtEmpleado.Text == "*" && chbxTodos.Checked == false && mtxtDia.Text != "    -  -")
+			{
+				tablaconsulta = controlador.ConsultaDiarios(mtxtDia.Text, txtEmpleado.Text);
+			}
+			else if (txtEmpleado.Text != "*" && chbxTodos.Checked == true)
+			{
+				tablaconsulta = controlador.ConsultaDiarios("*", txtEmpleado.Text);
+			}
+			else if (txtEmpleado.Text != "*" && mtxtDia.Text != "    -  -")
+			{
+				tablaconsulta = controlador.ConsultaDiarios(mtxtDia.Text, txtEmpleado.Text);
+			}
+
+			dgvVistaPrevia.DataSource = tablaconsulta;
+		}
+
+		private void mtxtDia_TextChanged(object sender, EventArgs e)
+		{
+			if (mtxtDia.Text == "    -  -")
+			{
+				dgvVistaPrevia.DataSource = limpiadata;
 			}
 		}
 	}

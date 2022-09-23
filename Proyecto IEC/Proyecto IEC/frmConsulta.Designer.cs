@@ -35,17 +35,15 @@ namespace Proyecto_IEC
 			this.rbnMensual = new System.Windows.Forms.RadioButton();
 			this.rbnDiarios = new System.Windows.Forms.RadioButton();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.chbxEmpleado = new System.Windows.Forms.CheckBox();
-			this.chbxMes = new System.Windows.Forms.CheckBox();
-			this.cbxAnio = new System.Windows.Forms.ComboBox();
+			this.chbxTodos = new System.Windows.Forms.CheckBox();
+			this.label3 = new System.Windows.Forms.Label();
+			this.mtxtDia = new System.Windows.Forms.MaskedTextBox();
+			this.label2 = new System.Windows.Forms.Label();
 			this.cbxEmpleado = new System.Windows.Forms.ComboBox();
-			this.cbxMes = new System.Windows.Forms.ComboBox();
 			this.dgvVistaPrevia = new System.Windows.Forms.DataGridView();
 			this.txtEmpleado = new System.Windows.Forms.TextBox();
 			this.txtbusqueda = new System.Windows.Forms.TextBox();
-			this.chbxAnio = new System.Windows.Forms.CheckBox();
-			this.chbxDia = new System.Windows.Forms.CheckBox();
-			this.cbxDia = new System.Windows.Forms.ComboBox();
+			this.btnConsultar = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
@@ -95,79 +93,63 @@ namespace Proyecto_IEC
 			// 
 			// panel2
 			// 
-			this.panel2.Controls.Add(this.chbxDia);
-			this.panel2.Controls.Add(this.cbxDia);
-			this.panel2.Controls.Add(this.chbxAnio);
-			this.panel2.Controls.Add(this.chbxEmpleado);
-			this.panel2.Controls.Add(this.chbxMes);
-			this.panel2.Controls.Add(this.cbxAnio);
+			this.panel2.Controls.Add(this.chbxTodos);
+			this.panel2.Controls.Add(this.label3);
+			this.panel2.Controls.Add(this.mtxtDia);
+			this.panel2.Controls.Add(this.label2);
 			this.panel2.Controls.Add(this.cbxEmpleado);
-			this.panel2.Controls.Add(this.cbxMes);
 			this.panel2.Location = new System.Drawing.Point(12, 51);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(746, 27);
+			this.panel2.Size = new System.Drawing.Size(473, 27);
 			this.panel2.TabIndex = 2;
 			// 
-			// chbxEmpleado
+			// chbxTodos
 			// 
-			this.chbxEmpleado.AutoSize = true;
-			this.chbxEmpleado.Location = new System.Drawing.Point(540, 7);
-			this.chbxEmpleado.Name = "chbxEmpleado";
-			this.chbxEmpleado.Size = new System.Drawing.Size(73, 17);
-			this.chbxEmpleado.TabIndex = 111;
-			this.chbxEmpleado.Text = "Empleado";
-			this.chbxEmpleado.UseVisualStyleBackColor = true;
+			this.chbxTodos.AutoSize = true;
+			this.chbxTodos.Location = new System.Drawing.Point(376, 5);
+			this.chbxTodos.Name = "chbxTodos";
+			this.chbxTodos.Size = new System.Drawing.Size(94, 17);
+			this.chbxTodos.TabIndex = 117;
+			this.chbxTodos.Text = "Mostrar Todos";
+			this.chbxTodos.UseVisualStyleBackColor = true;
+			this.chbxTodos.CheckedChanged += new System.EventHandler(this.chbxTodos_CheckedChanged);
 			// 
-			// chbxMes
+			// label3
 			// 
-			this.chbxMes.AutoSize = true;
-			this.chbxMes.Location = new System.Drawing.Point(184, 8);
-			this.chbxMes.Name = "chbxMes";
-			this.chbxMes.Size = new System.Drawing.Size(46, 17);
-			this.chbxMes.TabIndex = 110;
-			this.chbxMes.Text = "Mes";
-			this.chbxMes.UseVisualStyleBackColor = true;
-			this.chbxMes.CheckedChanged += new System.EventHandler(this.chbxMes_CheckedChanged);
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(228, 8);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(25, 13);
+			this.label3.TabIndex = 116;
+			this.label3.Text = "Día";
 			// 
-			// cbxAnio
+			// mtxtDia
 			// 
-			this.cbxAnio.FormattingEnabled = true;
-			this.cbxAnio.Location = new System.Drawing.Point(51, 4);
-			this.cbxAnio.Name = "cbxAnio";
-			this.cbxAnio.Size = new System.Drawing.Size(121, 21);
-			this.cbxAnio.TabIndex = 7;
-			this.cbxAnio.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+			this.mtxtDia.Location = new System.Drawing.Point(259, 3);
+			this.mtxtDia.Mask = "0000-00-00";
+			this.mtxtDia.Name = "mtxtDia";
+			this.mtxtDia.Size = new System.Drawing.Size(100, 20);
+			this.mtxtDia.TabIndex = 115;
+			this.mtxtDia.ValidatingType = typeof(System.DateTime);
+			this.mtxtDia.TextChanged += new System.EventHandler(this.mtxtDia_TextChanged);
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(3, 8);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(54, 13);
+			this.label2.TabIndex = 114;
+			this.label2.Text = "Empleado";
 			// 
 			// cbxEmpleado
 			// 
 			this.cbxEmpleado.FormattingEnabled = true;
-			this.cbxEmpleado.Location = new System.Drawing.Point(613, 4);
+			this.cbxEmpleado.Location = new System.Drawing.Point(63, 3);
 			this.cbxEmpleado.Name = "cbxEmpleado";
 			this.cbxEmpleado.Size = new System.Drawing.Size(121, 21);
 			this.cbxEmpleado.TabIndex = 3;
-			// 
-			// cbxMes
-			// 
-			this.cbxMes.FormattingEnabled = true;
-			this.cbxMes.Items.AddRange(new object[] {
-            "Seleccione un mes...",
-            "ENERO",
-            "FEBRERO",
-            "MARZO",
-            "ABRIL",
-            "MAYO",
-            "JUNIO",
-            "JULIO",
-            "AGOSTO",
-            "SEPTIEMBRE",
-            "OCTUBRE",
-            "NOVIEMBRE",
-            "DICIEMBRE"});
-			this.cbxMes.Location = new System.Drawing.Point(232, 4);
-			this.cbxMes.Name = "cbxMes";
-			this.cbxMes.Size = new System.Drawing.Size(121, 21);
-			this.cbxMes.TabIndex = 2;
-			this.cbxMes.SelectedIndexChanged += new System.EventHandler(this.cbxMes_SelectedIndexChanged);
+			this.cbxEmpleado.SelectedIndexChanged += new System.EventHandler(this.cbxEmpleado_SelectedIndexChanged);
 			// 
 			// dgvVistaPrevia
 			// 
@@ -177,16 +159,19 @@ namespace Proyecto_IEC
 			this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvVistaPrevia.Location = new System.Drawing.Point(12, 84);
 			this.dgvVistaPrevia.Name = "dgvVistaPrevia";
+			this.dgvVistaPrevia.ReadOnly = true;
 			this.dgvVistaPrevia.RowHeadersWidth = 51;
 			this.dgvVistaPrevia.Size = new System.Drawing.Size(1300, 354);
 			this.dgvVistaPrevia.TabIndex = 104;
 			// 
 			// txtEmpleado
 			// 
-			this.txtEmpleado.Location = new System.Drawing.Point(792, 56);
+			this.txtEmpleado.Location = new System.Drawing.Point(491, 54);
 			this.txtEmpleado.Name = "txtEmpleado";
 			this.txtEmpleado.Size = new System.Drawing.Size(100, 20);
 			this.txtEmpleado.TabIndex = 106;
+			this.txtEmpleado.Tag = "pkid";
+			this.txtEmpleado.Visible = false;
 			// 
 			// txtbusqueda
 			// 
@@ -195,41 +180,22 @@ namespace Proyecto_IEC
 			this.txtbusqueda.Size = new System.Drawing.Size(100, 20);
 			this.txtbusqueda.TabIndex = 109;
 			// 
-			// chbxAnio
+			// btnConsultar
 			// 
-			this.chbxAnio.AutoSize = true;
-			this.chbxAnio.Location = new System.Drawing.Point(6, 6);
-			this.chbxAnio.Name = "chbxAnio";
-			this.chbxAnio.Size = new System.Drawing.Size(45, 17);
-			this.chbxAnio.TabIndex = 112;
-			this.chbxAnio.Text = "Año";
-			this.chbxAnio.UseVisualStyleBackColor = true;
-			this.chbxAnio.CheckedChanged += new System.EventHandler(this.chbxAnio_CheckedChanged);
-			// 
-			// chbxDia
-			// 
-			this.chbxDia.AutoSize = true;
-			this.chbxDia.Location = new System.Drawing.Point(364, 7);
-			this.chbxDia.Name = "chbxDia";
-			this.chbxDia.Size = new System.Drawing.Size(44, 17);
-			this.chbxDia.TabIndex = 114;
-			this.chbxDia.Text = "Día";
-			this.chbxDia.UseVisualStyleBackColor = true;
-			this.chbxDia.CheckedChanged += new System.EventHandler(this.chbxDia_CheckedChanged);
-			// 
-			// cbxDia
-			// 
-			this.cbxDia.FormattingEnabled = true;
-			this.cbxDia.Location = new System.Drawing.Point(409, 4);
-			this.cbxDia.Name = "cbxDia";
-			this.cbxDia.Size = new System.Drawing.Size(121, 21);
-			this.cbxDia.TabIndex = 113;
+			this.btnConsultar.Location = new System.Drawing.Point(491, 52);
+			this.btnConsultar.Name = "btnConsultar";
+			this.btnConsultar.Size = new System.Drawing.Size(75, 23);
+			this.btnConsultar.TabIndex = 110;
+			this.btnConsultar.Text = "Consultar";
+			this.btnConsultar.UseVisualStyleBackColor = true;
+			this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
 			// 
 			// frmConsulta
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1324, 450);
+			this.Controls.Add(this.btnConsultar);
 			this.Controls.Add(this.txtbusqueda);
 			this.Controls.Add(this.txtEmpleado);
 			this.Controls.Add(this.dgvVistaPrevia);
@@ -257,15 +223,13 @@ namespace Proyecto_IEC
 		private System.Windows.Forms.RadioButton rbnDiarios;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.ComboBox cbxEmpleado;
-		private System.Windows.Forms.ComboBox cbxMes;
-		private System.Windows.Forms.ComboBox cbxAnio;
 		private System.Windows.Forms.DataGridView dgvVistaPrevia;
 		private System.Windows.Forms.TextBox txtEmpleado;
 		private System.Windows.Forms.TextBox txtbusqueda;
-		private System.Windows.Forms.CheckBox chbxEmpleado;
-		private System.Windows.Forms.CheckBox chbxMes;
-		private System.Windows.Forms.CheckBox chbxDia;
-		private System.Windows.Forms.ComboBox cbxDia;
-		private System.Windows.Forms.CheckBox chbxAnio;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.CheckBox chbxTodos;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.MaskedTextBox mtxtDia;
+		private System.Windows.Forms.Button btnConsultar;
 	}
 }

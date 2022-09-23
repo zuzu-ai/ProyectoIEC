@@ -721,37 +721,75 @@ namespace CapaModeloProyectoIEC
         }
 
         //FORMA DE CONSULTA
-        public void SeleccionaDatoFecha(ComboBox cbx, string value, string display, string partefecha, string tabla)
+        public void LlenarCombo(ComboBox cbx, string tabla, string campobuscado)
         {
+            string dato = "";
             try
             {
-                cbx.DataSource = null; cbx.Items.Clear();
-                String psql = "SELECT DISTINCT date_format(fechatrabajada, '%" + partefecha + "') FROM " + tabla + " WHERE estado = '1'";
+                cbx.Items.Clear();
+                cbx.Items.Add("Seleccione un elemento...");
+                cbx.Items.Add("Todos");
+                string insertQuery = "SELECT * FROM " + tabla + " WHERE estado = '1';";
+                //MessageBox.Show(insertQuery);
                 OdbcConnection conect = cn.conexion();
-                try
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                command.ExecuteNonQuery(); OdbcDataReader busquedac;
+                busquedac = command.ExecuteReader();
+                if (!busquedac.HasRows)
                 {
-                    OdbcCommand comando = new OdbcCommand(psql, conect);
-                    OdbcDataAdapter data = new OdbcDataAdapter(comando);
-                    DataTable dt = new DataTable();
-                    data.Fill(dt);
-                    cbx.ValueMember = value;
-                    cbx.DisplayMember = display;
-                    cbx.DataSource = dt;
+                    // throw new Exception("No hay dato guardado.");
                 }
-                catch (OdbcException ex)
+                while (busquedac.Read())
                 {
-                    MessageBox.Show("Error al leer los datos " + ex.Message);
+                    dato = busquedac[campobuscado].ToString();
+                    cbx.Items.Add(dato);
                 }
-                finally
-                {
-                    cn.desconexion(conect);
-                }
+                cn.desconexion(conect);
             }
-            catch (OdbcException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error al leer los datos " + ex.Message);
             }
         }
+        public DataTable ConsultaDiarios(string fechatrabajada, string empleado)
+        {
+            DataTable tablainicial = new DataTable();
 
+            try
+            {
+                string consultatodostodos= "select distinct diariosd.pkid as 'ID',diariosd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',diariose.fechatrabajada as 'Fecha', diariosd.entrada as 'Hora Entrada', diariosd.salida as 'Hora Salida', diariosd.htrabajadas as 'Horas Trabajadas', diariosd.hdescontadas as 'Horas Descontadas', diariosd.ausencias as 'Ausensias', diariosd.hextras as 'Horas Extras', diariosd.pcomidas as 'Pago de Comidas', diariosd.pcombustible as 'Pago de Combustible', diariosd.pviaticos as 'Pago de Viáticos', diariosd.potros as 'Otros Pagos', diariosd.observaciones as 'Observaciones' from diariose, diariosd, empleado where diariosd.fkempleado = empleado.pkid and diariosd.fkdiariosE = diariose.pkid order by diariosd.fkempleado;";
+                string consultatodosfecha = "select distinct diariosd.pkid as 'ID',diariosd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',diariose.fechatrabajada as 'Fecha', diariosd.entrada as 'Hora Entrada', diariosd.salida as 'Hora Salida', diariosd.htrabajadas as 'Horas Trabajadas', diariosd.hdescontadas as 'Horas Descontadas', diariosd.ausencias as 'Ausensias', diariosd.hextras as 'Horas Extras', diariosd.pcomidas as 'Pago de Comidas', diariosd.pcombustible as 'Pago de Combustible', diariosd.pviaticos as 'Pago de Viáticos', diariosd.potros as 'Otros Pagos', diariosd.observaciones as 'Observaciones' from diariose, diariosd, empleado where diariosd.fkempleado = empleado.pkid and diariosd.fkdiariosE = diariose.pkid and diariose.fechatrabajada = '" + fechatrabajada + "' order by diariosd.fkempleado;";
+                string consultaempleadotodos= "select distinct diariosd.pkid as 'ID',diariosd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',diariose.fechatrabajada as 'Fecha', diariosd.entrada as 'Hora Entrada', diariosd.salida as 'Hora Salida', diariosd.htrabajadas as 'Horas Trabajadas', diariosd.hdescontadas as 'Horas Descontadas', diariosd.ausencias as 'Ausensias', diariosd.hextras as 'Horas Extras', diariosd.pcomidas as 'Pago de Comidas', diariosd.pcombustible as 'Pago de Combustible', diariosd.pviaticos as 'Pago de Viáticos', diariosd.potros as 'Otros Pagos', diariosd.observaciones as 'Observaciones' from diariose, diariosd, empleado where diariosd.fkempleado = empleado.pkid and diariosd.fkdiariosE = diariose.pkid and diariosd.fkempleado = '" + empleado + "' order by diariose.fechatrabajada;";
+                string consultaempleadofecha= "select distinct diariosd.pkid as 'ID',diariosd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',diariose.fechatrabajada as 'Fecha', diariosd.entrada as 'Hora Entrada', diariosd.salida as 'Hora Salida', diariosd.htrabajadas as 'Horas Trabajadas', diariosd.hdescontadas as 'Horas Descontadas', diariosd.ausencias as 'Ausensias', diariosd.hextras as 'Horas Extras', diariosd.pcomidas as 'Pago de Comidas', diariosd.pcombustible as 'Pago de Combustible', diariosd.pviaticos as 'Pago de Viáticos', diariosd.potros as 'Otros Pagos', diariosd.observaciones as 'Observaciones' from diariose, diariosd, empleado where diariosd.fkempleado = empleado.pkid and diariosd.fkdiariosE = diariose.pkid and diariosd.fkempleado = '" + empleado + "' and diariose.fechatrabajada = '" + fechatrabajada + "' order by diariose.fechatrabajada;";
+                string insertQuery = "";
+
+
+                if (fechatrabajada == "*" && empleado == "*")
+                {
+                    insertQuery = consultatodostodos;
+                }
+                else if (fechatrabajada != "*" && empleado == "*")
+                {
+                    insertQuery = consultatodosfecha;
+                }
+                else if (fechatrabajada == "*" && empleado != "*")
+                {
+                    insertQuery = consultaempleadotodos;
+                }
+                else if (fechatrabajada != "*" && empleado != "*")
+                {
+                    insertQuery = consultaempleadofecha;
+                }
+                //MessageBox.Show(insertQuery);
+                OdbcConnection conect = cn.conexion();
+                OdbcDataAdapter adapter = new OdbcDataAdapter(insertQuery, conect);
+                adapter.Fill(tablainicial);
+                cn.desconexion(conect);
+            }
+            catch (Exception ex)
+            {
+            }
+            
+            return tablainicial;
+        }
     }
 }
