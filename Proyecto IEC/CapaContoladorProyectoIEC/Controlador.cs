@@ -69,6 +69,14 @@ namespace CapaContoladorProyectoIEC
             return tabla;
         }
 
+        public void guardarEncabezadoMes(string id, string fechainicio, string fechafin, string estado)
+        {
+            sn.guardarEncabezadoMes(id, fechainicio, fechafin, estado);
+        }
+        public void guardarDetalleMes(int idD, string idE, string empleado, string htrabajadas, string hdescontadas, string ausencias, string hextras, string pcomidas, string pcombustible, string pviaticos, string potros, string observaciones)
+        {
+            sn.guardarDetalleMes(idD, idE, empleado, htrabajadas, hdescontadas, ausencias, hextras, pcomidas, pcombustible, pviaticos, potros, observaciones);
+        }
 
         //Foto
         public byte[] obtenerByte(string id)
@@ -107,6 +115,13 @@ namespace CapaContoladorProyectoIEC
         {
             DataTable tablainicial = new DataTable();
             tablainicial = sn.ConsultaDiarios(fechatrabajada, empleado);
+
+            return tablainicial;
+        }
+        public DataTable ConsultaMensuales(string fechainicio, string fechafin, string empleado)
+        {
+            DataTable tablainicial = new DataTable();
+            tablainicial = sn.ConsultaMensuales(fechainicio, fechafin, empleado);
 
             return tablainicial;
         }

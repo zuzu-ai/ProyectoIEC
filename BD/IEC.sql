@@ -181,3 +181,29 @@ estado varchar(1) not null,
 foreign key (fkdiariosE) references diariosE(pkid),
 foreign key (fkempleado) references empleado(pkid)
 )engine=InnoDB DEFAULT CHARSET=latin1;
+-- TABLA MENSUALESE
+create table mensualesE(
+pkid varchar(4) primary key,
+fechainicio date not null,
+fechafin date not null,
+estado varchar(1) not null
+)engine=InnoDB DEFAULT CHARSET=latin1;
+-- TABLA MENSUALESD
+create table mensualesD(
+pkid varchar(4) primary key,
+fkmensualesE varchar(4) not null,
+fkempleado varchar(4) not null,
+htrabajadas time null,
+hdescontadas time null,
+ausencias int null,
+hextras time null,
+pcomidas double null,
+pcombustible double null,
+pviaticos double null,
+potros double null,
+observaciones varchar(800) null,
+estado varchar(1) not null,
+
+foreign key (fkmensualesE) references mensualesE(pkid),
+foreign key (fkempleado) references empleado(pkid)
+)engine=InnoDB DEFAULT CHARSET=latin1;

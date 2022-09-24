@@ -14,11 +14,15 @@ namespace Proyecto_IEC
 	public partial class frmCalculoMensual : Form
 	{
 		private Controlador cn = new Controlador();
+		DataTable table = new DataTable();
+		DataTable limpiadata = new DataTable();
 		public frmCalculoMensual()
 		{
 			InitializeComponent();
 			txtfechainicio.Text = dtpInicio.Value.ToString("yyyy-MM-dd");
 			txtfechafin.Text = dtpFin.Value.ToString("yyyy-MM-dd");
+			int id = cn.idSiguienteDeNuevoIngreso("mensualesE", "pkid");
+			txtID.Text = id.ToString();
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -50,6 +54,44 @@ namespace Proyecto_IEC
 		private void dtpFin_ValueChanged(object sender, EventArgs e)
 		{
 			txtfechafin.Text = dtpFin.Value.ToString("yyyy-MM-dd");
+		}
+
+		private void btnExportar_Click(object sender, EventArgs e)
+		{
+			table = (DataTable)dgvVistaPrevia.DataSource;
+			int contador = dgvVistaPrevia.Rows.Count;
+			try
+			{
+				cn.guardarEncabezadoMes(txtID.Text, txtfechainicio.Text, txtfechafin.Text, "1");
+
+				try
+				{
+					for (int i = 0; i < contador; i++)
+					{
+						int idD = cn.idSiguienteDeNuevoIngreso("mensualesD", "pkid");
+						string empleado = cn.BuscaDato("empleado", "pkid", "nombre", table.Rows[i]["Nombre"].ToString());
+						string htrabajadas = table.Rows[i]["Horas Trabajadas"].ToString();
+						string hdescontadas = table.Rows[i]["Horas Descontadas"].ToString();
+						string ausencias = table.Rows[i]["Ausencias"].ToString();
+						string hextras = table.Rows[i]["Horas Extras"].ToString();
+						string pcomidas = table.Rows[i]["Pago de Comidas"].ToString();
+						string pcombustible = table.Rows[i]["Pago de Combustible"].ToString();
+						string pviaticos = table.Rows[i]["Pago de Viáticos"].ToString();
+						string potros = table.Rows[i]["Otros Pagos"].ToString();
+						string observaciones = table.Rows[i]["Observaciones"].ToString();
+						cn.guardarDetalleMes(idD, txtID.Text,empleado, htrabajadas, hdescontadas, ausencias, hextras, pcomidas, pcombustible, pviaticos, potros, observaciones);
+
+					}
+				}
+				catch (Exception ex) { MessageBox.Show("No se puieron añadir los detalles de diario."); }
+				MessageBox.Show("Se añadieron los diarios correctamente.");
+			}
+			catch (Exception ex) { MessageBox.Show("No se puieron añadir los diarios."); }
+			dgvVistaPrevia.DataSource = limpiadata;
+			int idrefresh = cn.idSiguienteDeNuevoIngreso("mensualesE", "pkid");
+			txtID.Text = idrefresh.ToString();
+			dtpInicio.Value = DateTime.Now;
+			dtpFin.Value = DateTime.Now;
 		}
 	}
 }
