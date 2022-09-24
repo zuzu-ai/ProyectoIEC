@@ -61,10 +61,10 @@ namespace CapaContoladorProyectoIEC
         {
             sn.guardarDetalleDiarios(idD, idE, empleado, entrada, salida, htrabajadas, hdescontadas, ausencias, hextras, pcomidas, pcombustible, pviaticos, potros, observaciones);
         }
-        public DataTable CalculosMes(string ultimafecha)
+        public DataTable CalculosMes(string primerafecha, string ultimafecha)
         {
             DataTable tabla = new DataTable();
-            tabla = sn.CalculosMes(ultimafecha);
+            tabla = sn.CalculosMes(primerafecha, ultimafecha);
 
             return tabla;
         }

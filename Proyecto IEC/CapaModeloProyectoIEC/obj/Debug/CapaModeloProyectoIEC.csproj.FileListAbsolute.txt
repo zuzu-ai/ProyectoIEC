@@ -16,3 +16,9 @@ F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj
 F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
 F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
 C:\Users\ZUZU\Desktop\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
+F:\P\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+F:\P\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+F:\P\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
+F:\P\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
+F:\P\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
+F:\P\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
