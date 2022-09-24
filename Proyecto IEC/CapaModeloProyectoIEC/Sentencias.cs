@@ -155,12 +155,41 @@ namespace CapaModeloProyectoIEC
                 return dato;
             }
         }
-        public string Buscadiario(string tabla, string campo, string campobuscado, string datoreferencia, string campobuscado2, string datoreferencia2)
+        public string BuscaDatoEmpleado(string tabla, string campo, string campobuscado, string datoreferencia, string campobuscado2, string datoreferencia2)
         {
             string dato = "";
             try
             {
                 string insertQuery = "SELECT * FROM " + tabla + " WHERE " + campobuscado + " = '" + datoreferencia + "' AND " + campobuscado2 + " = '" + datoreferencia2 + "';";
+               // MessageBox.Show(insertQuery);
+                OdbcConnection conect = cn.conexion();
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                command.ExecuteNonQuery(); OdbcDataReader busquedac;
+                busquedac = command.ExecuteReader();
+                if (!busquedac.HasRows)
+                {
+                    // throw new Exception("No hay dato guardado.");
+                }
+                if (busquedac.Read())
+                {
+                    dato = busquedac[campo].ToString();
+                }
+                cn.desconexion(conect);
+                return dato;
+            }
+            catch (Exception ex)
+            {
+                return dato;
+            }
+        }
+        public string Buscadiario(string campo, string empleado, string fechatrabajada, string datobuscado, string nombrenuevo)
+        {
+            string dato = "";
+            try
+            {
+                string insertQuery = "select " + datobuscado + " as " + nombrenuevo + " from diariose,diariosd where diariosd.fkempleado = '" + empleado + "' and diariose.fechatrabajada = '" + fechatrabajada + "' and diariosd.fkdiariosE = diariose.pkid;";
+                    
+                
                 MessageBox.Show(insertQuery);
                 OdbcConnection conect = cn.conexion();
                 OdbcCommand command = new OdbcCommand(insertQuery, conect);
@@ -520,47 +549,53 @@ namespace CapaModeloProyectoIEC
         }
 
         //CALCULO MENSUAL
-        public (string, string, string, string, string, string, string, string) obtenerDatosMes(string fechatrabajada, string empleado)
+        public (string, string, string, string, string, string, string, string) obtenerDatosMes(string fechatrabajada, string empleado, string diariose)
         {
             MessageBox.Show(fechatrabajada + "  " + empleado);
 
             //CALCULO DE HORAS TRABAJADAS AL MES
             //BUSCAMOS EL ENCABEZADO DE DIARIO SEGÚN LA FECHA
-            string diariose = Buscadiario("diariose", "pkid", "fkempleado", empleado, "fecha", fechatrabajada);
+            //string diariose = Buscadiario("diariose", empleado, fechatrabajada,"diariose.pkid","diariose" );
+            
             MessageBox.Show("diariose" + diariose);
-            //BUSCAMOS LAS HORAS TRABAJADAS ESE DÍA
-            string horastrab = BuscaDato("diariosd", "htrabajadas", "fkdiariose", diariose);
-            MessageBox.Show("horastrab" + horastrab);
-            //BUSCAMOS LAS HORAS DESCONTADAS ESE DIA
-            string horasdesc = BuscaDato("diariosd", "hdescontadas", "fkdiariose", diariose);
-            MessageBox.Show("horasdesc" + horasdesc);
-            //BUSCAR AUSENCIAS DEL DIA
-            string ausencias = BuscaDato("diariosd", "ausencias", "fkdiariose", diariose);
-            MessageBox.Show("ausencias" + ausencias);
-            //BUSCAMOS HORAS EXTRAS DEL DIA
-            string horasext = BuscaDato("diariosd", "hextras", "fkdiariose", diariose);
-            MessageBox.Show("horasext" + horasext);
-            //PAGOS DE COMIDA DEL DIA
-            string comidas = BuscaDato("diariosd", "pcomidas", "fkdiariose", diariose);
-            MessageBox.Show("comidas" + comidas);
-            //PAGOS DE COMBUSTIBLE DEL DIA -- COMBUSTILE
-            string combustible = BuscaDato("diariosd", "pcombustile", "fkdiariose", diariose);
-            MessageBox.Show("combustible" + combustible);
-            //PAGO DE VIATICOS DEL DIA
-            string viaticos = BuscaDato("diariosd", "pviaticos", "fkdiariose", diariose);
-            MessageBox.Show("viaticos" + viaticos);
-            //OTROS PAGOS DEL DIA
-            string otros = BuscaDato("diariosd", "potros", "fkdiariose", diariose);
-            MessageBox.Show("otros" + otros);
-            MessageBox.Show("dato1= " + horastrab + " dato2= " + horasdesc + " dato3= " + ausencias + " dato4= " + horasext + " dato5= " + comidas + " dato6=" + combustible + " dato7= " + viaticos + " dato8= " + otros);
 
+            string horastrab = "", horasdesc = "", ausencias = "", horasext = "", comidas = "", combustible = "", viaticos = "", otros = "";
+
+                //BUSCAMOS LAS HORAS TRABAJADAS ESE DÍA
+                horastrab = BuscaDatoEmpleado("diariosd", "htrabajadas", "fkdiariose", diariose.ToString(), "fkempleado", empleado);
+                MessageBox.Show("horastrab" + horastrab);
+                //BUSCAMOS LAS HORAS DESCONTADAS ESE DIA
+                horasdesc = BuscaDatoEmpleado("diariosd", "hdescontadas", "fkdiariose", diariose.ToString(), "fkempleado", empleado);
+                MessageBox.Show("horasdesc" + horasdesc);
+                //BUSCAR AUSENCIAS DEL DIA
+                ausencias = BuscaDatoEmpleado("diariosd", "ausencias", "fkdiariose", diariose.ToString(), "fkempleado", empleado);
+                MessageBox.Show("ausencias" + ausencias);
+                //BUSCAMOS HORAS EXTRAS DEL DIA
+                horasext = BuscaDatoEmpleado("diariosd", "hextras", "fkdiariose", diariose.ToString(), "fkempleado", empleado);
+                MessageBox.Show("horasext" + horasext);
+                //PAGOS DE COMIDA DEL DIA
+                comidas = BuscaDatoEmpleado("diariosd", "pcomidas", "fkdiariose", diariose.ToString(), "fkempleado", empleado);
+                MessageBox.Show("comidas" + comidas);
+                //PAGOS DE COMBUSTIBLE DEL DIA -- COMBUSTILE
+                combustible = BuscaDatoEmpleado("diariosd", "pcombustible", "fkdiariose", diariose.ToString(), "fkempleado", empleado);
+                MessageBox.Show("combustible" + combustible);
+                //PAGO DE VIATICOS DEL DIA
+                viaticos = BuscaDatoEmpleado("diariosd", "pviaticos", "fkdiariose", diariose.ToString(), "fkempleado", empleado);
+                MessageBox.Show("viaticos" + viaticos);
+                //OTROS PAGOS DEL DIA
+                otros = BuscaDatoEmpleado("diariosd", "potros", "fkdiariose", diariose.ToString(), "fkempleado", empleado);
+                MessageBox.Show("otros" + otros);
+                
+            MessageBox.Show("dato1= " + horastrab + " dato2= " + horasdesc + " dato3= " + ausencias + " dato4= " + horasext + " dato5= " + comidas + " dato6=" + combustible + " dato7= " + viaticos + " dato8= " + otros);
+            
             return (horastrab, horasdesc, ausencias, horasext, comidas, combustible, viaticos, otros);
         }
 
-        public DataTable CalculosMes(string ultimafecha)
+        public DataTable CalculosMes(string primerafecha,string ultimafecha)
         {
             DataTable tablainicial = new DataTable();
             int cantidadEmpleados = idEncabezadoActual("empleado", "pkid");
+            int cantidadDiarios = idEncabezadoActual("diariose", "pkid");
 
             tablainicial.Columns.Add("ID");
             tablainicial.Columns.Add("Nombre");
@@ -577,69 +612,107 @@ namespace CapaModeloProyectoIEC
             //BUSCAR LA INFORMACIÓN DE LOS EMPLEADOS
             for (int i = 1; i <= cantidadEmpleados; i++)
             {
-                DataRow row = tablainicial.NewRow();
-                row["ID"] = i.ToString();
-                row["Nombre"] = BuscaDato("empleado", "nombre", "pkid", i.ToString());
-
-                //CONSEGUIMOS EL MES, LOS DÍAS Y EL AÑO
-                DateTime uf = Convert.ToDateTime(ultimafecha);
-                string dias = uf.ToString("dd");
-                int diasc = Int32.Parse(dias);
-                string mes = uf.ToString("MM");
-                string anio = uf.ToString("yyyy");
-                var horast = 0; var horasd = 0; var ausencias = 0; var horase = 0; double pcomidas = 0; double pcomb = 0; double pviat = 0; double otp = 0;
-                for (int j = 1; j <= diasc; j++)
+                for (int d = 1; d <= cantidadDiarios; d++)
                 {
-                    DateTime diactual = Convert.ToDateTime(j.ToString());
-                    string dia = diactual.ToString("dd");
-                    string fechaenviada = anio + "-" + mes + "-" + dia;
+                    DataRow row = tablainicial.NewRow();
+                    row["ID"] = i.ToString();
+                    row["Nombre"] = BuscaDato("empleado", "nombre", "pkid", i.ToString());
 
-                    //BUSCAMOS LOS DATOS POR DIA HASTA COMPLETAR EL MES
-                    var (dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8) = obtenerDatosMes(fechaenviada, i.ToString());
-                    try
+                    //CONSEGUIMOS EL MES, LOS DÍAS Y EL AÑO
+                    DateTime uf = Convert.ToDateTime(ultimafecha);
+                    DateTime pf = Convert.ToDateTime(primerafecha);
+                    string dias = uf.ToString("dd");
+                    int diasc = Int32.Parse(dias);
+                    string mes = uf.ToString("MM");
+                    string anio = uf.ToString("yyyy");
+                    var horast = 0; var horasd = 0; var ausencias = 0; var horase = 0; double pcomidas = 0; double pcomb = 0; double pviat = 0; double otp = 0;
+                    // for (int j = 1; j <= diasc; j++)
+                    TimeSpan hotrastotales = new TimeSpan();
+                    TimeSpan hotrastotalesdescontadas = new TimeSpan();
+                    TimeSpan hotrastotalesextra = new TimeSpan();
+                    for (DateTime j = pf; j <= uf; j = j.AddDays(1))
                     {
-                        //SUMAMOS RESULTADOS DE TODOS LOS DIAS
-                        horast = horast + Int32.Parse(dato1);
-                        horasd = horasd + Int32.Parse(dato2);
-                        ausencias = ausencias + Int32.Parse(dato3);
-                        horase = horase + Int32.Parse(dato4);
-                        pcomidas = pcomidas + Double.Parse(dato5);
-                        pcomb = pcomb + Double.Parse(dato6);
-                        pviat = pviat + Double.Parse(dato7);
-                        otp = otp + Double.Parse(dato8);
+                        DateTime diactual = j;
+                        string dia = diactual.ToString("dd");
+                        string fechaenviada = anio + "-" + mes + "-" + dia;
+                        
+                        //BUSCAMOS LOS DATOS POR DIA HASTA COMPLETAR EL MES
+                        var (dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8) = obtenerDatosMes(fechaenviada, i.ToString(), d.ToString());
+                        try
+                        {
+                            DateTime datoA = new DateTime();
+                            datoA = Convert.ToDateTime(dato1);
+                            string horafechacalculo = j.ToString("dd") + "/" + uf.ToString("MM") + "/" + uf.ToString("yyyy") + " " + dato1;
+                            string horadescontadacalculo = j.ToString("dd") + "/" + uf.ToString("MM") + "/" + uf.ToString("yyyy") + " " + dato2;
+                            string horaextracalculo = j.ToString("dd") + "/" + uf.ToString("MM") + "/" + uf.ToString("yyyy") + " " + dato4;
+                            string horacero = j.ToString("dd") + "/" + uf.ToString("MM") + "/" + uf.ToString("yyyy") + " 00:00:00";
+                            DateTime datoB = new DateTime();
+                            datoB = Convert.ToDateTime(horafechacalculo);
+                            DateTime datoC = new DateTime();
+                            datoC = Convert.ToDateTime(horacero);
+                            DateTime datoD = new DateTime();
+                            datoD = Convert.ToDateTime(horadescontadacalculo);
+                            DateTime datoE = new DateTime();
+                            datoE = Convert.ToDateTime(horaextracalculo);
+                            TimeSpan dts = new TimeSpan();
+                            TimeSpan htd = new TimeSpan();
+                            TimeSpan hte = new TimeSpan();
+                            dts = datoB - datoC;
+                            hotrastotales = hotrastotales + dts;
+                            htd = datoD - datoC;
+                            hotrastotalesdescontadas = hotrastotalesdescontadas + htd;
+                            hte = datoE - datoC;
+                            hotrastotalesextra = hotrastotalesextra + hte;
+
+                            //SUMAMOS RESULTADOS DE TODOS LOS DIAS
+                            // datoB =Convert.ToDateTime(dato1);//Convert.ToDateTime(dato1);
+
+
+                            //datoA.AddHours(datoC);
+                            MessageBox.Show("horas datoA: " + datoB + "  horas pf : " + pf.ToString() + " horas totales= " + hotrastotales);
+                            //horast = horast + Int32.Parse(dato1);
+                            //horasd = horasd + Int32.Parse(dato2);
+                            ausencias = ausencias + Int32.Parse(dato3);
+                           // horase = horase + Int32.Parse(dato4);
+                            pcomidas = pcomidas + Double.Parse(dato5);
+                            pcomb = pcomb + Double.Parse(dato6);
+                            pviat = pviat + Double.Parse(dato7);
+                            otp = otp + Double.Parse(dato8);
+                            
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show(e.ToString());
+                        }
                     }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show(e.ToString());
-                    }
+                    //CONVERTIMOS LAS HORAS
+                    TimeSpan ht = new TimeSpan(
+                        Convert.ToInt32(Math.Floor(decimal.Parse(horast.ToString()))),
+                        Convert.ToInt32((horast - Math.Floor(decimal.Parse(horast.ToString()))) * 60),
+                        0);
+                    string horastrabajadas = ht.ToString();
+                    TimeSpan hd = new TimeSpan(
+                        Convert.ToInt32(Math.Floor(decimal.Parse(horasd.ToString()))),
+                        Convert.ToInt32((horasd - Math.Floor(decimal.Parse(horasd.ToString()))) * 60),
+                        0);
+                    string horasdescontadas = ht.ToString();
+                    TimeSpan he = new TimeSpan(
+                        Convert.ToInt32(Math.Floor(decimal.Parse(horase.ToString()))),
+                        Convert.ToInt32((horase - Math.Floor(decimal.Parse(horase.ToString()))) * 60),
+                        0);
+                    //IMPRIMIMOS EN TABLA
+                    string horasextras = he.ToString();
+                    row["Horas Trabajadas"] = hotrastotales.ToString(); //horastrabajadas.ToString();
+                    row["Horas Descontadas"] = hotrastotalesdescontadas.ToString();//horasdescontadas.ToString();
+                    row["Ausencias"] = ausencias.ToString();
+                    row["Horas Extras"] = hotrastotalesextra.ToString(); //horasextras.ToString();
+                    row["Pago de Comidas"] = pcomidas.ToString();
+                    row["Pago de Combustible"] = pcomb.ToString();
+                    row["Pago de Viáticos"] = pviat.ToString();
+                    row["Otros Pagos"] = otp.ToString();
+
+                    tablainicial.Rows.Add(row);
                 }
-                //CONVERTIMOS LAS HORAS
-                TimeSpan ht = new TimeSpan(
-                    Convert.ToInt32(Math.Floor(decimal.Parse(horast.ToString()))),
-                    Convert.ToInt32((horast - Math.Floor(decimal.Parse(horast.ToString()))) * 60),
-                    0);
-                string horastrabajadas = ht.ToString();
-                TimeSpan hd = new TimeSpan(
-                    Convert.ToInt32(Math.Floor(decimal.Parse(horasd.ToString()))),
-                    Convert.ToInt32((horasd - Math.Floor(decimal.Parse(horasd.ToString()))) * 60),
-                    0);
-                string horasdescontadas = ht.ToString();
-                TimeSpan he = new TimeSpan(
-                    Convert.ToInt32(Math.Floor(decimal.Parse(horase.ToString()))),
-                    Convert.ToInt32((horase - Math.Floor(decimal.Parse(horase.ToString()))) * 60),
-                    0);
-                //IMPRIMIMOS EN TABLA
-                string horasextras = he.ToString();
-                row["Horas Trabajadas"] = horastrabajadas.ToString();
-                row["Horas Descontadas"] = horasdescontadas.ToString();
-                row["Ausencias"] = ausencias.ToString();
-                row["Horas Extras"] = horasextras.ToString();
-                row["Pago de Comidas"] = pcomidas.ToString();
-                row["Pago de Combustible"] = pcomb.ToString();
-                row["Pago de Viáticos"] = pviat.ToString();
-                row["Otros Pagos"] = otp.ToString();
-
-                tablainicial.Rows.Add(row);
             }
 
             return tablainicial;

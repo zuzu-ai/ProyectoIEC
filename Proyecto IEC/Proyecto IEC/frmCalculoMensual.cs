@@ -28,7 +28,7 @@ namespace Proyecto_IEC
 
 		public void Calculo()
 		{
-			DataTable tablafinal = cn.CalculosMes(txtfechafin.Text);
+			DataTable tablafinal = cn.CalculosMes(txtfechainicio.Text,txtfechafin.Text);
 			dgvVistaPrevia.DataSource = tablafinal;
 			dgvVistaPrevia.Columns[0].ReadOnly = true;
 			dgvVistaPrevia.Columns[1].ReadOnly = true;
