@@ -48,16 +48,31 @@ insert into empleado values ("1","1", "José René Quemé Hervías","21458962501
 insert into empleado values ("2","1", "Jorge Mario Ruiz Gonzales","5647821450101","1",null,null,null,"1");
 insert into empleado values ("3","2", "Pedro David Hernandez Turcos","6632147850101","1",null,null,null,"1");
 insert into empleado values ("4","2", "Andrea Sofía Galindo Zacs","6632014570101","1",null,null,null,"1");
+
+-- TABLA TIPO USUARIO
+create table tipousuario(
+pkid varchar(4) primary key,
+nombre varchar(15) not null,
+estado varchar(1)
+)engine=InnoDB DEFAULT CHARSET=latin1;
+
+insert into tipousuario values ("1", "Administrador", "1");
+insert into tipousuario values ("2", "Supervisor", "1");
+insert into tipousuario values ("3", "Visitante", "1");
 -- TABLA USUARIO
 create table usuario(
 pkid varchar(4) primary key,
+fktipousuario varchar(4) not null,
 fkempleado varchar(4) not null,
 usuario varchar(15) not null,
 contrasena varchar(100) not null,
 estado varchar(1),
-
+foreign key (fktipousuario) references tipousuario(pkid),
 foreign key (fkempleado) references empleado(pkid)
 )engine=InnoDB DEFAULT CHARSET=latin1;
+
+insert into usuario values ("1", "1", "1", "admin","LKAekHU9EtweB49HAaTRfg==","1");
+
 -- TABLA DISPOSITIVO
 create table dispositivo(
 pkid varchar(4) primary key,
