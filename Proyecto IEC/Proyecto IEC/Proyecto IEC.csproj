@@ -244,6 +244,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Recursos\iconoRTEC.ico" />
+    <Content Include="Recursos\icons8_web_accessibility.ico" />
     <Content Include="Recursos\icons8_worker.ico" />
     <Content Include="Recursos\Mantenimientos.png" />
     <Content Include="Recursos\MDI.png" />

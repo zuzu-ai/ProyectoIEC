@@ -7,3 +7,12 @@ C:\Users\Kevin\source\repos\Login\CapaControladorSeguridad\bin\Debug\CapaModeloS
 C:\Users\Kevin\source\repos\Login\CapaControladorSeguridad\bin\Debug\CapaModeloSeguridad.pdb
 C:\Users\Kevin\source\repos\Login\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.AssemblyReference.cache
 C:\Users\Kevin\source\repos\Login\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.CopyComplete
+F:\ProyectoIEC\Login\CapaControladorSeguridad\bin\Debug\CapaControladorSeguridad.dll
+F:\ProyectoIEC\Login\CapaControladorSeguridad\bin\Debug\CapaControladorSeguridad.pdb
+F:\ProyectoIEC\Login\CapaControladorSeguridad\bin\Debug\CapaModeloSeguridad.dll
+F:\ProyectoIEC\Login\CapaControladorSeguridad\bin\Debug\CapaModeloSeguridad.pdb
+F:\ProyectoIEC\Login\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.AssemblyReference.cache
+F:\ProyectoIEC\Login\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.CoreCompileInputs.cache
+F:\ProyectoIEC\Login\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.CopyComplete
+F:\ProyectoIEC\Login\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.dll
+F:\ProyectoIEC\Login\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.pdb

@@ -143,5 +143,18 @@ namespace Proyecto_IEC
                 catch (Exception ex) { MessageBox.Show("Error: " + ex); }
             }
         }
-	}
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Realmente desea salir?", "Salir",
+           MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            { 
+                this.Close();                
+            }
+            else { }
+           
+        }
+    }
 }
