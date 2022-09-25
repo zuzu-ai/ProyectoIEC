@@ -186,6 +186,7 @@ create table mensualesE(
 pkid varchar(4) primary key,
 fechainicio date not null,
 fechafin date not null,
+mes varchar(2) not null,
 estado varchar(1) not null
 )engine=InnoDB DEFAULT CHARSET=latin1;
 -- TABLA MENSUALESD

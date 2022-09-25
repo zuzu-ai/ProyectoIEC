@@ -35,6 +35,13 @@ namespace Proyecto_IEC
 			this.rbnMensual = new System.Windows.Forms.RadioButton();
 			this.rbnDiarios = new System.Windows.Forms.RadioButton();
 			this.pnConsultaDiario = new System.Windows.Forms.Panel();
+			this.label5 = new System.Windows.Forms.Label();
+			this.mtxtFinM = new System.Windows.Forms.MaskedTextBox();
+			this.chbxIntervalos = new System.Windows.Forms.CheckBox();
+			this.btnConsultar = new System.Windows.Forms.Button();
+			this.mtxtFinD = new System.Windows.Forms.MaskedTextBox();
+			this.label4 = new System.Windows.Forms.Label();
+			this.mtxtMes = new System.Windows.Forms.MaskedTextBox();
 			this.chbxTodos = new System.Windows.Forms.CheckBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.mtxtDia = new System.Windows.Forms.MaskedTextBox();
@@ -43,8 +50,10 @@ namespace Proyecto_IEC
 			this.dgvVistaPrevia = new System.Windows.Forms.DataGridView();
 			this.txtEmpleado = new System.Windows.Forms.TextBox();
 			this.txtbusqueda = new System.Windows.Forms.TextBox();
-			this.btnConsultar = new System.Windows.Forms.Button();
-			this.mtxtMes = new System.Windows.Forms.MaskedTextBox();
+			this.txtMesInicio = new System.Windows.Forms.TextBox();
+			this.txtMesFin = new System.Windows.Forms.TextBox();
+			this.txtAnio = new System.Windows.Forms.TextBox();
+			this.txtAnio2 = new System.Windows.Forms.TextBox();
 			this.pnTipoConsulta.SuspendLayout();
 			this.pnConsultaDiario.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
@@ -65,7 +74,7 @@ namespace Proyecto_IEC
 			this.pnTipoConsulta.Controls.Add(this.rbnDiarios);
 			this.pnTipoConsulta.Location = new System.Drawing.Point(115, 7);
 			this.pnTipoConsulta.Name = "pnTipoConsulta";
-			this.pnTipoConsulta.Size = new System.Drawing.Size(150, 22);
+			this.pnTipoConsulta.Size = new System.Drawing.Size(160, 22);
 			this.pnTipoConsulta.TabIndex = 1;
 			// 
 			// rbnMensual
@@ -94,6 +103,12 @@ namespace Proyecto_IEC
 			// 
 			// pnConsultaDiario
 			// 
+			this.pnConsultaDiario.Controls.Add(this.label5);
+			this.pnConsultaDiario.Controls.Add(this.mtxtFinM);
+			this.pnConsultaDiario.Controls.Add(this.chbxIntervalos);
+			this.pnConsultaDiario.Controls.Add(this.btnConsultar);
+			this.pnConsultaDiario.Controls.Add(this.mtxtFinD);
+			this.pnConsultaDiario.Controls.Add(this.label4);
 			this.pnConsultaDiario.Controls.Add(this.mtxtMes);
 			this.pnConsultaDiario.Controls.Add(this.chbxTodos);
 			this.pnConsultaDiario.Controls.Add(this.label3);
@@ -102,8 +117,82 @@ namespace Proyecto_IEC
 			this.pnConsultaDiario.Controls.Add(this.cbxEmpleado);
 			this.pnConsultaDiario.Location = new System.Drawing.Point(12, 51);
 			this.pnConsultaDiario.Name = "pnConsultaDiario";
-			this.pnConsultaDiario.Size = new System.Drawing.Size(473, 27);
+			this.pnConsultaDiario.Size = new System.Drawing.Size(607, 55);
 			this.pnConsultaDiario.TabIndex = 2;
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Location = new System.Drawing.Point(221, 8);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(32, 13);
+			this.label5.TabIndex = 126;
+			this.label5.Text = "Inicio";
+			// 
+			// mtxtFinM
+			// 
+			this.mtxtFinM.Location = new System.Drawing.Point(259, 29);
+			this.mtxtFinM.Mask = "0000-00";
+			this.mtxtFinM.Name = "mtxtFinM";
+			this.mtxtFinM.Size = new System.Drawing.Size(100, 20);
+			this.mtxtFinM.TabIndex = 125;
+			this.mtxtFinM.ValidatingType = typeof(System.DateTime);
+			this.mtxtFinM.Visible = false;
+			this.mtxtFinM.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtFinM_MaskInputRejected);
+			this.mtxtFinM.TextChanged += new System.EventHandler(this.mtxtFinM_TextChanged);
+			// 
+			// chbxIntervalos
+			// 
+			this.chbxIntervalos.AutoSize = true;
+			this.chbxIntervalos.Location = new System.Drawing.Point(376, 28);
+			this.chbxIntervalos.Name = "chbxIntervalos";
+			this.chbxIntervalos.Size = new System.Drawing.Size(145, 17);
+			this.chbxIntervalos.TabIndex = 124;
+			this.chbxIntervalos.Text = "Usar Intervalo de Fechas";
+			this.chbxIntervalos.UseVisualStyleBackColor = true;
+			this.chbxIntervalos.CheckedChanged += new System.EventHandler(this.chbxIntervalos_CheckedChanged);
+			// 
+			// btnConsultar
+			// 
+			this.btnConsultar.Location = new System.Drawing.Point(527, 5);
+			this.btnConsultar.Name = "btnConsultar";
+			this.btnConsultar.Size = new System.Drawing.Size(75, 47);
+			this.btnConsultar.TabIndex = 110;
+			this.btnConsultar.Text = "Consultar";
+			this.btnConsultar.UseVisualStyleBackColor = true;
+			this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+			// 
+			// mtxtFinD
+			// 
+			this.mtxtFinD.Location = new System.Drawing.Point(259, 29);
+			this.mtxtFinD.Mask = "0000-00-00";
+			this.mtxtFinD.Name = "mtxtFinD";
+			this.mtxtFinD.Size = new System.Drawing.Size(100, 20);
+			this.mtxtFinD.TabIndex = 120;
+			this.mtxtFinD.ValidatingType = typeof(System.DateTime);
+			this.mtxtFinD.Visible = false;
+			this.mtxtFinD.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtFinD_MaskInputRejected);
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(228, 34);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(21, 13);
+			this.label4.TabIndex = 119;
+			this.label4.Text = "Fin";
+			this.label4.Visible = false;
+			// 
+			// mtxtMes
+			// 
+			this.mtxtMes.Location = new System.Drawing.Point(259, 3);
+			this.mtxtMes.Mask = "0000-00";
+			this.mtxtMes.Name = "mtxtMes";
+			this.mtxtMes.Size = new System.Drawing.Size(100, 20);
+			this.mtxtMes.TabIndex = 118;
+			this.mtxtMes.ValidatingType = typeof(System.DateTime);
+			this.mtxtMes.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtMes_MaskInputRejected);
+			this.mtxtMes.TextChanged += new System.EventHandler(this.mtxtMes_TextChanged);
 			// 
 			// chbxTodos
 			// 
@@ -159,16 +248,16 @@ namespace Proyecto_IEC
 			this.dgvVistaPrevia.AllowUserToDeleteRows = false;
 			this.dgvVistaPrevia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dgvVistaPrevia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvVistaPrevia.Location = new System.Drawing.Point(12, 84);
+			this.dgvVistaPrevia.Location = new System.Drawing.Point(12, 112);
 			this.dgvVistaPrevia.Name = "dgvVistaPrevia";
 			this.dgvVistaPrevia.ReadOnly = true;
 			this.dgvVistaPrevia.RowHeadersWidth = 51;
-			this.dgvVistaPrevia.Size = new System.Drawing.Size(1300, 354);
+			this.dgvVistaPrevia.Size = new System.Drawing.Size(1300, 326);
 			this.dgvVistaPrevia.TabIndex = 104;
 			// 
 			// txtEmpleado
 			// 
-			this.txtEmpleado.Location = new System.Drawing.Point(491, 54);
+			this.txtEmpleado.Location = new System.Drawing.Point(398, 9);
 			this.txtEmpleado.Name = "txtEmpleado";
 			this.txtEmpleado.Size = new System.Drawing.Size(100, 20);
 			this.txtEmpleado.TabIndex = 106;
@@ -177,37 +266,56 @@ namespace Proyecto_IEC
 			// 
 			// txtbusqueda
 			// 
-			this.txtbusqueda.Location = new System.Drawing.Point(271, 9);
+			this.txtbusqueda.Location = new System.Drawing.Point(281, 9);
 			this.txtbusqueda.Name = "txtbusqueda";
 			this.txtbusqueda.Size = new System.Drawing.Size(100, 20);
 			this.txtbusqueda.TabIndex = 109;
 			// 
-			// btnConsultar
+			// txtMesInicio
 			// 
-			this.btnConsultar.Location = new System.Drawing.Point(491, 52);
-			this.btnConsultar.Name = "btnConsultar";
-			this.btnConsultar.Size = new System.Drawing.Size(75, 23);
-			this.btnConsultar.TabIndex = 110;
-			this.btnConsultar.Text = "Consultar";
-			this.btnConsultar.UseVisualStyleBackColor = true;
-			this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+			this.txtMesInicio.Location = new System.Drawing.Point(514, 9);
+			this.txtMesInicio.Name = "txtMesInicio";
+			this.txtMesInicio.Size = new System.Drawing.Size(100, 20);
+			this.txtMesInicio.TabIndex = 110;
+			this.txtMesInicio.Tag = "pkid";
+			this.txtMesInicio.Visible = false;
 			// 
-			// mtxtMes
+			// txtMesFin
 			// 
-			this.mtxtMes.Location = new System.Drawing.Point(259, 3);
-			this.mtxtMes.Mask = "0000-00";
-			this.mtxtMes.Name = "mtxtMes";
-			this.mtxtMes.Size = new System.Drawing.Size(100, 20);
-			this.mtxtMes.TabIndex = 118;
-			this.mtxtMes.ValidatingType = typeof(System.DateTime);
-			this.mtxtMes.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtMes_MaskInputRejected);
+			this.txtMesFin.Location = new System.Drawing.Point(631, 9);
+			this.txtMesFin.Name = "txtMesFin";
+			this.txtMesFin.Size = new System.Drawing.Size(100, 20);
+			this.txtMesFin.TabIndex = 111;
+			this.txtMesFin.Tag = "pkid";
+			this.txtMesFin.Visible = false;
+			// 
+			// txtAnio
+			// 
+			this.txtAnio.Location = new System.Drawing.Point(631, 35);
+			this.txtAnio.Name = "txtAnio";
+			this.txtAnio.Size = new System.Drawing.Size(100, 20);
+			this.txtAnio.TabIndex = 112;
+			this.txtAnio.Tag = "pkid";
+			this.txtAnio.Visible = false;
+			// 
+			// txtAnio2
+			// 
+			this.txtAnio2.Location = new System.Drawing.Point(631, 61);
+			this.txtAnio2.Name = "txtAnio2";
+			this.txtAnio2.Size = new System.Drawing.Size(100, 20);
+			this.txtAnio2.TabIndex = 113;
+			this.txtAnio2.Tag = "pkid";
+			this.txtAnio2.Visible = false;
 			// 
 			// frmConsulta
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1324, 450);
-			this.Controls.Add(this.btnConsultar);
+			this.Controls.Add(this.txtAnio2);
+			this.Controls.Add(this.txtAnio);
+			this.Controls.Add(this.txtMesFin);
+			this.Controls.Add(this.txtMesInicio);
 			this.Controls.Add(this.txtbusqueda);
 			this.Controls.Add(this.txtEmpleado);
 			this.Controls.Add(this.dgvVistaPrevia);
@@ -245,5 +353,14 @@ namespace Proyecto_IEC
 		private System.Windows.Forms.MaskedTextBox mtxtDia;
 		private System.Windows.Forms.Button btnConsultar;
 		private System.Windows.Forms.MaskedTextBox mtxtMes;
+		private System.Windows.Forms.MaskedTextBox mtxtFinD;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.CheckBox chbxIntervalos;
+		private System.Windows.Forms.MaskedTextBox mtxtFinM;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.TextBox txtMesInicio;
+		private System.Windows.Forms.TextBox txtMesFin;
+		private System.Windows.Forms.TextBox txtAnio;
+		private System.Windows.Forms.TextBox txtAnio2;
 	}
 }

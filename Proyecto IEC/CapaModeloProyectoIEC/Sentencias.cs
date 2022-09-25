@@ -724,11 +724,11 @@ namespace CapaModeloProyectoIEC
 
             return tablainicial;
         }
-        public void guardarEncabezadoMes(string id, string fechainicio, string fechafin, string estado)
+        public void guardarEncabezadoMes(string id, string fechainicio, string fechafin, string mes, string estado)
         {
             try
             {
-                string cadena = "INSERT INTO mensualesE VALUES ('" + id + "','" + fechainicio + "','" + fechafin + "','" + estado + "');";
+                string cadena = "INSERT INTO mensualesE VALUES ('" + id + "','" + fechainicio + "','" + fechafin + "','" + mes + "','" + estado + "');";
                 OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
                 consulta.ExecuteNonQuery();
             }
@@ -930,6 +930,72 @@ namespace CapaModeloProyectoIEC
                     insertQuery = consultaempleadofecha;
                 }
                 //MessageBox.Show(insertQuery);
+                OdbcConnection conect = cn.conexion();
+                OdbcDataAdapter adapter = new OdbcDataAdapter(insertQuery, conect);
+                adapter.Fill(tablainicial);
+                cn.desconexion(conect);
+            }
+            catch (Exception ex)
+            {
+            }
+
+            return tablainicial;
+        }
+        public DataTable ConsultaIntervalosD(string fechainicio, string fechafin, string empleado)
+        {
+            DataTable tablainicial = new DataTable();
+
+            try
+            {
+                //string consultatodostodos = "select distinct mensualesd.pkid as 'ID',mensualesd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',mensualese.fechainicio as 'Fecha Inical', mensualese.fechafin as 'Fecha Final', mensualesd.htrabajadas as 'Horas Trabajadas', mensualesd.hdescontadas as 'Horas Descontadas', mensualesd.ausencias as 'Ausensias', mensualesd.hextras as 'Horas Extras', mensualesd.pcomidas as 'Pago de Comidas', mensualesd.pcombustible as 'Pago de Combustible', mensualesd.pviaticos as 'Pago de Viáticos', mensualesd.potros as 'Otros Pagos', mensualesd.observaciones as 'Observaciones' from mensualese, mensualesd, empleado where mensualesd.fkempleado = empleado.pkid and mensualesd.fkmensualesE = mensualese.pkid order by mensualesd.fkempleado;";
+                string consultatodosfecha = "select distinct diariosd.pkid as 'ID',diariosd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',diariose.fechatrabajada as 'Fecha', diariosd.entrada as 'Hora Entrada', diariosd.salida as 'Hora Salida', diariosd.htrabajadas as 'Horas Trabajadas', diariosd.hdescontadas as 'Horas Descontadas', diariosd.ausencias as 'Ausensias', diariosd.hextras as 'Horas Extras', diariosd.pcomidas as 'Pago de Comidas', diariosd.pcombustible as 'Pago de Combustible', diariosd.pviaticos as 'Pago de Viáticos', diariosd.potros as 'Otros Pagos', diariosd.observaciones as 'Observaciones' from diariose, diariosd, empleado where diariosd.fkempleado = empleado.pkid and diariosd.fkdiariosE = diariose.pkid and diariose.fechatrabajada between '" + fechainicio + "' and '" + fechafin + "' order by diariosd.fkempleado;";
+                //string consultaempleadotodos = "select distinct mensualesd.pkid as 'ID',mensualesd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',mensualese.fechainicio as 'Fecha Inical', mensualese.fechafin as 'Fecha Final', mensualesd.htrabajadas as 'Horas Trabajadas', mensualesd.hdescontadas as 'Horas Descontadas', mensualesd.ausencias as 'Ausensias', mensualesd.hextras as 'Horas Extras', mensualesd.pcomidas as 'Pago de Comidas', mensualesd.pcombustible as 'Pago de Combustible', mensualesd.pviaticos as 'Pago de Viáticos', mensualesd.potros as 'Otros Pagos', mensualesd.observaciones as 'Observaciones' from mensualese, mensualesd, empleado where mensualesd.fkempleado = empleado.pkid and mensualesd.fkmensualesE = mensualese.pkid and mensualesd.fkempleado = '" + empleado + "' order by mensualesd.fkempleado;";
+                string consultaempleadofecha = "select distinct diariosd.pkid as 'ID',diariosd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',diariose.fechatrabajada as 'Fecha', diariosd.entrada as 'Hora Entrada', diariosd.salida as 'Hora Salida', diariosd.htrabajadas as 'Horas Trabajadas', diariosd.hdescontadas as 'Horas Descontadas', diariosd.ausencias as 'Ausensias', diariosd.hextras as 'Horas Extras', diariosd.pcomidas as 'Pago de Comidas', diariosd.pcombustible as 'Pago de Combustible', diariosd.pviaticos as 'Pago de Viáticos', diariosd.potros as 'Otros Pagos', diariosd.observaciones as 'Observaciones' from diariose, diariosd, empleado where diariosd.fkempleado = empleado.pkid and diariosd.fkdiariosE = diariose.pkid and diariose.fechatrabajada between '" + fechainicio + "' and '" + fechafin + "' and diariosd.fkempleado = '" + empleado + "' order by diariosd.fkempleado;";
+                string insertQuery = "";
+
+
+                if (fechainicio != "*" && fechafin != "*" && empleado == "*")
+                {
+                    insertQuery = consultatodosfecha;
+                }
+                else if (fechainicio != "*" && fechafin != "*" && empleado != "*")
+                {
+                    insertQuery = consultaempleadofecha;
+                }
+                //MessageBox.Show(insertQuery);
+                OdbcConnection conect = cn.conexion();
+                OdbcDataAdapter adapter = new OdbcDataAdapter(insertQuery, conect);
+                adapter.Fill(tablainicial);
+                cn.desconexion(conect);
+            }
+            catch (Exception ex)
+            {
+            }
+
+            return tablainicial;
+        }
+        public DataTable ConsultaIntervalosM(string fechainicio, string fechafin, string empleado, string mesinicio, string mesfin)
+        {
+            DataTable tablainicial = new DataTable();
+
+            try
+            {
+                //string consultatodostodos = "select distinct mensualesd.pkid as 'ID',mensualesd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',mensualese.fechainicio as 'Fecha Inical', mensualese.fechafin as 'Fecha Final', mensualesd.htrabajadas as 'Horas Trabajadas', mensualesd.hdescontadas as 'Horas Descontadas', mensualesd.ausencias as 'Ausensias', mensualesd.hextras as 'Horas Extras', mensualesd.pcomidas as 'Pago de Comidas', mensualesd.pcombustible as 'Pago de Combustible', mensualesd.pviaticos as 'Pago de Viáticos', mensualesd.potros as 'Otros Pagos', mensualesd.observaciones as 'Observaciones' from mensualese, mensualesd, empleado where mensualesd.fkempleado = empleado.pkid and mensualesd.fkmensualesE = mensualese.pkid order by mensualesd.fkempleado;";
+                string consultatodosfecha = "select distinct mensualesd.pkid as 'ID',mensualesd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',mensualese.fechainicio as 'Fecha Inical', mensualese.fechafin as 'Fecha Final', mensualesd.htrabajadas as 'Horas Trabajadas', mensualesd.hdescontadas as 'Horas Descontadas', mensualesd.ausencias as 'Ausensias', mensualesd.hextras as 'Horas Extras', mensualesd.pcomidas as 'Pago de Comidas', mensualesd.pcombustible as 'Pago de Combustible', mensualesd.pviaticos as 'Pago de Viáticos', mensualesd.potros as 'Otros Pagos', mensualesd.observaciones as 'Observaciones' from mensualese, mensualesd, empleado where mensualesd.fkempleado = empleado.pkid and mensualesd.fkmensualesE = mensualese.pkid and (mensualese.fechainicio like '" + fechainicio + "-%' and mensualese.fechafin like '" + fechainicio + "-%' or mensualese.fechainicio like '" + fechafin + "-%' and mensualese.fechafin like '" + fechafin + "-%') and mensualese.mes between '" + mesinicio + "' and '" + mesfin + "' order by mensualesd.fkempleado;";
+                //string consultaempleadotodos = "select distinct mensualesd.pkid as 'ID',mensualesd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',mensualese.fechainicio as 'Fecha Inical', mensualese.fechafin as 'Fecha Final', mensualesd.htrabajadas as 'Horas Trabajadas', mensualesd.hdescontadas as 'Horas Descontadas', mensualesd.ausencias as 'Ausensias', mensualesd.hextras as 'Horas Extras', mensualesd.pcomidas as 'Pago de Comidas', mensualesd.pcombustible as 'Pago de Combustible', mensualesd.pviaticos as 'Pago de Viáticos', mensualesd.potros as 'Otros Pagos', mensualesd.observaciones as 'Observaciones' from mensualese, mensualesd, empleado where mensualesd.fkempleado = empleado.pkid and mensualesd.fkmensualesE = mensualese.pkid and mensualesd.fkempleado = '" + empleado + "' order by mensualesd.fkempleado;";
+                string consultaempleadofecha = "select distinct mensualesd.pkid as 'ID',mensualesd.fkempleado as 'ID Empleado', empleado.nombre as 'Empleado',mensualese.fechainicio as 'Fecha Inical', mensualese.fechafin as 'Fecha Final', mensualesd.htrabajadas as 'Horas Trabajadas', mensualesd.hdescontadas as 'Horas Descontadas', mensualesd.ausencias as 'Ausensias', mensualesd.hextras as 'Horas Extras', mensualesd.pcomidas as 'Pago de Comidas', mensualesd.pcombustible as 'Pago de Combustible', mensualesd.pviaticos as 'Pago de Viáticos', mensualesd.potros as 'Otros Pagos', mensualesd.observaciones as 'Observaciones' from mensualese, mensualesd, empleado where mensualesd.fkempleado = empleado.pkid and mensualesd.fkmensualesE = mensualese.pkid and (mensualese.fechainicio like '" + fechainicio + "-%' and mensualese.fechafin like '" + fechainicio + "-%' or mensualese.fechainicio like '" + fechafin + "-%' and mensualese.fechafin like '" + fechafin + "-%') and mensualese.mes between '" + mesinicio + "' and '" + mesfin + "' and mensualesd.fkempleado = '" + empleado + "' order by mensualesd.fkempleado;";
+                string insertQuery = "";
+
+
+                if (fechainicio != "*" && fechafin != "*" && empleado == "*")
+                {
+                    insertQuery = consultatodosfecha;
+                }
+                else if (fechainicio != "*" && fechafin != "*" && empleado != "*")
+                {
+                    insertQuery = consultaempleadofecha;
+                }
+                MessageBox.Show(insertQuery);
                 OdbcConnection conect = cn.conexion();
                 OdbcDataAdapter adapter = new OdbcDataAdapter(insertQuery, conect);
                 adapter.Fill(tablainicial);

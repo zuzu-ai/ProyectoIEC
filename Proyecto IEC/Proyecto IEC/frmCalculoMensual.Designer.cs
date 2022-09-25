@@ -41,6 +41,7 @@ namespace Proyecto_IEC
 			this.txtfechafin = new System.Windows.Forms.TextBox();
 			this.txtID = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
+			this.txtMesTrabajado = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -127,6 +128,7 @@ namespace Proyecto_IEC
 			this.txtfechainicio.Size = new System.Drawing.Size(100, 20);
 			this.txtfechainicio.TabIndex = 114;
 			this.txtfechainicio.Visible = false;
+			this.txtfechainicio.TextChanged += new System.EventHandler(this.txtfechainicio_TextChanged);
 			// 
 			// txtfechafin
 			// 
@@ -153,11 +155,20 @@ namespace Proyecto_IEC
 			this.label3.TabIndex = 118;
 			this.label3.Text = "ID:";
 			// 
+			// txtMesTrabajado
+			// 
+			this.txtMesTrabajado.Location = new System.Drawing.Point(812, 54);
+			this.txtMesTrabajado.Name = "txtMesTrabajado";
+			this.txtMesTrabajado.Size = new System.Drawing.Size(100, 20);
+			this.txtMesTrabajado.TabIndex = 120;
+			this.txtMesTrabajado.Visible = false;
+			// 
 			// frmCalculoMensual
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1319, 483);
+			this.Controls.Add(this.txtMesTrabajado);
 			this.Controls.Add(this.txtID);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.txtfechafin);
@@ -192,5 +203,6 @@ namespace Proyecto_IEC
 		private System.Windows.Forms.TextBox txtfechafin;
 		private System.Windows.Forms.TextBox txtID;
 		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.TextBox txtMesTrabajado;
 	}
 }
