@@ -15,7 +15,6 @@ C:\Users\Kevin\source\repos\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.pdb
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\Proyecto IEC.exe.config
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\Proyecto IEC.exe
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\Proyecto IEC.pdb
-F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaNavegador.dll
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaNavegador.pdb
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.AssemblyReference.cache
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmImportarArchivo.resources
@@ -28,11 +27,9 @@ F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.CopyCompl
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.exe
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.pdb
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.ResolveComReference.cache
-F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\DocumentFormat.OpenXml.dll
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\SpreadsheetLight.dll
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\System.Drawing.Common.dll
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\System.IO.Packaging.dll
-F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\DocumentFormat.OpenXml.xml
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\System.IO.Packaging.xml
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaContoladorProyectoIEC.dll
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaContoladorProyectoIEC.pdb

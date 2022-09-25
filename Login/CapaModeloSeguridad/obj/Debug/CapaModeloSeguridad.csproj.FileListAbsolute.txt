@@ -4,3 +4,9 @@ C:\Users\Kevin\source\repos\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguri
 C:\Users\Kevin\source\repos\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.dll
 C:\Users\Kevin\source\repos\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.pdb
 C:\Users\Kevin\source\repos\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.AssemblyReference.cache
+F:\ProyectoIEC\Login\CapaModeloSeguridad\bin\Debug\CapaModeloSeguridad.dll
+F:\ProyectoIEC\Login\CapaModeloSeguridad\bin\Debug\CapaModeloSeguridad.pdb
+F:\ProyectoIEC\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.AssemblyReference.cache
+F:\ProyectoIEC\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.CoreCompileInputs.cache
+F:\ProyectoIEC\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.dll
+F:\ProyectoIEC\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.pdb

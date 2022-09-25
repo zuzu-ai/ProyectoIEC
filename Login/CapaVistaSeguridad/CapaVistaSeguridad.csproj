@@ -36,6 +36,9 @@
     <Reference Include="CapaControladorSeguridad">
       <HintPath>..\CapaControladorSeguridad\bin\Debug\CapaControladorSeguridad.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVistaNavegador">
+      <HintPath>..\..\Navegador\CapaVistaNavegador\bin\Debug\CapaVistaNavegador.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,10 +58,28 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTipoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoUsuario.Designer.cs">
+      <DependentUpon>frmTipoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoUsuario.resx">
+      <DependentUpon>frmTipoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +109,7 @@
     <Content Include="Recursos\Fondo.png" />
     <Content Include="Recursos\hide %281%29.png" />
     <Content Include="Recursos\iconoRTEC.ico" />
+    <Content Include="Recursos\icons8_web_accessibility.ico" />
     <Content Include="Recursos\male_user_60px.png" />
     <Content Include="Recursos\MicrosoftTeams-image %2810%29.png" />
     <Content Include="Recursos\MicrosoftTeams-image %2811%29.png" />
