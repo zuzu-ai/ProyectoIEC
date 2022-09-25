@@ -62,7 +62,7 @@ namespace Proyecto_IEC
 			int contador = dgvVistaPrevia.Rows.Count;
 			try
 			{
-				cn.guardarEncabezadoMes(txtID.Text, txtfechainicio.Text, txtfechafin.Text, "1");
+				cn.guardarEncabezadoMes(txtID.Text, txtfechainicio.Text, txtfechafin.Text, txtMesTrabajado.Text, "1");
 
 				try
 				{
@@ -92,6 +92,11 @@ namespace Proyecto_IEC
 			txtID.Text = idrefresh.ToString();
 			dtpInicio.Value = DateTime.Now;
 			dtpFin.Value = DateTime.Now;
+		}
+
+		private void txtfechainicio_TextChanged(object sender, EventArgs e)
+		{
+			txtMesTrabajado.Text = dtpInicio.Value.ToString("MM");
 		}
 	}
 }
