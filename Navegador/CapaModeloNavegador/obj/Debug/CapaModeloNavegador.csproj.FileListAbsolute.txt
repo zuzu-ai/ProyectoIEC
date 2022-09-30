@@ -10,3 +10,9 @@ F:\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.cspro
 F:\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.CoreCompileInputs.cache
 F:\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.dll
 F:\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.AssemblyReference.cache
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.CoreCompileInputs.cache
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.pdb
