@@ -85,7 +85,7 @@ namespace CapaModeloNavegador
                 {
                     if (arreglo[i].Tag.ToString() == campoEstado)
                     {
-                        string sql = "UPDATE" + " " + tabla + " " + "SET" + " " + campoEstado + " =" + "'" + '0' + "'" + " " + "WHERE" + " " + arreglo[0].Tag.ToString() + " = " + arreglo[0].Text;                        
+                        string sql = "UPDATE" + " " + tabla + " " + "SET" + " " + campoEstado + " =" + "'" + '0' + "'" + " " + "WHERE" + " " + arreglo[0].Tag.ToString() + " = " + arreglo[0].Text;
                         try
                         {
                             OdbcCommand eliminar = new OdbcCommand(sql, conexion);
@@ -246,7 +246,7 @@ namespace CapaModeloNavegador
                 leer = comando.ExecuteReader();
                 while (leer.Read())
                 {
-                    ultimoEntero = leer.GetString(0);                    
+                    ultimoEntero = leer.GetString(0);
                     enteroSumado = int.Parse(ultimoEntero) + 1;
                 }
             }
@@ -343,7 +343,7 @@ namespace CapaModeloNavegador
             }
             catch (OdbcException ex)
             {
-                MessageBox.Show("Error al cargar los datos" + ex.Message);                
+                MessageBox.Show("Error al cargar los datos" + ex.Message);
             }
             finally
             {
@@ -556,6 +556,19 @@ namespace CapaModeloNavegador
             else
             {
                 return false;
+            }
+        }
+        public void metodoColocaHora(DateTimePicker date, TextBox textoDate)
+        {
+            String dt = "";
+            dt = date.Value.ToString("HH:mm:ss");//lo pasa al formato necesitado por mysql
+            textoDate.Text = dt;
+        }
+        public void metodoRecibeHora(DateTimePicker date, TextBox textoDate)
+        {
+            if (textoDate.Text != "")
+            {
+                date.Value = Convert.ToDateTime(textoDate.Text.ToString());
             }
         }
     }

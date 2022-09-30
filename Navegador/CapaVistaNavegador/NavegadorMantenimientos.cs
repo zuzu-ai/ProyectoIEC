@@ -763,5 +763,27 @@ namespace CapaVistaNavegador
 
             }
         }
+        public void RecibeHora(DateTimePicker date, TextBox textoDate)
+        {
+            try
+            {
+                control.metodoRecibeHora(date, textoDate);
+            }
+            catch
+            {
+
+            }
+        }
+        public void ColocaHora(DateTimePicker date, TextBox textoDate)
+        {
+            try
+            {
+                control.metodoColocaHora(date, textoDate);
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

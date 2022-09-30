@@ -204,6 +204,29 @@ namespace CapaControladorNavegador
                 MessageBox.Show("Error en la capa controlador, revisar la funcion LlamadaAyudas");
             }
         }
+        public void metodoRecibeHora(DateTimePicker date, TextBox textoDate)
+        {
+            try
+            {
+                Modelo.metodoRecibeHora(date, textoDate);
+            }
+            catch
+            {
+                MessageBox.Show("Error en la capa controlador, revisar la funcion SeleccionarFechaDTP");
+            }
+        }
+        public void metodoColocaHora(DateTimePicker date, TextBox textoDate)
+        {
+            try
+            {
+                Modelo.metodoColocaHora(date, textoDate);
+            }
+            catch
+            {
+                MessageBox.Show("Error en la capa controlador, revisar la funcion CambiarFormatoFecha");
+            }
+        }
+
         /*Liam Patrick Bernard García - 0901-18-10092
         public string funObtienePermisos(string idUsuario, string idAplicacion)
         {
