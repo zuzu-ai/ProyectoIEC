@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaModeloProyectoIEC", "Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaContoladorProyectoIEC", "CapaContoladorProyectoIEC\CapaContoladorProyectoIEC.csproj", "{685B9032-7A3A-464C-9B3E-85675E27542A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaVistaProyectoIEC", "CapaVistaProyectoIEC\CapaVistaProyectoIEC.csproj", "{0E4D94E8-FF9C-4781-8DE1-B143049CA229}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{685B9032-7A3A-464C-9B3E-85675E27542A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{685B9032-7A3A-464C-9B3E-85675E27542A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{685B9032-7A3A-464C-9B3E-85675E27542A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0E4D94E8-FF9C-4781-8DE1-B143049CA229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E4D94E8-FF9C-4781-8DE1-B143049CA229}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E4D94E8-FF9C-4781-8DE1-B143049CA229}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E4D94E8-FF9C-4781-8DE1-B143049CA229}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
