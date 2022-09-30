@@ -13,3 +13,12 @@ F:\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNaveg
 F:\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.dll
 F:\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.pdb
 F:\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CopyComplete
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.AssemblyReference.cache
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CoreCompileInputs.cache
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CopyComplete
