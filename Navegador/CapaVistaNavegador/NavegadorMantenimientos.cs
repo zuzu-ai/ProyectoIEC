@@ -619,15 +619,22 @@ namespace CapaVistaNavegador
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("¿Realmente desea salir?", "Salir",
+           MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
             {
-                
-            }
-            catch
-            {
+                try
+                {
+                    generic.Close();
+                }
+                catch
+                {
 
+                }
             }
-            generic.Close();
+            else { }          
+            
         }
         Form generic;
         public void ObtenerReferenciaFormActual(Form generico)

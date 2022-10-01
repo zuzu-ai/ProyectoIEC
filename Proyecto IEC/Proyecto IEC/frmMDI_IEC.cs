@@ -106,34 +106,29 @@ namespace Proyecto_IEC
         }
 
         private void ausenciasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            {
+        {            
                 try
                 {
                     frmAusencias form = new frmAusencias();
                     form.MdiParent = this;
                     form.Show();
                 }
-                catch (Exception ex) { MessageBox.Show("Error: " + ex); }
-            }
+                catch (Exception ex) { MessageBox.Show("Error: " + ex); }            
         }
 
         private void jornadaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            {
+        {            
                 try
                 {
                     frmJornada form = new frmJornada();
                     form.MdiParent = this;
                     form.Show();
                 }
-                catch (Exception ex) { MessageBox.Show("Error: " + ex); }
-            }
+                catch (Exception ex) { MessageBox.Show("Error: " + ex); }            
         }
 
 		private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-            {
                 try
                 {
                     frmConsulta form = new frmConsulta();
@@ -141,7 +136,6 @@ namespace Proyecto_IEC
                     form.Show();
                 }
                 catch (Exception ex) { MessageBox.Show("Error: " + ex); }
-            }
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -155,6 +149,28 @@ namespace Proyecto_IEC
             }
             else { }
            
+        }
+
+        private void tipoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmTipoUsuario form = new frmTipoUsuario();
+                form.MdiParent = this;
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmUsuario form = new frmUsuario();
+                form.MdiParent = this;
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
     }
 }
