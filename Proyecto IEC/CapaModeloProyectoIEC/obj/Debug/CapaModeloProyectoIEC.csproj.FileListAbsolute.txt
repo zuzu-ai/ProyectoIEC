@@ -22,3 +22,9 @@ F:\P\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.A
 F:\P\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
 F:\P\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
 F:\P\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb

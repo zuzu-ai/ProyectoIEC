@@ -1007,5 +1007,32 @@ namespace CapaModeloProyectoIEC
 
             return tablainicial;
         }
+
+        public void EnviarContratoDespido(DateTimePicker date, TextBox textoDate, CheckBox check)
+        {
+            String dt = "";
+            if (check.Checked == true)
+            {
+                textoDate.Text = "";
+            }
+            else if (check.Checked == false)
+            {
+                dt = date.Value.ToString("yyyy-MM-dd");//lo pasa al formato necesitado por mysql
+                textoDate.Text = dt;
+            }
+        }
+        public void RecibirContratoDespido(DateTimePicker date, TextBox textoDate, CheckBox check)
+        {
+            if (check.Checked == true)
+            {
+            }
+            else if (check.Checked == false)
+            {
+                if (textoDate.Text != "")
+                {
+                    date.Value = Convert.ToDateTime(textoDate.Text.ToString());
+                }
+            }
+        }
     }
 }

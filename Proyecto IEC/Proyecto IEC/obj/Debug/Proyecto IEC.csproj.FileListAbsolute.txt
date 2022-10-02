@@ -232,3 +232,5 @@ D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Informac
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmTipoUsuario.resources
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaNavegador.dll
 F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmUsuario.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmTipoUsuario.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmUsuario.resources
