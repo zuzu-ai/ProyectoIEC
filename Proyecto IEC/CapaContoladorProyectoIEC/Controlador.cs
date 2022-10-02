@@ -139,5 +139,13 @@ namespace CapaContoladorProyectoIEC
 
             return tablainicial;
         }
+        public void EnviarContratoDespido(DateTimePicker date, TextBox textoDate, CheckBox check)
+        {
+            sn.EnviarContratoDespido(date, textoDate, check);
+        }
+        public void RecibirContratoDespido(DateTimePicker date, TextBox textoDate, CheckBox check)
+        {
+            sn.RecibirContratoDespido(date, textoDate, check);
+        }
     }
 }

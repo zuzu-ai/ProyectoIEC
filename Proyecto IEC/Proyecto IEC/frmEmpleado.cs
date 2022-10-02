@@ -79,8 +79,7 @@ namespace Proyecto_IEC
         {
 			try
 			{
-				navegadorMantenimientos1.SeleccionarFechaDTP(dtpContratacion, txtContratacion);
-				navegadorMantenimientos1.CambiarFormatoFecha(dtpContratacion, txtContratacion);
+				controlador.RecibirContratoDespido(dtpContratacion,txtContratacion,chbxNoContratacion);
 			}
 			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 		}
@@ -91,8 +90,7 @@ namespace Proyecto_IEC
 			{
 				try
 				{
-					navegadorMantenimientos1.CambiarFormatoFecha(dtpContratacion, txtContratacion);
-					navegadorMantenimientos1.SeleccionarFechaDTP(dtpContratacion, txtContratacion);
+					controlador.EnviarContratoDespido(dtpContratacion,txtContratacion,chbxNoContratacion);
 				}
 				catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 			}
@@ -105,8 +103,7 @@ namespace Proyecto_IEC
         {
 			try
 			{
-				navegadorMantenimientos1.SeleccionarFechaDTP(dtpDespido, txtDespido);
-				navegadorMantenimientos1.CambiarFormatoFecha(dtpDespido, txtDespido);
+				controlador.RecibirContratoDespido(dtpDespido,txtDespido,chbxNoDespido);
 			}
 			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 		}
@@ -117,8 +114,7 @@ namespace Proyecto_IEC
 			{
 				try
 				{
-					navegadorMantenimientos1.CambiarFormatoFecha(dtpDespido, txtDespido);
-					navegadorMantenimientos1.SeleccionarFechaDTP(dtpDespido, txtDespido);
+					controlador.EnviarContratoDespido(dtpDespido,txtDespido,chbxNoDespido);
 				}
 				catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 			}
@@ -228,6 +224,7 @@ namespace Proyecto_IEC
 			if (chbxNoContratacion.Checked == true)
 			{
 				dtpContratacion.Enabled = false;
+				txtContratacion.Text = "";
 			}
 			else if (chbxNoContratacion.Checked == false)
 			{
@@ -246,6 +243,7 @@ namespace Proyecto_IEC
 			if (chbxNoDespido.Checked == true)
 			{
 				dtpDespido.Enabled = false;
+				txtDespido.Text = "";
 			}
 			else if (chbxNoDespido.Checked == false)
 			{
