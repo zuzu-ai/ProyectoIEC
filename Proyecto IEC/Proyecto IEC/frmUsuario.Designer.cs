@@ -29,6 +29,7 @@ namespace Proyecto_IEC
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -58,7 +59,9 @@ namespace Proyecto_IEC
             this.btnPasswordn = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtConfirmarContraseña = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtContraseña = new System.Windows.Forms.MaskedTextBox();
+            this.tpMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
             this.SuspendLayout();
@@ -78,8 +81,8 @@ namespace Proyecto_IEC
             this.txtUsuario.Location = new System.Drawing.Point(152, 159);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(268, 20);
-            this.txtUsuario.TabIndex = 119;
-            this.txtUsuario.Tag = "nombre";
+            this.txtUsuario.TabIndex = 3;
+            this.txtUsuario.Tag = "usuario";
             // 
             // txtID
             // 
@@ -107,7 +110,7 @@ namespace Proyecto_IEC
             this.rbnEstatusimodulo.Location = new System.Drawing.Point(100, 1);
             this.rbnEstatusimodulo.Name = "rbnEstatusimodulo";
             this.rbnEstatusimodulo.Size = new System.Drawing.Size(72, 20);
-            this.rbnEstatusimodulo.TabIndex = 3;
+            this.rbnEstatusimodulo.TabIndex = 9;
             this.rbnEstatusimodulo.TabStop = true;
             this.rbnEstatusimodulo.Text = "Inactivo";
             this.rbnEstatusimodulo.UseVisualStyleBackColor = true;
@@ -121,7 +124,7 @@ namespace Proyecto_IEC
             this.rbnEstatusamodulo.Location = new System.Drawing.Point(31, 1);
             this.rbnEstatusamodulo.Name = "rbnEstatusamodulo";
             this.rbnEstatusamodulo.Size = new System.Drawing.Size(63, 20);
-            this.rbnEstatusamodulo.TabIndex = 2;
+            this.rbnEstatusamodulo.TabIndex = 8;
             this.rbnEstatusamodulo.TabStop = true;
             this.rbnEstatusamodulo.Text = "Activo";
             this.rbnEstatusamodulo.UseVisualStyleBackColor = true;
@@ -191,10 +194,10 @@ namespace Proyecto_IEC
             // 
             this.txtIDPregunta.Location = new System.Drawing.Point(607, 132);
             this.txtIDPregunta.Name = "txtIDPregunta";
-            this.txtIDPregunta.Size = new System.Drawing.Size(39, 20);
+            this.txtIDPregunta.Size = new System.Drawing.Size(268, 20);
             this.txtIDPregunta.TabIndex = 129;
             this.txtIDPregunta.TabStop = false;
-            this.txtIDPregunta.Tag = "fkpuesto";
+            this.txtIDPregunta.Tag = "fkpregunta";
             this.txtIDPregunta.Visible = false;
             this.txtIDPregunta.TextChanged += new System.EventHandler(this.txtIDPregunta_TextChanged);
             // 
@@ -204,7 +207,7 @@ namespace Proyecto_IEC
             this.cbxPregunta.Location = new System.Drawing.Point(607, 132);
             this.cbxPregunta.Name = "cbxPregunta";
             this.cbxPregunta.Size = new System.Drawing.Size(268, 21);
-            this.cbxPregunta.TabIndex = 127;
+            this.cbxPregunta.TabIndex = 6;
             this.cbxPregunta.SelectedIndexChanged += new System.EventHandler(this.cbxPregunta_SelectedIndexChanged);
             // 
             // label4
@@ -235,7 +238,7 @@ namespace Proyecto_IEC
             this.cbxEmpleado.Location = new System.Drawing.Point(152, 132);
             this.cbxEmpleado.Name = "cbxEmpleado";
             this.cbxEmpleado.Size = new System.Drawing.Size(268, 21);
-            this.cbxEmpleado.TabIndex = 127;
+            this.cbxEmpleado.TabIndex = 2;
             this.cbxEmpleado.SelectedIndexChanged += new System.EventHandler(this.cbxEmpleado_SelectedIndexChanged);
             // 
             // txtIDEmpleado
@@ -245,7 +248,7 @@ namespace Proyecto_IEC
             this.txtIDEmpleado.Size = new System.Drawing.Size(39, 20);
             this.txtIDEmpleado.TabIndex = 129;
             this.txtIDEmpleado.TabStop = false;
-            this.txtIDEmpleado.Tag = "fkpuesto";
+            this.txtIDEmpleado.Tag = "fkempleado";
             this.txtIDEmpleado.Visible = false;
             this.txtIDEmpleado.TextChanged += new System.EventHandler(this.txtIDEmpleado_TextChanged);
             // 
@@ -285,11 +288,10 @@ namespace Proyecto_IEC
             // txtRespuesta
             // 
             this.txtRespuesta.Location = new System.Drawing.Point(607, 160);
-            this.txtRespuesta.Multiline = true;
             this.txtRespuesta.Name = "txtRespuesta";
-            this.txtRespuesta.Size = new System.Drawing.Size(268, 35);
-            this.txtRespuesta.TabIndex = 119;
-            this.txtRespuesta.Tag = "nombre";
+            this.txtRespuesta.Size = new System.Drawing.Size(268, 20);
+            this.txtRespuesta.TabIndex = 7;
+            this.txtRespuesta.Tag = "respuesta";
             // 
             // label9
             // 
@@ -308,7 +310,7 @@ namespace Proyecto_IEC
             this.cbxTipoUsuario.Location = new System.Drawing.Point(152, 103);
             this.cbxTipoUsuario.Name = "cbxTipoUsuario";
             this.cbxTipoUsuario.Size = new System.Drawing.Size(268, 21);
-            this.cbxTipoUsuario.TabIndex = 127;
+            this.cbxTipoUsuario.TabIndex = 1;
             this.cbxTipoUsuario.SelectedIndexChanged += new System.EventHandler(this.cbxTipoUsuario_SelectedIndexChanged);
             // 
             // txtIDTipoUsuario
@@ -318,7 +320,7 @@ namespace Proyecto_IEC
             this.txtIDTipoUsuario.Size = new System.Drawing.Size(39, 20);
             this.txtIDTipoUsuario.TabIndex = 129;
             this.txtIDTipoUsuario.TabStop = false;
-            this.txtIDTipoUsuario.Tag = "fkpuesto";
+            this.txtIDTipoUsuario.Tag = "fktipousuario";
             this.txtIDTipoUsuario.Visible = false;
             this.txtIDTipoUsuario.TextChanged += new System.EventHandler(this.txtIDTipoUsuario_TextChanged);
             // 
@@ -333,7 +335,9 @@ namespace Proyecto_IEC
             this.btnPassword.Name = "btnPassword";
             this.btnPassword.Size = new System.Drawing.Size(19, 19);
             this.btnPassword.TabIndex = 132;
+            this.btnPassword.TabStop = false;
             this.btnPassword.UseVisualStyleBackColor = false;
+            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
             // 
             // btnPasswordn
             // 
@@ -346,8 +350,10 @@ namespace Proyecto_IEC
             this.btnPasswordn.Name = "btnPasswordn";
             this.btnPasswordn.Size = new System.Drawing.Size(19, 19);
             this.btnPasswordn.TabIndex = 131;
+            this.btnPasswordn.TabStop = false;
             this.btnPasswordn.UseVisualStyleBackColor = false;
             this.btnPasswordn.Visible = false;
+            this.btnPasswordn.Click += new System.EventHandler(this.btnPasswordn_Click);
             // 
             // txtContraseña
             // 
@@ -358,8 +364,12 @@ namespace Proyecto_IEC
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(268, 26);
             this.txtContraseña.TabIndex = 130;
+            this.txtContraseña.Tag = "contrasena";
             this.txtContraseña.Text = "Nombre usuario";
             this.txtContraseña.UseSystemPasswordChar = true;
+            this.txtContraseña.Visible = false;
+            this.txtContraseña.EnabledChanged += new System.EventHandler(this.txtContraseña_EnabledChanged);
+            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
             // label10
             // 
@@ -372,12 +382,26 @@ namespace Proyecto_IEC
             this.label10.TabIndex = 123;
             this.label10.Text = "Conrtraseña:";
             // 
-            // maskedTextBox1
+            // mtxtConfirmarContraseña
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(607, 103);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(268, 20);
-            this.maskedTextBox1.TabIndex = 133;
+            this.mtxtConfirmarContraseña.Location = new System.Drawing.Point(607, 103);
+            this.mtxtConfirmarContraseña.Name = "mtxtConfirmarContraseña";
+            this.mtxtConfirmarContraseña.Size = new System.Drawing.Size(268, 20);
+            this.mtxtConfirmarContraseña.TabIndex = 5;
+            this.mtxtConfirmarContraseña.UseSystemPasswordChar = true;
+            this.mtxtConfirmarContraseña.Leave += new System.EventHandler(this.mtxtConfirmarContraseña_Leave);
+            // 
+            // mtxtContraseña
+            // 
+            this.mtxtContraseña.Location = new System.Drawing.Point(607, 70);
+            this.mtxtContraseña.Name = "mtxtContraseña";
+            this.mtxtContraseña.Size = new System.Drawing.Size(268, 20);
+            this.mtxtContraseña.TabIndex = 4;
+            this.mtxtContraseña.UseSystemPasswordChar = true;
+            // 
+            // tpMensaje
+            // 
+            this.tpMensaje.BackColor = System.Drawing.Color.LightBlue;
             // 
             // frmUsuario
             // 
@@ -391,8 +415,9 @@ namespace Proyecto_IEC
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtIDEmpleado);
             this.Controls.Add(this.txtIDTipoUsuario);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.mtxtContraseña);
             this.Controls.Add(this.txtID);
+            this.Controls.Add(this.mtxtConfirmarContraseña);
             this.Controls.Add(this.btnPassword);
             this.Controls.Add(this.btnPasswordn);
             this.Controls.Add(this.cbxTipoUsuario);
@@ -454,6 +479,8 @@ namespace Proyecto_IEC
         private System.Windows.Forms.Button btnPasswordn;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtxtConfirmarContraseña;
+        private System.Windows.Forms.MaskedTextBox mtxtContraseña;
+        private System.Windows.Forms.ToolTip tpMensaje;
     }
 }

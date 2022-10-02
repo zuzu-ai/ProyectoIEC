@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaContoladorProyectoIEC;
 
 namespace Proyecto_IEC
 {
@@ -37,7 +38,6 @@ namespace Proyecto_IEC
 			navegadorMantenimientos1.campoAyuda = "pkId";
 			//fin de elementos para ejecutar la ayuda
 
-
 			// Inicio datos para ejecurar reportes
 			//navegadorMantenimientos1.LlamarRutaReporte("ruta", "idAplicacion", "Reporte");
 			// Final datos para ejecutar reportes
@@ -48,6 +48,7 @@ namespace Proyecto_IEC
 			//String cadena = txtprueba.Text;
 			//navegador1.pruebaMensaje(cadena);
 		}
+		Encriptar encript = new Encriptar();
 		private void txtEstado_TextChanged(object sender, EventArgs e)
 		{
 			navegadorMantenimientos1.ActivaRadiobtn(rbnEstatusamodulo, rbnEstatusimodulo, txtEstado);
@@ -65,9 +66,7 @@ namespace Proyecto_IEC
 
 		private void dgvVistaPrevia_SelectionChanged(object sender, EventArgs e)
 		{
-
 			navegadorMantenimientos1.SelecciondeFilaDGV(dgvVistaPrevia);
-
 		}
 
         private void cbxTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,5 +98,80 @@ namespace Proyecto_IEC
         {
 			navegadorMantenimientos1.SeleccionarElementosenCombo(cbxPregunta, txtIDPregunta);
 		}
+
+        private void btnPassword_Click(object sender, EventArgs e)
+        {
+			mtxtContraseña.UseSystemPasswordChar = false;
+			mtxtConfirmarContraseña.UseSystemPasswordChar = false;
+			btnPassword.Visible = false;
+			btnPasswordn.Visible = true;
+		}
+
+        private void btnPasswordn_Click(object sender, EventArgs e)
+        {
+			mtxtContraseña.UseSystemPasswordChar = true;
+			mtxtConfirmarContraseña.UseSystemPasswordChar = true;
+			btnPassword.Visible = true;
+			btnPasswordn.Visible = false;
+		}
+
+        private void txtContraseña_EnabledChanged(object sender, EventArgs e)
+        {
+			if (txtContraseña.Enabled == true)
+            {
+				mtxtConfirmarContraseña.Enabled = true;
+				mtxtContraseña.Enabled = true;
+            }
+			else if (txtContraseña.Enabled == false)
+            {
+				mtxtConfirmarContraseña.Enabled = false;
+				mtxtContraseña.Enabled = false;
+			}
+        }
+
+        private void mtxtConfirmarContraseña_Leave(object sender, EventArgs e)
+        {
+			if (mtxtContraseña.Text == "" && mtxtConfirmarContraseña.Text=="")
+			{
+				mtxtConfirmarContraseña.Text = "";
+				mtxtContraseña.Text = "";
+				mtxtContraseña.Focus();
+				
+			}
+			if (mtxtConfirmarContraseña.Text != mtxtContraseña.Text)
+			{
+				DialogResult respuesta;
+				respuesta = MessageBox.Show("Ingrese la misma contraseña en ambas cajas de texto.", "Error en contraseña",
+			   MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				if (respuesta == DialogResult.OK)
+				{
+					mtxtConfirmarContraseña.Text = "";
+					mtxtContraseña.Text = "";
+					mtxtContraseña.Focus();					
+				}
+			}
+			else
+			{
+				var key = "b14ca5898a4e4133bbce2ea2315a1916";
+				Encriptar encriptar = new Encriptar();
+				string password = encriptar.metodoEncryptString(key, mtxtContraseña.Text);
+				txtContraseña.Text = password;
+			}
+		
+			
+        }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+			
+			string password = encript.metodoValidar(txtContraseña.Text);
+			mtxtConfirmarContraseña.Text = password;
+			mtxtContraseña.Text = password;
+        }
+
+        private void mtxtContraseña_Leave(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -69,7 +69,7 @@ namespace Proyecto_IEC
             this.txtInicio.Size = new System.Drawing.Size(143, 20);
             this.txtInicio.TabIndex = 128;
             this.txtInicio.TabStop = false;
-            this.txtInicio.Tag = "fecha";
+            this.txtInicio.Tag = "horainicio";
             this.txtInicio.Visible = false;
             this.txtInicio.TextChanged += new System.EventHandler(this.txtInicio_TextChanged);
             // 
@@ -207,7 +207,7 @@ namespace Proyecto_IEC
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(179, 20);
             this.txtNombre.TabIndex = 126;
-            this.txtNombre.Tag = "pkid";
+            this.txtNombre.Tag = "nombre";
             // 
             // label3
             // 
@@ -238,7 +238,7 @@ namespace Proyecto_IEC
             this.txtFin.Size = new System.Drawing.Size(143, 20);
             this.txtFin.TabIndex = 128;
             this.txtFin.TabStop = false;
-            this.txtFin.Tag = "fecha";
+            this.txtFin.Tag = "horafin";
             this.txtFin.Visible = false;
             this.txtFin.TextChanged += new System.EventHandler(this.txtFin_TextChanged);
             // 
