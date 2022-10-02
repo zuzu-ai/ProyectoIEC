@@ -229,3 +229,6 @@ D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Informac
 D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.csproj.CopyComplete
 D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.exe
 D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.pdb
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmTipoUsuario.resources
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaNavegador.dll
+F:\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmUsuario.resources

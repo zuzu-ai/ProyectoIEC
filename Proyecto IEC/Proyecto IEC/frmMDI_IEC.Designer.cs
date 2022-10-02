@@ -69,14 +69,14 @@ namespace Proyecto_IEC
             // 
             this.cerrarSesiónToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cerrarSesiónToolStripMenuItem.Image")));
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -173,7 +173,7 @@ namespace Proyecto_IEC
             // 
             this.ausenciasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ausenciasToolStripMenuItem.Image")));
             this.ausenciasToolStripMenuItem.Name = "ausenciasToolStripMenuItem";
-            this.ausenciasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ausenciasToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.ausenciasToolStripMenuItem.Text = "Ausencias";
             this.ausenciasToolStripMenuItem.Click += new System.EventHandler(this.ausenciasToolStripMenuItem_Click);
             // 
@@ -181,7 +181,7 @@ namespace Proyecto_IEC
             // 
             this.calculoMensualToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("calculoMensualToolStripMenuItem.Image")));
             this.calculoMensualToolStripMenuItem.Name = "calculoMensualToolStripMenuItem";
-            this.calculoMensualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculoMensualToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.calculoMensualToolStripMenuItem.Text = "Calculo Mensual";
             this.calculoMensualToolStripMenuItem.Click += new System.EventHandler(this.calculoMensualToolStripMenuItem_Click);
             // 
@@ -189,7 +189,7 @@ namespace Proyecto_IEC
             // 
             this.importarDatosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("importarDatosToolStripMenuItem.Image")));
             this.importarDatosToolStripMenuItem.Name = "importarDatosToolStripMenuItem";
-            this.importarDatosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importarDatosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.importarDatosToolStripMenuItem.Text = "Importar Datos";
             this.importarDatosToolStripMenuItem.Click += new System.EventHandler(this.importarDatosToolStripMenuItem_Click);
             // 
@@ -197,7 +197,7 @@ namespace Proyecto_IEC
             // 
             this.consultaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaToolStripMenuItem.Image")));
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.consultaToolStripMenuItem.Text = "Consulta";
             this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
             // 
@@ -236,7 +236,8 @@ namespace Proyecto_IEC
             this.usuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usuariosToolStripMenuItem.Image")));
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Text = "Usuario";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // tipoUsuarioToolStripMenuItem
             // 
@@ -244,6 +245,7 @@ namespace Proyecto_IEC
             this.tipoUsuarioToolStripMenuItem.Name = "tipoUsuarioToolStripMenuItem";
             this.tipoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tipoUsuarioToolStripMenuItem.Text = "Tipo usuario";
+            this.tipoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.tipoUsuarioToolStripMenuItem_Click);
             // 
             // bitácoraToolStripMenuItem
             // 
