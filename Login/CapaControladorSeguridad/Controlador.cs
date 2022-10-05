@@ -22,5 +22,13 @@ namespace CapaControladorSeguridad
             string Consulta = "UPDATE usuario set estado= 0 where usuario= '" + Usuario + "';";
             sn.funcModificar(Consulta);
         }
-    }
+
+        public string BuscaDato(string tabla, string campo, string campobuscado, string datoreferencia)
+        {
+            string dato = sn.BuscaDato(tabla, campo, campobuscado, datoreferencia);
+
+            return dato;
+        }
+
+        }
 }

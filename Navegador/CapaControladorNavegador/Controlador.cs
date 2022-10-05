@@ -38,7 +38,7 @@ namespace CapaControladorNavegador
             {
                 MessageBox.Show("Error en la capa controlador, revisar la funcion comparaTagscampoBD");
             }
-        }        
+        }
         public void funAsignarSalidadControl(Form menu)
         {
             try
@@ -137,7 +137,7 @@ namespace CapaControladorNavegador
             {
                 MessageBox.Show("Error en la capa controlador, revisar la funcion SeleccionarElementoEnComboBox");
             }
-        }        
+        }
         public void CambiarFormatoFecha(DateTimePicker date, TextBox textoDate)
         {
             try
@@ -234,5 +234,20 @@ namespace CapaControladorNavegador
             return modeloSeguridad.llenarpermisos(idUsuario, idAplicacion);
         }*/
 
+        public void bloquearBtn(Button Agregar, Button Modificar, Button Guardar, Button Cancelar, Button Eliminar, Button Reporte, Button Actualizar, Button Inicio, Button Anterior, Button Siguiente, Button Final, Button Ayuda, Button Salir, string tipousuario)
+        {
+
+            try
+            {
+                //MessageBox.Show(id_usuario + " " + usuario);
+                Modelo.bloquearBtn(Agregar, Modificar, Guardar, Cancelar, Eliminar, Reporte, Actualizar, Inicio, Anterior, Siguiente, Final, Ayuda, Salir, tipousuario);
+            }
+            catch
+            {
+                MessageBox.Show("Error en la capa controlador, revisar la funcion bloquearBtn");
+            }
+
+
+        }
     }
 }

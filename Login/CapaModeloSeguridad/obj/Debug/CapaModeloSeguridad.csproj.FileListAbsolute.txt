@@ -10,3 +10,9 @@ F:\ProyectoIEC\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.As
 F:\ProyectoIEC\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.CoreCompileInputs.cache
 F:\ProyectoIEC\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.dll
 F:\ProyectoIEC\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.pdb
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Login\CapaModeloSeguridad\bin\Debug\CapaModeloSeguridad.dll
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Login\CapaModeloSeguridad\bin\Debug\CapaModeloSeguridad.pdb
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.AssemblyReference.cache
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.CoreCompileInputs.cache
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.dll
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Login\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.pdb

@@ -16,9 +16,14 @@ namespace Proyecto_IEC
 {
 	public partial class frmEmpleado : Form
 	{
+		CapaContoladorProyectoIEC.Global g = new CapaContoladorProyectoIEC.Global();
+		CapaContoladorProyectoIEC.Controlador controlador = new CapaContoladorProyectoIEC.Controlador();
 		public frmEmpleado()
 		{
 			InitializeComponent();
+			controlador.bloqueareporte(g.obtienenombretusuario, btnImprimir);
+			controlador.bloquearimagen(g.obtienenombretusuario, btnAyuda);
+			navegadorMantenimientos1.bloquearBtn(g.obtienenombretusuario);
 
 			TextBox[] alias = navegadorMantenimientos1.ClasificaTextboxsegunParent(this);
 			navegadorMantenimientos1.ObtenerCamposdeTabla(alias, "empleado", "IEC");
@@ -51,7 +56,6 @@ namespace Proyecto_IEC
 			//String cadena = txtprueba.Text;
 			//navegador1.pruebaMensaje(cadena);
 		}
-		Controlador controlador = new Controlador();
 		
 		private void txtEstado_TextChanged(object sender, EventArgs e)
 		{
@@ -265,6 +269,12 @@ namespace Proyecto_IEC
 		private void cbxJornada_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			navegadorMantenimientos1.EnviarDatoComboaTextbox(cbxJornada, txtJornada);
+		}
+
+		private void btnImprimir_Click(object sender, EventArgs e)
+		{
+			Reporte3 reporte = new Reporte3();
+			reporte.Show();
 		}
 	}
 }

@@ -8,13 +8,25 @@ namespace CapaControladorSeguridad
 {
     public class PideDato
     {
-        static string dt;
-        public static string DtUsuario 
+        public string dt;
+        public string usuario;
+        public string id;
+        public string DtUsuario 
         {
             get { return dt; }
             set { dt = value; } 
         }
-        
+
+        public string ObtUsuario
+        {
+            get { return usuario; }
+            set { usuario = value; }
+        }
+        public string ObtID
+        {
+            get { return id; }
+            set { id = value; }
+        }
     }
    
 }

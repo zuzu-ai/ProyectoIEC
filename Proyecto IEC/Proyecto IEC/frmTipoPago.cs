@@ -12,9 +12,14 @@ namespace Proyecto_IEC
 {
     public partial class frmTipoPago : Form
     {
-        public frmTipoPago()
+		CapaContoladorProyectoIEC.Global g = new CapaContoladorProyectoIEC.Global();
+		CapaContoladorProyectoIEC.Controlador controlador = new CapaContoladorProyectoIEC.Controlador();
+		public frmTipoPago()
         {
             InitializeComponent();
+			controlador.bloqueareporte(g.obtienenombretusuario, btnImprimir);
+			navegadorMantenimientos1.bloquearBtn(g.obtienenombretusuario);
+
 			TextBox[] alias = navegadorMantenimientos1.ClasificaTextboxsegunParent(this);
 			navegadorMantenimientos1.ObtenerCamposdeTabla(alias, "tipopago", "IEC");
 			navegadorMantenimientos1.MetodoSalirVista(this);
@@ -66,6 +71,12 @@ namespace Proyecto_IEC
 
 			navegadorMantenimientos1.SelecciondeFilaDGV(dgvVistaPrevia);
 
+		}
+
+		private void btnImprimir_Click(object sender, EventArgs e)
+		{
+			Reporte9 reporte = new Reporte9();
+			reporte.Show();
 		}
 	}
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaVistaSeguridad;
 
 namespace Proyecto_IEC
 {
@@ -16,7 +17,7 @@ namespace Proyecto_IEC
 		{
 			InitializeComponent();
 		}
-
+        CapaContoladorProyectoIEC.Controlador controlador = new CapaContoladorProyectoIEC.Controlador();
         private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -172,5 +173,53 @@ namespace Proyecto_IEC
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
-    }
+
+        private void frmMDI_IEC_Load(object sender, EventArgs e)
+        {
+            frmLogin form = new frmLogin();
+
+            if(form.ShowDialog()== DialogResult.OK)
+            {
+                txtUsuario.Text = form.usuario();
+                txtId.Text = form.id();
+                CapaContoladorProyectoIEC.Global global = new CapaContoladorProyectoIEC.Global();
+                global.obtieneusuario = txtUsuario.Text;
+                global.obtieneid = txtId.Text;
+                txtidtusuario.Text=controlador.BuscaDato("usuario","fktipousuario","pkid",txtId.Text);
+                txtnombretusuario.Text = controlador.BuscaDato("tipousuario", "nombre", "pkid", txtidtusuario.Text);
+                global.obtieneidtusuario = txtidtusuario.Text;
+                global.obtienenombretusuario = txtnombretusuario.Text;
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin form = new frmLogin();
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                // txtUsuario.Text = form.usuario();
+
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+		private void pagoGastosEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            try
+            {
+                frmPagoEmpleado form = new frmPagoEmpleado();
+                form.MdiParent = this;
+                form.Show();
+            }
+            catch (Exception ex) { MessageBox.Show("Error: " + ex); }
+        }
+	}
 }
