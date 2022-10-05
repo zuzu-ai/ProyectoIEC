@@ -25,7 +25,7 @@ insert into jornada values ("2","Área Administrativa", "08:00:00","16:30:00","1
 -- TABLA FOTO
 create table foto (
 pkId varchar(15) primary key,
-fotografia LONGBLOB
+fotografia LONGBLOB null
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- TABLA EMPLEADO
@@ -35,19 +35,19 @@ fkpuesto varchar(4) not null,
 nombre varchar(60) not null,
 DPI varchar(13) not null,
 fkjornada varchar(4) not null,
-contratacion date,
-despido date,
-foto varchar(15)null,
+contratacion date default null,
+despido date default null,
+foto varchar(15) default null,
 estado varchar(1),
 foreign key (fkpuesto) references puesto(pkid),
 foreign key (fkjornada) references jornada(pkid),
 foreign key (foto) references foto(pkid)
 )engine=InnoDB DEFAULT CHARSET=latin1;
 
-insert into empleado values ("1","1", "José René Quemé Hervías","2145896250101","1",null,null,null,"1");
-insert into empleado values ("2","1", "Jorge Mario Ruiz Gonzales","5647821450101","1",null,null,null,"1");
-insert into empleado values ("3","2", "Pedro David Hernandez Turcos","6632147850101","1",null,null,null,"1");
-insert into empleado values ("4","2", "Andrea Sofía Galindo Zacs","6632014570101","1",null,null,null,"1");
+insert into empleado values ("1","1", "José René Quemé Hervías","2145896250101","1","0000-00-00","0000-00-00","1","1");
+insert into empleado values ("2","1", "Jorge Mario Ruiz Gonzales","5647821450101","1","0000-00-00","0000-00-00","1","1");
+insert into empleado values ("3","2", "Pedro David Hernandez Turcos","6632147850101","1","0000-00-00","0000-00-00","1","1");
+insert into empleado values ("4","2", "Andrea Sofía Galindo Zacs","6632014570101","1","0000-00-00","0000-00-00","1","1");
 
 -- TABLA PREGUNTA
 create table pregunta(
@@ -57,6 +57,7 @@ estado varchar(1)
 )engine=InnoDB DEFAULT CHARSET=latin1;
 
 insert into pregunta values ("1", "¿Año de nacimiento?", "1");
+
 
 -- TABLA TIPO USUARIO
 create table tipousuario(

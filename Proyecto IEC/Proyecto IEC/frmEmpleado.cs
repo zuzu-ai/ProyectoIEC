@@ -55,6 +55,8 @@ namespace Proyecto_IEC
 			navegadorMantenimientos1.ObtenerReferenciaFormActual(this);
 			//String cadena = txtprueba.Text;
 			//navegador1.pruebaMensaje(cadena);
+			chbxNoContratacion.Checked = false;
+			chbxNoDespido.Checked = false;
 		}
 		
 		private void txtEstado_TextChanged(object sender, EventArgs e)
@@ -76,6 +78,31 @@ namespace Proyecto_IEC
 		{
 
 			navegadorMantenimientos1.SelecciondeFilaDGV(dgvVistaPrevia);
+			if (txtContratacion.Text == "" && txtNombres.Enabled == false)
+			{
+				chbxNoContratacion.Checked = true;
+			}
+			else if (txtContratacion.Text != "" && txtNombres.Enabled == false)
+			{
+				chbxNoContratacion.Checked = false;
+			}
+			else if(txtContratacion.Text != "" && txtNombres.Enabled == true)
+			{
+				chbxNoContratacion.Checked = false;
+			}
+
+			if (txtDespido.Text == "" && txtNombres.Enabled == false)
+			{
+				chbxNoDespido.Checked = true;
+			}
+			else if (txtDespido.Text != "" && txtNombres.Enabled == false)
+			{
+				chbxNoDespido.Checked = false;
+			}
+			else if (txtDespido.Text != "" && txtNombres.Enabled == true)
+			{
+				chbxNoDespido.Checked = false;
+			}
 
 		}
 
@@ -225,12 +252,12 @@ namespace Proyecto_IEC
 
 		private void chbxNoContratacion_CheckedChanged(object sender, EventArgs e)
 		{
-			if (chbxNoContratacion.Checked == true)
+			if (chbxNoContratacion.Checked == true && txtNombres.Enabled == true)
 			{
 				dtpContratacion.Enabled = false;
-				txtContratacion.Text = "";
+				txtContratacion.Text = "0000-00-00";
 			}
-			else if (chbxNoContratacion.Checked == false)
+			else if (chbxNoContratacion.Checked == false && txtNombres.Enabled == true)
 			{
 				dtpContratacion.Enabled = true;
 				try
@@ -244,12 +271,12 @@ namespace Proyecto_IEC
 
 		private void chbxNoDespido_CheckedChanged(object sender, EventArgs e)
 		{
-			if (chbxNoDespido.Checked == true)
+			if (chbxNoDespido.Checked == true && txtNombres.Enabled == true)
 			{
 				dtpDespido.Enabled = false;
-				txtDespido.Text = "";
+				txtDespido.Text = "0000-00-00";
 			}
-			else if (chbxNoDespido.Checked == false)
+			else if (chbxNoDespido.Checked == false && txtNombres.Enabled == true)
 			{
 				dtpDespido.Enabled = true;
 				try
@@ -264,17 +291,46 @@ namespace Proyecto_IEC
 		private void cbxPuesto_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			navegadorMantenimientos1.EnviarDatoComboaTextbox(cbxPuesto, txtIdPuesto);
+			txtIdFoto.Text = "1";
 		}
 
 		private void cbxJornada_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			navegadorMantenimientos1.EnviarDatoComboaTextbox(cbxJornada, txtJornada);
+			txtIdFoto.Text = "1";
 		}
 
 		private void btnImprimir_Click(object sender, EventArgs e)
 		{
 			Reporte3 reporte = new Reporte3();
 			reporte.Show();
+		}
+
+		private void txtNombres_EnabledChanged(object sender, EventArgs e)
+		{
+			if (txtNombres.Text == "" && txtNombres.Enabled == true)
+			{
+				chbxNoContratacion.Checked = false;
+				chbxNoDespido.Checked = false;
+				txtIdFoto.Text = "1";
+			}
+		}
+
+		private void dtpContratacion_EnabledChanged(object sender, EventArgs e)
+		{
+			if (dtpContratacion.Enabled == true && dtpDespido.Enabled == true)
+			{
+				chbxNoContratacion.Checked = false;
+				chbxNoDespido.Checked = false;
+			}
+		}
+
+		private void txtIdFoto_EnabledChanged(object sender, EventArgs e)
+		{
+			if (txtIdFoto.Enabled == true && txtIdFoto.Text == "")
+			{
+				txtIdFoto.Text = "1";
+			}
 		}
 	}
 }

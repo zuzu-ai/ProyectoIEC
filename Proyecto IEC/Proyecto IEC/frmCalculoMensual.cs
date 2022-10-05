@@ -98,5 +98,22 @@ namespace Proyecto_IEC
 		{
 			txtMesTrabajado.Text = dtpInicio.Value.ToString("MM");
 		}
+
+		private void btnImprimir_Click(object sender, EventArgs e)
+		{
+			DGVPrinterHelper.DGVPrinter printer = new DGVPrinterHelper.DGVPrinter();
+			printer.Title = "Reporte de Calculo Mensual";
+
+			printer.SubTitle = string.Format("Fecha de Informe: {0}", DateTime.Now.Date.ToString("dd/MM/yyyy")) + " ID Reporte: "
+				+ txtID.Text.ToString() + "\n" + "Periodo del " + txtfechainicio + " al " + txtfechafin;
+			printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+			printer.PageNumbers = true;
+			printer.PageNumberInHeader = false;
+			printer.PorportionalColumns = true;
+			printer.HeaderCellAlignment = StringAlignment.Near;
+			printer.Footer = "IEC";
+			printer.FooterSpacing = 15;
+			printer.PrintDataGridView(dgvVistaPrevia);
+		}
 	}
 }

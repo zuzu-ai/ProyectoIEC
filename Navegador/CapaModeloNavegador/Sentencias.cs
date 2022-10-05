@@ -608,7 +608,7 @@ namespace CapaModeloNavegador
           //  nombre = dato1;
            // id = dato2;
 
-            MessageBox.Show(nombre);
+           // MessageBox.Show(nombre);
             if(nombre == "Administrador" || nombre == "administrador" || nombre == "ADMINISTRADOR" || nombre == "ADMIN" || nombre == "Admin" || nombre == "admin")
             {
                 Agregar.Enabled = true;

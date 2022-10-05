@@ -104,6 +104,7 @@ namespace Proyecto_IEC
 			this.txtNombres.Size = new System.Drawing.Size(268, 20);
 			this.txtNombres.TabIndex = 3;
 			this.txtNombres.Tag = "nombre";
+			this.txtNombres.EnabledChanged += new System.EventHandler(this.txtNombres_EnabledChanged);
 			// 
 			// label4
 			// 
@@ -184,6 +185,7 @@ namespace Proyecto_IEC
 			this.dtpContratacion.Size = new System.Drawing.Size(268, 20);
 			this.dtpContratacion.TabIndex = 18;
 			this.dtpContratacion.ValueChanged += new System.EventHandler(this.dtpContratacion_ValueChanged);
+			this.dtpContratacion.EnabledChanged += new System.EventHandler(this.dtpContratacion_EnabledChanged);
 			// 
 			// dtpDespido
 			// 
@@ -247,11 +249,13 @@ namespace Proyecto_IEC
 			// 
 			// txtIdFoto
 			// 
-			this.txtIdFoto.Location = new System.Drawing.Point(199, 269);
+			this.txtIdFoto.Location = new System.Drawing.Point(199, 267);
 			this.txtIdFoto.Name = "txtIdFoto";
 			this.txtIdFoto.Size = new System.Drawing.Size(32, 20);
 			this.txtIdFoto.TabIndex = 95;
 			this.txtIdFoto.Tag = "foto";
+			this.txtIdFoto.Visible = false;
+			this.txtIdFoto.EnabledChanged += new System.EventHandler(this.txtIdFoto_EnabledChanged);
 			this.txtIdFoto.TextChanged += new System.EventHandler(this.txtIdFoto_TextChanged);
 			// 
 			// pbFoto
@@ -424,10 +428,6 @@ namespace Proyecto_IEC
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.ClientSize = new System.Drawing.Size(917, 622);
-			this.Controls.Add(this.btnImprimir);
-			this.Controls.Add(this.chbxNoDespido);
-			this.Controls.Add(this.chbxNoContratacion);
-			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.txtEstado);
 			this.Controls.Add(this.txtIdFoto);
 			this.Controls.Add(this.txtDespido);
@@ -437,6 +437,10 @@ namespace Proyecto_IEC
 			this.Controls.Add(this.txtNombres);
 			this.Controls.Add(this.txtIdPuesto);
 			this.Controls.Add(this.txtID);
+			this.Controls.Add(this.btnImprimir);
+			this.Controls.Add(this.chbxNoDespido);
+			this.Controls.Add(this.chbxNoContratacion);
+			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.navegadorMantenimientos1);
 			this.Controls.Add(this.dgvVistaPrevia);
 			this.Controls.Add(this.btnAyuda);
