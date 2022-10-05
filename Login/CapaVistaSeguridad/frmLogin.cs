@@ -58,10 +58,10 @@ namespace CapaVistaSeguridad
                     usuariotxt = txtUsuario.Text;
                     
                     pd.usuario = txtUsuario.Text;
-                    MessageBox.Show(pd.usuario);
+                    //MessageBox.Show(pd.usuario);
                     idusuario = ctr.BuscaDato("usuario","pkid","usuario.usuario",pd.usuario);
                     pd.id = idusuario;
-                    MessageBox.Show(pd.id);
+                   // MessageBox.Show(pd.id);
                 }
                 else
                 {

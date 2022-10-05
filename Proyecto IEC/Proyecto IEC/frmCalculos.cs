@@ -83,5 +83,22 @@ namespace Proyecto_IEC
 			dgvVistaPrevia.Columns[10].ReadOnly = true;
 			dgvVistaPrevia.Columns[11].ReadOnly = true;
 		}
+
+		private void btnImprimir_Click(object sender, EventArgs e)
+		{
+			DGVPrinterHelper.DGVPrinter printer = new DGVPrinterHelper.DGVPrinter();
+			printer.Title = "Reporte de Calculo Diarios";
+
+			printer.SubTitle = string.Format("Fecha: {0}", DateTime.Now.Date.ToString("dd/MM/yyyy")) + "\n" + " ID Reporte: "
+				+ txtID.Text.ToString();
+			printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+			printer.PageNumbers = true;
+			printer.PageNumberInHeader = false;
+			printer.PorportionalColumns = true;
+			printer.HeaderCellAlignment = StringAlignment.Near;
+			printer.Footer = "IEC";
+			printer.FooterSpacing = 15;
+			printer.PrintDataGridView(dgvVistaPrevia);
+		}
 	}
 }

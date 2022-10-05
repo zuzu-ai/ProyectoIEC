@@ -42,17 +42,16 @@ namespace Proyecto_IEC
 			this.tipoPagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tipoAusenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.pagoGastosEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ausenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.calculoMensualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.importarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.pagoGastosEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tipoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.bitácoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.txtUsuario = new System.Windows.Forms.TextBox();
 			this.txtId = new System.Windows.Forms.TextBox();
 			this.txtnombretusuario = new System.Windows.Forms.TextBox();
@@ -103,7 +102,7 @@ namespace Proyecto_IEC
 			// 
 			this.dispositivoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dispositivoToolStripMenuItem.Image")));
 			this.dispositivoToolStripMenuItem.Name = "dispositivoToolStripMenuItem";
-			this.dispositivoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.dispositivoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
 			this.dispositivoToolStripMenuItem.Text = "Dispositivo";
 			this.dispositivoToolStripMenuItem.Click += new System.EventHandler(this.dispositivoToolStripMenuItem_Click);
 			// 
@@ -111,7 +110,7 @@ namespace Proyecto_IEC
 			// 
 			this.empleadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("empleadoToolStripMenuItem.Image")));
 			this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
-			this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
 			this.empleadoToolStripMenuItem.Text = "Empleado";
 			this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click);
 			// 
@@ -119,7 +118,7 @@ namespace Proyecto_IEC
 			// 
 			this.gestiónToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestiónToolStripMenuItem.Image")));
 			this.gestiónToolStripMenuItem.Name = "gestiónToolStripMenuItem";
-			this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
 			this.gestiónToolStripMenuItem.Text = "Gestión";
 			this.gestiónToolStripMenuItem.Click += new System.EventHandler(this.gestiónToolStripMenuItem_Click);
 			// 
@@ -127,7 +126,7 @@ namespace Proyecto_IEC
 			// 
 			this.jornadaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("jornadaToolStripMenuItem.Image")));
 			this.jornadaToolStripMenuItem.Name = "jornadaToolStripMenuItem";
-			this.jornadaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.jornadaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
 			this.jornadaToolStripMenuItem.Text = "Jornada";
 			this.jornadaToolStripMenuItem.Click += new System.EventHandler(this.jornadaToolStripMenuItem_Click);
 			// 
@@ -135,7 +134,7 @@ namespace Proyecto_IEC
 			// 
 			this.puestoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("puestoToolStripMenuItem.Image")));
 			this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
-			this.puestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.puestoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
 			this.puestoToolStripMenuItem.Text = "Puesto";
 			this.puestoToolStripMenuItem.Click += new System.EventHandler(this.puestoToolStripMenuItem_Click);
 			// 
@@ -143,7 +142,7 @@ namespace Proyecto_IEC
 			// 
 			this.tipoPagoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("tipoPagoToolStripMenuItem.Image")));
 			this.tipoPagoToolStripMenuItem.Name = "tipoPagoToolStripMenuItem";
-			this.tipoPagoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.tipoPagoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
 			this.tipoPagoToolStripMenuItem.Text = "Tipo pago";
 			this.tipoPagoToolStripMenuItem.Click += new System.EventHandler(this.tipoPagoToolStripMenuItem_Click);
 			// 
@@ -151,7 +150,7 @@ namespace Proyecto_IEC
 			// 
 			this.tipoAusenciaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("tipoAusenciaToolStripMenuItem.Image")));
 			this.tipoAusenciaToolStripMenuItem.Name = "tipoAusenciaToolStripMenuItem";
-			this.tipoAusenciaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.tipoAusenciaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
 			this.tipoAusenciaToolStripMenuItem.Text = "Tipo ausencia";
 			this.tipoAusenciaToolStripMenuItem.Click += new System.EventHandler(this.tipoAusenciaToolStripMenuItem_Click);
 			// 
@@ -166,6 +165,14 @@ namespace Proyecto_IEC
 			this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
 			this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
 			this.procesosToolStripMenuItem.Text = "Procesos";
+			// 
+			// pagoGastosEmpleadosToolStripMenuItem
+			// 
+			this.pagoGastosEmpleadosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pagoGastosEmpleadosToolStripMenuItem.Image")));
+			this.pagoGastosEmpleadosToolStripMenuItem.Name = "pagoGastosEmpleadosToolStripMenuItem";
+			this.pagoGastosEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+			this.pagoGastosEmpleadosToolStripMenuItem.Text = "Pago Gastos Empleados";
+			this.pagoGastosEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.pagoGastosEmpleadosToolStripMenuItem_Click);
 			// 
 			// ausenciasToolStripMenuItem
 			// 
@@ -199,14 +206,6 @@ namespace Proyecto_IEC
 			this.consultaToolStripMenuItem.Text = "Consulta";
 			this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
 			// 
-			// pagoGastosEmpleadosToolStripMenuItem
-			// 
-			this.pagoGastosEmpleadosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pagoGastosEmpleadosToolStripMenuItem.Image")));
-			this.pagoGastosEmpleadosToolStripMenuItem.Name = "pagoGastosEmpleadosToolStripMenuItem";
-			this.pagoGastosEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-			this.pagoGastosEmpleadosToolStripMenuItem.Text = "Pago Gastos Empleados";
-			this.pagoGastosEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.pagoGastosEmpleadosToolStripMenuItem_Click);
-			// 
 			// ayudaToolStripMenuItem
 			// 
 			this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
@@ -231,8 +230,7 @@ namespace Proyecto_IEC
 			// 
 			this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
-            this.tipoUsuarioToolStripMenuItem,
-            this.bitácoraToolStripMenuItem});
+            this.tipoUsuarioToolStripMenuItem});
 			this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
 			this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
 			this.seguridadToolStripMenuItem.Text = "Seguridad";
@@ -241,7 +239,7 @@ namespace Proyecto_IEC
 			// 
 			this.usuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usuariosToolStripMenuItem.Image")));
 			this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-			this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+			this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.usuariosToolStripMenuItem.Text = "Usuario";
 			this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
 			// 
@@ -249,15 +247,9 @@ namespace Proyecto_IEC
 			// 
 			this.tipoUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("tipoUsuarioToolStripMenuItem.Image")));
 			this.tipoUsuarioToolStripMenuItem.Name = "tipoUsuarioToolStripMenuItem";
-			this.tipoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+			this.tipoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.tipoUsuarioToolStripMenuItem.Text = "Tipo usuario";
 			this.tipoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.tipoUsuarioToolStripMenuItem_Click);
-			// 
-			// bitácoraToolStripMenuItem
-			// 
-			this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
-			this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-			this.bitácoraToolStripMenuItem.Text = "Bitácora";
 			// 
 			// txtUsuario
 			// 
@@ -343,7 +335,6 @@ namespace Proyecto_IEC
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bitácoraToolStripMenuItem;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtId;
 		private System.Windows.Forms.ToolStripMenuItem pagoGastosEmpleadosToolStripMenuItem;

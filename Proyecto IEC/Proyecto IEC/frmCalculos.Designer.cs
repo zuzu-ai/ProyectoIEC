@@ -114,6 +114,7 @@ namespace Proyecto_IEC
 			this.btnImprimir.Size = new System.Drawing.Size(50, 50);
 			this.btnImprimir.TabIndex = 127;
 			this.btnImprimir.UseVisualStyleBackColor = false;
+			this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
 			// 
 			// frmCalculos
 			// 
