@@ -399,3 +399,41 @@ C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_I
 C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte7.resources
 C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte8.resources
 C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte9.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\AxShockwaveFlashObjects.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaSeguridad.exe
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.Shared.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\ShockwaveFlashObjects.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaControladorSeguridad.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\stdole.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaModeloSeguridad.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaSeguridad.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaVistaSeguridad.exe.config
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaControladorSeguridad.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\bin\Debug\CapaModeloSeguridad.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmPagoEmpleado.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte1.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte10.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte11.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte2.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte3.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte4.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte5.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte6.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte7.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte8.resources
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.Reporte9.resources
