@@ -12,9 +12,13 @@ namespace Proyecto_IEC
 {
     public partial class frmPuesto : Form
     {
-        public frmPuesto()
+		CapaContoladorProyectoIEC.Global g = new CapaContoladorProyectoIEC.Global();
+		CapaContoladorProyectoIEC.Controlador controlador = new CapaContoladorProyectoIEC.Controlador();
+		public frmPuesto()
         {
             InitializeComponent();
+			controlador.bloqueareporte(g.obtienenombretusuario, btnImprimir);
+			navegadorMantenimientos1.bloquearBtn(g.obtienenombretusuario);
 
 			TextBox[] alias = navegadorMantenimientos1.ClasificaTextboxsegunParent(this);
 			navegadorMantenimientos1.ObtenerCamposdeTabla(alias, "puesto", "IEC");
@@ -67,6 +71,12 @@ namespace Proyecto_IEC
 
 			navegadorMantenimientos1.SelecciondeFilaDGV(dgvVistaPrevia);
 
+		}
+
+		private void btnImprimir_Click(object sender, EventArgs e)
+		{
+			Reporte7 reporte = new Reporte7();
+			reporte.Show();
 		}
 	}
 }

@@ -12,9 +12,12 @@ namespace Proyecto_IEC
 {
     public partial class frmDispositivo : Form
     {
+		CapaContoladorProyectoIEC.Global g = new CapaContoladorProyectoIEC.Global();
+		CapaContoladorProyectoIEC.Controlador controlador = new CapaContoladorProyectoIEC.Controlador();
         public frmDispositivo()
         {
             InitializeComponent();
+			controlador.bloqueareporte(g.obtienenombretusuario, btnImprimir);
 
 			TextBox[] alias = navegadorMantenimientos1.ClasificaTextboxsegunParent(this);
 			navegadorMantenimientos1.ObtenerCamposdeTabla(alias, "dispositivo", "IEC");
@@ -46,6 +49,8 @@ namespace Proyecto_IEC
 			navegadorMantenimientos1.ObtenerReferenciaFormActual(this);
 			//String cadena = txtprueba.Text;
 			//navegador1.pruebaMensaje(cadena);
+			//MessageBox.Show(g.obtienenombretusuario);
+			navegadorMantenimientos1.bloquearBtn(g.obtienenombretusuario);
 		}
 		private void txtEstado_TextChanged(object sender, EventArgs e)
 		{
@@ -67,6 +72,12 @@ namespace Proyecto_IEC
 
 			navegadorMantenimientos1.SelecciondeFilaDGV(dgvVistaPrevia);
 
+		}
+
+		private void btnImprimir_Click(object sender, EventArgs e)
+		{
+			Reporte2 reporte = new Reporte2();
+			reporte.Show();
 		}
 	}
 }

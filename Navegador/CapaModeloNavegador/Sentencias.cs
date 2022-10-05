@@ -571,6 +571,92 @@ namespace CapaModeloNavegador
                 date.Value = Convert.ToDateTime(textoDate.Text.ToString());
             }
         }
+
+        public (string, string) permisos(string admin, string id)
+        {
+            string per1 = "";
+            string per2 = ""; int CT = 0; OdbcDataReader leer = null;
+            string query = "SELECT usuario.fktipousuario AS 'id',tipousuario.nombre AS 'nombre' from usuario, tipousuario where usuario.usuario = '" + admin + "' and usuario.pkid = '" + id + "' and usuario.fktipousuario = tipousuario.pkid;";
+            
+            Conexion cn = new Conexion();
+            OdbcConnection conn = cn.conexion();
+
+            OdbcCommand command = new OdbcCommand(query, conn);
+            leer = command.ExecuteReader();
+            if (!leer.HasRows)
+            {
+                per1 = "0";
+                per2 = "0";
+            }
+            if (leer.Read())
+            {
+                per1 = leer[id].ToString();
+                per2 = leer[id].ToString();
+            }
+            { cn.desconexion(conn); }
+
+            return (per1, per2);
+        }
+
+        public void bloquearBtn( Button Agregar, Button Modificar, Button Guardar, Button Cancelar, Button Eliminar, Button Reporte, Button Actualizar, Button Inicio, Button Anterior, Button Siguiente, Button Final, Button Ayuda, Button Salir, string nombre)
+        {
+            //string id = "";
+           // string nombre = "";
+
+           // var (dato1, dato2) = permisos(usuario, id_usuario);
+
+          //  nombre = dato1;
+           // id = dato2;
+
+            MessageBox.Show(nombre);
+            if(nombre == "Administrador" || nombre == "administrador" || nombre == "ADMINISTRADOR" || nombre == "ADMIN" || nombre == "Admin" || nombre == "admin")
+            {
+                Agregar.Enabled = true;
+                Modificar.Enabled = true;
+                Guardar.Enabled = true;
+                Cancelar.Enabled = true;
+                Eliminar.Enabled = true;
+                Reporte.Enabled = false;
+                Actualizar.Enabled = true;
+                Inicio.Enabled = true;
+                Anterior.Enabled = true;
+                Siguiente.Enabled = true;
+                Final.Enabled = true;
+                Ayuda.Enabled = true;
+                Salir.Enabled = true;
+            }else if(nombre == "Supervisor" || nombre == "supervisor" || nombre == "SUPERVISOR" )
+            {
+                Agregar.Enabled = false;
+                Modificar.Enabled = false;
+                Guardar.Enabled = false;
+                Cancelar.Enabled = false;
+                Eliminar.Enabled = false;
+                Reporte.Enabled = false;
+                Actualizar.Enabled = true;
+                Inicio.Enabled = true;
+                Anterior.Enabled = true;
+                Siguiente.Enabled = true;
+                Final.Enabled = true;
+                Ayuda.Enabled = true;
+                Salir.Enabled = true;
+            }else if (nombre == "Visitante" || nombre == "visitante" || nombre == "VISITANTE")
+            {
+                Agregar.Enabled = false;
+                Modificar.Enabled = false;
+                Guardar.Enabled = false;
+                Cancelar.Enabled = false;
+                Eliminar.Enabled = false;
+                Reporte.Enabled = false;
+                Actualizar.Enabled = true;
+                Inicio.Enabled = true;
+                Anterior.Enabled = true;
+                Siguiente.Enabled = true;
+                Final.Enabled = true;
+                Ayuda.Enabled = true;
+                Salir.Enabled = true;
+            }
+
+        }// fin bloquearBtn
     }
 }
 

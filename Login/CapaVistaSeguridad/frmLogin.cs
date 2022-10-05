@@ -14,8 +14,11 @@ namespace CapaVistaSeguridad
 {
     public partial class frmLogin : Form
     {
+        public string idusuario = "";
+        public string usuariotxt = "";
         private Controlador ctr = new Controlador();
-        
+        CapaControladorSeguridad.PideDato pd = new CapaControladorSeguridad.PideDato();
+
         public frmLogin()
         {
             InitializeComponent();
@@ -35,6 +38,7 @@ namespace CapaVistaSeguridad
                 txtContraseña.Text = "";
             }
         }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string Usuario = txtUsuario.Text.Trim();
@@ -49,7 +53,15 @@ namespace CapaVistaSeguridad
                 if (ctr.funIniciarSesion(txtUsuario.Text, password) == 1)
                 {                    
                     DialogResult = DialogResult.OK;                   
-                    MessageBox.Show(" Bienvenido " + txtUsuario.Text);                   
+                    MessageBox.Show(" Bienvenido " + txtUsuario.Text);
+                    
+                    usuariotxt = txtUsuario.Text;
+                    
+                    pd.usuario = txtUsuario.Text;
+                    MessageBox.Show(pd.usuario);
+                    idusuario = ctr.BuscaDato("usuario","pkid","usuario.usuario",pd.usuario);
+                    pd.id = idusuario;
+                    MessageBox.Show(pd.id);
                 }
                 else
                 {
@@ -113,6 +125,8 @@ namespace CapaVistaSeguridad
             }
         }
 
+         
+
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
             funValidarUsuario();
@@ -138,6 +152,19 @@ namespace CapaVistaSeguridad
                 txtContraseña.Focus();
                 funValidarUsuario();
             }
+        }
+
+        private void lklRecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+        public string usuario()
+        {
+            return pd.usuario;
+        }
+        public string id()
+        {
+            return pd.id;
         }
     }
 }

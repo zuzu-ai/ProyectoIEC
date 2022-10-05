@@ -12,7 +12,7 @@ namespace CapaModeloSeguridad
     {
         private Conexion cn = new Conexion();
         private OdbcCommand Comm;
-        public int funIniciarSesion(string Usuario, string Contraseña, int validar)
+        public int funIniciarSesion(string Usuario, string Contraseña,  int validar)
         {
             try
             {
@@ -38,13 +38,14 @@ namespace CapaModeloSeguridad
             return validar;
         }
         //Kevin Flores 9959-18-17632
+        //Carol Monterroso 0901-17-5961
         public int funInicio(string Usuario, string Contrasena)
         {
             try
             {
                 string Us = "";
                 string Con = "";
-                Comm = new OdbcCommand("SELECT usuario, contrasena FROM iec.usuario WHERE usuario ='" + Usuario + "' AND contrasena ='" + Contrasena + "' AND estado = '1' ;", cn.conexion());
+                Comm = new OdbcCommand("SELECT usuario, contrasena FROM iec.usuario WHERE usuario ='" + Usuario + "' AND contrasena ='" + Contrasena + "' AND estado = '1' ;", cn.conexion()); //+ Email + "'AND email ='"
                 OdbcDataReader reader = Comm.ExecuteReader();
                 reader.Read();
                 Us = reader.GetString(0);
@@ -78,6 +79,40 @@ namespace CapaModeloSeguridad
                 Console.WriteLine("Error en modelo-modificar ", Error);
                 return null;
             }
+       
+        
         }
+
+
+        public string BuscaDato(string tabla, string campo, string campobuscado, string datoreferencia)
+        {
+            string dato = "";
+            try
+            {
+                string insertQuery = "SELECT * FROM " + tabla + " WHERE " + campobuscado + " = '" + datoreferencia + "';";
+                //MessageBox.Show(insertQuery);
+                OdbcConnection conect = cn.conexion();
+                OdbcCommand command = new OdbcCommand(insertQuery, conect);
+                command.ExecuteNonQuery(); OdbcDataReader busquedac;
+                busquedac = command.ExecuteReader();
+                if (!busquedac.HasRows)
+                {
+                    // throw new Exception("No hay dato guardado.");
+                }
+                if (busquedac.Read())
+                {
+                    dato = busquedac[campo].ToString();
+                }
+                cn.desconexion(conect);
+                return dato;
+            }
+            catch (Exception ex)
+            {
+                return dato;
+            }
+        }
+        
+
     }
+
 }

@@ -13,9 +13,13 @@ namespace Proyecto_IEC
 {
     public partial class frmUsuario : Form
     {
-        public frmUsuario()
+		CapaContoladorProyectoIEC.Global g = new CapaContoladorProyectoIEC.Global();
+		CapaContoladorProyectoIEC.Controlador controlador = new CapaContoladorProyectoIEC.Controlador();
+		public frmUsuario()
         {
             InitializeComponent();
+			controlador.bloqueareporte(g.obtienenombretusuario, btnImprimir);
+			navegadorMantenimientos1.bloquearBtn(g.obtienenombretusuario);
 
 			TextBox[] alias = navegadorMantenimientos1.ClasificaTextboxsegunParent(this);
 			navegadorMantenimientos1.ObtenerCamposdeTabla(alias, "usuario", "IEC");
@@ -173,5 +177,11 @@ namespace Proyecto_IEC
         {
 
         }
-    }
+
+		private void btnImprimir_Click(object sender, EventArgs e)
+		{
+			Reporte10 reporte = new Reporte10();
+			reporte.Show();
+		}
+	}
 }

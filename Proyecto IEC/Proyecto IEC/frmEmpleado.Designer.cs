@@ -61,6 +61,7 @@ namespace Proyecto_IEC
 			this.rbnEstatusamodulo = new System.Windows.Forms.RadioButton();
 			this.chbxNoContratacion = new System.Windows.Forms.CheckBox();
 			this.chbxNoDespido = new System.Windows.Forms.CheckBox();
+			this.btnImprimir = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvVistaPrevia)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -220,6 +221,7 @@ namespace Proyecto_IEC
 			this.txtContratacion.Size = new System.Drawing.Size(39, 20);
 			this.txtContratacion.TabIndex = 23;
 			this.txtContratacion.Tag = "contratacion";
+			this.txtContratacion.Visible = false;
 			this.txtContratacion.TextChanged += new System.EventHandler(this.txtContratacion_TextChanged);
 			// 
 			// txtDespido
@@ -229,6 +231,7 @@ namespace Proyecto_IEC
 			this.txtDespido.Size = new System.Drawing.Size(39, 20);
 			this.txtDespido.TabIndex = 24;
 			this.txtDespido.Tag = "despido";
+			this.txtDespido.Visible = false;
 			this.txtDespido.TextChanged += new System.EventHandler(this.txtDespido_TextChanged);
 			// 
 			// label9
@@ -379,7 +382,7 @@ namespace Proyecto_IEC
 			// chbxNoContratacion
 			// 
 			this.chbxNoContratacion.AutoSize = true;
-			this.chbxNoContratacion.Location = new System.Drawing.Point(683, 211);
+			this.chbxNoContratacion.Location = new System.Drawing.Point(633, 215);
 			this.chbxNoContratacion.Name = "chbxNoContratacion";
 			this.chbxNoContratacion.Size = new System.Drawing.Size(70, 17);
 			this.chbxNoContratacion.TabIndex = 125;
@@ -390,13 +393,28 @@ namespace Proyecto_IEC
 			// chbxNoDespido
 			// 
 			this.chbxNoDespido.AutoSize = true;
-			this.chbxNoDespido.Location = new System.Drawing.Point(683, 236);
+			this.chbxNoDespido.Location = new System.Drawing.Point(633, 240);
 			this.chbxNoDespido.Name = "chbxNoDespido";
 			this.chbxNoDespido.Size = new System.Drawing.Size(70, 17);
 			this.chbxNoDespido.TabIndex = 126;
 			this.chbxNoDespido.Text = "No incluir";
 			this.chbxNoDespido.UseVisualStyleBackColor = true;
 			this.chbxNoDespido.CheckedChanged += new System.EventHandler(this.chbxNoDespido_CheckedChanged);
+			// 
+			// btnImprimir
+			// 
+			this.btnImprimir.BackColor = System.Drawing.Color.Transparent;
+			this.btnImprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImprimir.BackgroundImage")));
+			this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnImprimir.FlatAppearance.BorderSize = 0;
+			this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnImprimir.Location = new System.Drawing.Point(253, 4);
+			this.btnImprimir.Margin = new System.Windows.Forms.Padding(0);
+			this.btnImprimir.Name = "btnImprimir";
+			this.btnImprimir.Size = new System.Drawing.Size(50, 50);
+			this.btnImprimir.TabIndex = 127;
+			this.btnImprimir.UseVisualStyleBackColor = false;
+			this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
 			// 
 			// frmEmpleado
 			// 
@@ -406,6 +424,7 @@ namespace Proyecto_IEC
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.ClientSize = new System.Drawing.Size(917, 622);
+			this.Controls.Add(this.btnImprimir);
 			this.Controls.Add(this.chbxNoDespido);
 			this.Controls.Add(this.chbxNoContratacion);
 			this.Controls.Add(this.panel1);
@@ -482,5 +501,6 @@ namespace Proyecto_IEC
         private System.Windows.Forms.RadioButton rbnEstatusamodulo;
 		private System.Windows.Forms.CheckBox chbxNoContratacion;
 		private System.Windows.Forms.CheckBox chbxNoDespido;
+		private System.Windows.Forms.Button btnImprimir;
 	}
 }

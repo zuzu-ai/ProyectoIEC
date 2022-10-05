@@ -12,9 +12,14 @@ namespace Proyecto_IEC
 {
     public partial class frmAusencias : Form
     {
-        public frmAusencias()
+		CapaContoladorProyectoIEC.Global g = new CapaContoladorProyectoIEC.Global();
+		CapaContoladorProyectoIEC.Controlador controlador = new CapaContoladorProyectoIEC.Controlador();
+		public frmAusencias()
         {
             InitializeComponent();
+			controlador.bloqueareporte(g.obtienenombretusuario, btnImprimir);
+			navegadorMantenimientos1.bloquearBtn(g.obtienenombretusuario);
+
 			TextBox[] alias = navegadorMantenimientos1.ClasificaTextboxsegunParent(this);
 			navegadorMantenimientos1.ObtenerCamposdeTabla(alias, "ausencia", "IEC");
 			navegadorMantenimientos1.MetodoSalirVista(this);
@@ -108,5 +113,11 @@ namespace Proyecto_IEC
 			}
 			catch (Exception ex) { MessageBox.Show("Error: " + ex); }
 		}
-    }
+
+		private void btnImprimir_Click(object sender, EventArgs e)
+		{
+			Reporte1 reporte = new Reporte1();
+			reporte.Show();
+		}
+	}
 }

@@ -52,3 +52,30 @@ D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Informac
 D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CopyComplete
 D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.dll
 D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.pdb
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaContoladorProyectoIEC.dll
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaContoladorProyectoIEC.pdb
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.AssemblyReference.cache
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CoreCompileInputs.cache
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CopyComplete
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.dll
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.pdb
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaContoladorProyectoIEC.dll
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaContoladorProyectoIEC.pdb
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.AssemblyReference.cache
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CoreCompileInputs.cache
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CopyComplete
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.dll
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.pdb
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaContoladorProyectoIEC.dll
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaContoladorProyectoIEC.pdb
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.AssemblyReference.cache
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CoreCompileInputs.cache
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.csproj.CopyComplete
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.dll
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaContoladorProyectoIEC\obj\Debug\CapaContoladorProyectoIEC.pdb

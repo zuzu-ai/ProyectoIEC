@@ -346,6 +346,8 @@ namespace CapaModeloProyectoIEC
             CT = Int32.Parse(contador);
             return (CT);
         }
+
+      
         public int cantidadTB2(string tabla, string campo, string dato, string campo2, string dato2, string campo3, string dato3)
         {
             string contador = ""; int CT = 0; OdbcDataReader leer = null;
@@ -1032,6 +1034,36 @@ namespace CapaModeloProyectoIEC
                 {
                     date.Value = Convert.ToDateTime(textoDate.Text.ToString());
                 }
+            }
+        }
+        public void bloqueareporte(string tipousuario, Button reporte)
+        {
+            if (tipousuario == "admin" || tipousuario == "Admin" || tipousuario == "ADMIN" || tipousuario == "administrador" || tipousuario == "Administrador" || tipousuario == "ADMINISTRADOR")
+            {
+                reporte.Enabled = true;
+            }
+            else if (tipousuario == "supervisor" || tipousuario == "Supervisor" || tipousuario == "SUPERVISOR")
+            {
+                reporte.Enabled = true;
+            }
+            else if (tipousuario == "visitante" || tipousuario == "Visitante" || tipousuario == "VISITANTE")
+            {
+                reporte.Enabled = false;
+            }
+        }
+        public void bloqueaimagen(string tipousuario, Button imagen)
+        {
+            if (tipousuario == "admin" || tipousuario == "Admin" || tipousuario == "ADMIN" || tipousuario == "administrador" || tipousuario == "Administrador" || tipousuario == "ADMINISTRADOR")
+            {
+                imagen.Enabled = true;
+            }
+            else if (tipousuario == "supervisor" || tipousuario == "Supervisor" || tipousuario == "SUPERVISOR")
+            {
+                imagen.Enabled = false;
+            }
+            else if (tipousuario == "visitante" || tipousuario == "Visitante" || tipousuario == "VISITANTE")
+            {
+                imagen.Enabled = false;
             }
         }
     }

@@ -12,9 +12,14 @@ namespace Proyecto_IEC
 {
     public partial class frmTipoUsuario : Form
     {
-        public frmTipoUsuario()
+		CapaContoladorProyectoIEC.Global g = new CapaContoladorProyectoIEC.Global();
+		CapaContoladorProyectoIEC.Controlador controlador = new CapaContoladorProyectoIEC.Controlador();
+		public frmTipoUsuario()
         {
             InitializeComponent();
+			controlador.bloqueareporte(g.obtienenombretusuario, btnImprimir);
+			navegadorMantenimientos1.bloquearBtn(g.obtienenombretusuario);
+
 			TextBox[] alias = navegadorMantenimientos1.ClasificaTextboxsegunParent(this);
 			navegadorMantenimientos1.ObtenerCamposdeTabla(alias, "tipousuario", "IEC");
 			navegadorMantenimientos1.MetodoSalirVista(this);
@@ -64,6 +69,12 @@ namespace Proyecto_IEC
 		private void dgvVistaPrevia_SelectionChanged(object sender, EventArgs e)
 		{
 			navegadorMantenimientos1.SelecciondeFilaDGV(dgvVistaPrevia);
+		}
+
+		private void btnImprimir_Click(object sender, EventArgs e)
+		{
+			Reporte11 reporte = new Reporte11();
+			reporte.Show();
 		}
 	}
 }

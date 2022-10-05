@@ -20,6 +20,8 @@ namespace CapaVistaNavegador
         string tablas; string DB;
         public string campoEstado = ""; public string tablaAyuda = "";
         public string campoAyuda = ""; public string idAplicacion = "";
+        string usuario = "", idusuario = "";
+        //LLAMADA A FUNCION DE PERMISOS
         //public reporte formReporte = new reporte();
 
         DataGridView dataE;
@@ -38,13 +40,15 @@ namespace CapaVistaNavegador
         public Boolean permisoReporteador = true;  //Valor que debe llegar de seguridad
 
         public string permisos;
-        public string usuario = "";
+        //public string usuario = "";
         public string aplicacion = "";
-        public string idusuario;
+        //public string idusuario;
         public string idmodulo;
         public NavegadorMantenimientos()
         {
             InitializeComponent();
+            
+            //bloquearBtn(btnIngresar, btnEditar, btnGuardar, btnCancelar, btnEliminar, btnImprimir, btnActualizar, btnInicio, btnAnterior, btnSiguiente, btnFinal, btnAyuda, btnSalir, idusuario, usuario);
         }
 
         public TextBox[] ClasificaTextboxsegunParent(Control parent)
@@ -792,5 +796,12 @@ namespace CapaVistaNavegador
 
             }
         }
+
+        public void bloquearBtn(string tipousuario)
+        {
+            //MessageBox.Show(id_usuario + " " + usuario);
+            control.bloquearBtn(btnIngresar, btnEditar, btnGuardar, btnCancelar, btnEliminar, btnImprimir, btnActualizar, btnInicio, btnAnterior, btnSiguiente, btnFinal, btnAyuda, btnSalir, tipousuario);
+        }
+
     }
 }

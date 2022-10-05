@@ -16,7 +16,7 @@ namespace CapaVistaSeguridad
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTipoUsuario());
+            Application.Run(new frmLogin());
         }
     }
 }

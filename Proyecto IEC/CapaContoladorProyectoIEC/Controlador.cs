@@ -147,5 +147,13 @@ namespace CapaContoladorProyectoIEC
         {
             sn.RecibirContratoDespido(date, textoDate, check);
         }
+        public void bloqueareporte(string tipousuario, Button reporte)
+        {
+            sn.bloqueareporte(tipousuario,reporte);
+        }
+        public void bloquearimagen(string tipousuario, Button imagen)
+        {
+            sn.bloqueaimagen(tipousuario, imagen);
+        }
     }
 }
