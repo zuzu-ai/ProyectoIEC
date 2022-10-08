@@ -1,0 +1,36 @@
+C:\Users\Kevin\source\repos\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.dll
+C:\Users\Kevin\source\repos\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.pdb
+C:\Users\Kevin\source\repos\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.AssemblyReference.cache
+C:\Users\Kevin\source\repos\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\source\repos\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.dll
+C:\Users\Kevin\source\repos\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.dll
+F:\ProyectoIEC\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.AssemblyReference.cache
+F:\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.CoreCompileInputs.cache
+F:\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.dll
+F:\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.AssemblyReference.cache
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.CoreCompileInputs.cache
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.pdb
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.dll
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.pdb
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.AssemblyReference.cache
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.CoreCompileInputs.cache
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.dll
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.pdb
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.dll
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.pdb
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.AssemblyReference.cache
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.CoreCompileInputs.cache
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.dll
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.pdb
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.dll
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaModeloNavegador\bin\Debug\CapaModeloNavegador.pdb
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.AssemblyReference.cache
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.dll
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaModeloNavegador\obj\Debug\CapaModeloNavegador.pdb
