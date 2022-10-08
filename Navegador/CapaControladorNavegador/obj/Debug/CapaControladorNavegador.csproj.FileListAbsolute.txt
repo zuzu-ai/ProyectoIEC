@@ -1,0 +1,51 @@
+C:\Users\Kevin\source\repos\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.dll
+C:\Users\Kevin\source\repos\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.pdb
+C:\Users\Kevin\source\repos\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.AssemblyReference.cache
+C:\Users\Kevin\source\repos\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\source\repos\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.dll
+C:\Users\Kevin\source\repos\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.dll
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.AssemblyReference.cache
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CoreCompileInputs.cache
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.dll
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.dll
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.pdb
+F:\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CopyComplete
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.AssemblyReference.cache
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CoreCompileInputs.cache
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CopyComplete
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.AssemblyReference.cache
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CoreCompileInputs.cache
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.dll
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.pdb
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.dll
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.pdb
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.dll
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.pdb
+C:\Users\kievk\Desktop\ProyectoIEC\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CopyComplete
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.dll
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.pdb
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.dll
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.pdb
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.AssemblyReference.cache
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CoreCompileInputs.cache
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CopyComplete
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.dll
+C:\Users\ZUZU\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.pdb
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.dll
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaControladorNavegador.pdb
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.dll
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\bin\Debug\CapaModeloNavegador.pdb
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.AssemblyReference.cache
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.csproj.CopyComplete
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.dll
+C:\Users\Kevin\Desktop\ProyectoIEC\Navegador\CapaControladorNavegador\obj\Debug\CapaControladorNavegador.pdb

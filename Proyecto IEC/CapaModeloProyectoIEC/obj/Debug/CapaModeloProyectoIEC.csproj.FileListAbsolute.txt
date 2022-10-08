@@ -1,0 +1,48 @@
+F:\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+F:\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+F:\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
+F:\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
+F:\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
+F:\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
+F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
+F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
+F:\IEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\ZUZU\Desktop\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
+F:\P\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+F:\P\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+F:\P\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
+F:\P\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
+F:\P\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
+F:\P\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
+D:\Documentos\UMG\0 -Decimo Semestre\2. Seminario de Tecnologías de la Información\Software\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
+C:\Users\Carol\Desktop\ProyectoS\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\Kevin\Desktop\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.AssemblyReference.cache
+C:\Users\Kevin\Desktop\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Desktop\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.dll
+C:\Users\Kevin\Desktop\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\obj\Debug\CapaModeloProyectoIEC.pdb
+C:\Users\Kevin\Desktop\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.dll
+C:\Users\Kevin\Desktop\ProyectoIEC\Proyecto IEC\CapaModeloProyectoIEC\bin\Debug\CapaModeloProyectoIEC.pdb
