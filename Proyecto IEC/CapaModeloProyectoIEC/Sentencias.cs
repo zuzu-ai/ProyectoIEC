@@ -373,7 +373,7 @@ namespace CapaModeloProyectoIEC
         {
             DataTable tablainicial = new DataTable();
             int cantidadEmpleados = idEncabezadoActual("empleado", "pkid");
-
+            
             tablainicial.Columns.Add("ID");
             tablainicial.Columns.Add("Nombre");
             tablainicial.Columns.Add("Entrada");
@@ -425,6 +425,7 @@ namespace CapaModeloProyectoIEC
                     0);
                 string horastrabajadas = tiempo.ToString();
                 row["Horas Trabajadas"] = horastrabajadas;
+                
                 //CALCULO DIFERENCIA DE HORAS
                 //BUSCAMOS JORNADA DEL EMPLEADO Y PROCESAMOS LOS HORARIOS
                 string idjornada = BuscaDato("empleado", "fkjornada", "pkid", i.ToString());
@@ -515,6 +516,7 @@ namespace CapaModeloProyectoIEC
 
                 //BUSQUEDA DE SUSPENCIONES
                 tablainicial.Rows.Add(row);
+                horastrabajadas = "";
             }
 
             return tablainicial;
@@ -613,9 +615,11 @@ namespace CapaModeloProyectoIEC
 
             //DataRow row = tablainicial.NewRow();
             //BUSCAR LA INFORMACIÓN DE LOS EMPLEADOS
+            
             for (int i = 1; i <= cantidadEmpleados; i++)
             {
                 var horast = 0; var horasd = 0; var ausencias = 0; var horase = 0; double pcomidas = 0; double pcomb = 0; double pviat = 0; double otp = 0;
+                string horastotales = "", horastotalesdescontadas = "", horastotalesextra = "";
 
                 TimeSpan hotrastotales = new TimeSpan();
                 TimeSpan hotrastotalesdescontadas = new TimeSpan();
@@ -624,7 +628,7 @@ namespace CapaModeloProyectoIEC
                 DataRow row = tablainicial.NewRow();
                 for (int d = 1; d <= cantidadDiarios; d++)
                 {
-
+                    
                     //CONSEGUIMOS EL MES, LOS DÍAS Y EL AÑO
                     DateTime uf = Convert.ToDateTime(ultimafecha);
                     DateTime pf = Convert.ToDateTime(primerafecha);
@@ -632,8 +636,9 @@ namespace CapaModeloProyectoIEC
                     int diasc = Int32.Parse(dias);
                     string mes = uf.ToString("MM");
                     string anio = uf.ToString("yyyy");
-                    
+
                     // for (int j = 1; j <= diasc; j++)
+                    
                     
                     for (DateTime j = pf; j <= uf; j = j.AddDays(1))
                     {
@@ -659,6 +664,7 @@ namespace CapaModeloProyectoIEC
                             datoD = Convert.ToDateTime(horadescontadacalculo);
                             DateTime datoE = new DateTime();
                             datoE = Convert.ToDateTime(horaextracalculo);
+
                             TimeSpan dts = new TimeSpan();
                             TimeSpan htd = new TimeSpan();
                             TimeSpan hte = new TimeSpan();
@@ -669,6 +675,9 @@ namespace CapaModeloProyectoIEC
                             hte = datoE - datoC;
                             hotrastotalesextra = hotrastotalesextra + hte;
 
+                            horastotales = hotrastotales.ToString();
+                            horastotalesdescontadas = hotrastotalesdescontadas.ToString();
+                            horastotalesextra = hotrastotalesextra.ToString();
                             //SUMAMOS RESULTADOS DE TODOS LOS DIAS
                             // datoB =Convert.ToDateTime(dato1);//Convert.ToDateTime(dato1);
 
@@ -678,11 +687,12 @@ namespace CapaModeloProyectoIEC
                             //horast = horast + Int32.Parse(dato1);
                             //horasd = horasd + Int32.Parse(dato2);
                             ausencias = ausencias + Int32.Parse(dato3);
-                           // horase = horase + Int32.Parse(dato4);
+                            // horase = horase + Int32.Parse(dato4);
                             pcomidas = pcomidas + Double.Parse(dato5);
                             pcomb = pcomb + Double.Parse(dato6);
                             pviat = pviat + Double.Parse(dato7);
                             otp = otp + Double.Parse(dato8);
+
                             
                         }
                         catch (Exception e)
@@ -706,22 +716,24 @@ namespace CapaModeloProyectoIEC
                         Convert.ToInt32((horase - Math.Floor(decimal.Parse(horase.ToString()))) * 60),
                         0);
                     //IMPRIMIMOS EN TABLA
-                    string horasextras = he.ToString();
-                    
+                    string horasextras = he.ToString();    
 
-                    
                 }
                 row["ID"] = i.ToString();
                 row["Nombre"] = BuscaDato("empleado", "nombre", "pkid", i.ToString());
-                row["Horas Trabajadas"] = hotrastotales.ToString(); //horastrabajadas.ToString();
-                row["Horas Descontadas"] = hotrastotalesdescontadas.ToString();//horasdescontadas.ToString();
+                row["Horas Trabajadas"] = horastotales; //horastrabajadas.ToString();
+                row["Horas Descontadas"] = horastotalesdescontadas.ToString();//horasdescontadas.ToString();
                 row["Ausencias"] = ausencias.ToString();
-                row["Horas Extras"] = hotrastotalesextra.ToString(); //horasextras.ToString();
+                row["Horas Extras"] = horastotalesextra.ToString(); //horasextras.ToString();
                 row["Pago de Comidas"] = pcomidas.ToString();
                 row["Pago de Combustible"] = pcomb.ToString();
                 row["Pago de Viáticos"] = pviat.ToString();
                 row["Otros Pagos"] = otp.ToString();
                 tablainicial.Rows.Add(row);
+
+                horastotales = "";
+                horastotalesdescontadas = "";
+                horastotalesextra = "";
             }
 
             return tablainicial;

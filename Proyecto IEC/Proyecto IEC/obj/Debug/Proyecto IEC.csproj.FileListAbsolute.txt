@@ -556,3 +556,4 @@ C:\Users\Kevin\Desktop\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto 
 C:\Users\Kevin\Desktop\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.exe
 C:\Users\Kevin\Desktop\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto IEC.pdb
 C:\Users\Kevin\Desktop\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmRecuperaContraseña.resources
+C:\Users\ZUZU\Desktop\ProyectoIEC\Proyecto IEC\Proyecto IEC\obj\Debug\Proyecto_IEC.frmRecuperaContraseña.resources

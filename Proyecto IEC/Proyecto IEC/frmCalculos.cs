@@ -89,7 +89,7 @@ namespace Proyecto_IEC
 			DGVPrinterHelper.DGVPrinter printer = new DGVPrinterHelper.DGVPrinter();
 			printer.Title = "Reporte de Calculo Diarios";
 
-			printer.SubTitle = string.Format("Fecha: {0}", DateTime.Now.Date.ToString("dd/MM/yyyy")) + "\n" + " ID Reporte: "
+			printer.SubTitle = string.Format("Fecha: {0}", txtFechatrabajada.Text) + "\n" + " ID Reporte: "
 				+ txtID.Text.ToString();
 			printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
 			printer.PageNumbers = true;

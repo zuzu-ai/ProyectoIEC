@@ -86,5 +86,21 @@ namespace Proyecto_IEC
 			}
 			else { }
 		}
-    }
+
+		private void btnPassword_Click(object sender, EventArgs e)
+		{
+			btnPasswordn.Visible = true;
+			btnPassword.Visible = false;
+			mtxtContraseña.UseSystemPasswordChar = false;
+			mtxtConfirmarContraseña.UseSystemPasswordChar = false;
+		}
+
+		private void btnPasswordn_Click(object sender, EventArgs e)
+		{
+			btnPasswordn.Visible = false;
+			btnPassword.Visible = true;
+			mtxtContraseña.UseSystemPasswordChar = true;
+			mtxtConfirmarContraseña.UseSystemPasswordChar = true;
+		}
+	}
 }
