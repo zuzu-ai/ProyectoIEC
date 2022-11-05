@@ -105,7 +105,7 @@ namespace Proyecto_IEC
 			printer.Title = "Reporte de Calculo Mensual";
 
 			printer.SubTitle = string.Format("Fecha de Informe: {0}", DateTime.Now.Date.ToString("dd/MM/yyyy")) + " ID Reporte: "
-				+ txtID.Text.ToString() + "\n" + "Periodo del " + txtfechainicio + " al " + txtfechafin;
+				+ txtID.Text.ToString() + "\n" + "Periodo del " + txtfechainicio.Text + " al " + txtfechafin.Text;
 			printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
 			printer.PageNumbers = true;
 			printer.PageNumberInHeader = false;
