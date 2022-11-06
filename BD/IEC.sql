@@ -25,7 +25,7 @@ insert into jornada values ("2","Área Administrativa", "08:00:00","16:30:00","1
 -- TABLA FOTO
 create table foto (
 pkId varchar(15) primary key,
-fotografia LONGBLOB
+fotografia LONGBLOB null
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- TABLA EMPLEADO
@@ -35,9 +35,9 @@ fkpuesto varchar(4) not null,
 nombre varchar(60) not null,
 DPI varchar(13) not null,
 fkjornada varchar(4) not null,
-contratacion date,
-despido date,
-foto varchar(15)null,
+contratacion date default null,
+despido date default null,
+foto varchar(15) default null,
 estado varchar(1),
 foreign key (fkpuesto) references puesto(pkid),
 foreign key (fkjornada) references jornada(pkid),
@@ -57,6 +57,7 @@ estado varchar(1)
 )engine=InnoDB DEFAULT CHARSET=latin1;
 
 insert into pregunta values ("1", "¿Año de nacimiento?", "1");
+
 
 -- TABLA TIPO USUARIO
 create table tipousuario(
@@ -173,7 +174,7 @@ insert into datosE values ("4","4","1","1");
 create table datosD(
 pkid varchar(4) primary key,
 fkdatosE varchar(4) not null,
-tiempo datetime not null,
+tiempo varchar(45) not null,
 fkgestion varchar(1) not null,
 tiporeg varchar(1) not null,
 estado varchar(1) not null,
@@ -183,7 +184,7 @@ foreign key (fkgestion) references gestion(pkid)
 -- TABLA DIARIOSE
 create table diariosE(
 pkid varchar(4) primary key,
-fechatrabajada date not null,
+fechatrabajada varchar(45) not null,
 estado varchar(1) not null
 )engine=InnoDB DEFAULT CHARSET=latin1;
 -- TABLA DIARIOSD
@@ -191,12 +192,12 @@ create table diariosD(
 pkid varchar(4) primary key,
 fkdiariosE varchar(4) not null,
 fkempleado varchar(4) not null,
-entrada time null,
-salida time null,
-htrabajadas time null,
-hdescontadas time null,
+entrada varchar(15) null,
+salida varchar(15) null,
+htrabajadas varchar(15) null,
+hdescontadas varchar(15) null,
 ausencias int null,
-hextras time null,
+hextras varchar(15) null,
 pcomidas double null,
 pcombustible double null,
 pviaticos double null,
@@ -210,8 +211,8 @@ foreign key (fkempleado) references empleado(pkid)
 -- TABLA MENSUALESE
 create table mensualesE(
 pkid varchar(4) primary key,
-fechainicio date not null,
-fechafin date not null,
+fechainicio varchar(45) not null,
+fechafin varchar(45) not null,
 mes varchar(2) not null,
 estado varchar(1) not null
 )engine=InnoDB DEFAULT CHARSET=latin1;
@@ -220,8 +221,8 @@ create table mensualesD(
 pkid varchar(4) primary key,
 fkmensualesE varchar(4) not null,
 fkempleado varchar(4) not null,
-htrabajadas time null,
-hdescontadas time null,
+htrabajadas varchar(15) null,
+hdescontadas varchar(15) null,
 ausencias int null,
 hextras time null,
 pcomidas double null,
