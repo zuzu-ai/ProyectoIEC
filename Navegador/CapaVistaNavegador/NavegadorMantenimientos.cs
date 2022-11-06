@@ -797,7 +797,16 @@ namespace CapaVistaNavegador
             }
         }
 
-        public void bloquearBtn(string tipousuario)
+		private void btnAyuda_Click_1(object sender, EventArgs e)
+		{
+            try
+            {
+                Help.ShowHelp(this, "C:/AYUDAGH/AYUDA.chm", "C:/AYUDAGH/AYUDA.html");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+        }
+
+		public void bloquearBtn(string tipousuario)
         {
             //MessageBox.Show(id_usuario + " " + usuario);
             control.bloquearBtn(btnIngresar, btnEditar, btnGuardar, btnCancelar, btnEliminar, btnImprimir, btnActualizar, btnInicio, btnAnterior, btnSiguiente, btnFinal, btnAyuda, btnSalir, tipousuario);

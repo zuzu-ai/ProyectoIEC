@@ -207,6 +207,7 @@ namespace CapaVistaNavegador
 			this.btnAyuda.Size = new System.Drawing.Size(50, 50);
 			this.btnAyuda.TabIndex = 0;
 			this.btnAyuda.UseVisualStyleBackColor = false;
+			this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click_1);
 			// 
 			// btnSalir
 			// 

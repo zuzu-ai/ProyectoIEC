@@ -213,6 +213,7 @@ namespace Proyecto_IEC
 			this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
 			this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
 			this.ayudaToolStripMenuItem.Text = "Ayuda";
+			this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
 			// 
 			// menuStrip1
 			// 
@@ -241,7 +242,7 @@ namespace Proyecto_IEC
 			// 
 			this.usuariosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usuariosToolStripMenuItem.Image")));
 			this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-			this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
 			this.usuariosToolStripMenuItem.Text = "Usuario";
 			this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
 			// 
@@ -249,7 +250,7 @@ namespace Proyecto_IEC
 			// 
 			this.tipoUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("tipoUsuarioToolStripMenuItem.Image")));
 			this.tipoUsuarioToolStripMenuItem.Name = "tipoUsuarioToolStripMenuItem";
-			this.tipoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.tipoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
 			this.tipoUsuarioToolStripMenuItem.Text = "Tipo usuario";
 			this.tipoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.tipoUsuarioToolStripMenuItem_Click);
 			// 

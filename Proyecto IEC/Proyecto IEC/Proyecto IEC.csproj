@@ -464,6 +464,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Recursos\AYUDA.chm" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -501,6 +502,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Recursos\AYUDA.html" />
     <Content Include="Recursos\iconoRTEC.ico" />
     <Content Include="Recursos\icons8_cancel.ico" />
     <Content Include="Recursos\icons8_ok %281%29.ico" />

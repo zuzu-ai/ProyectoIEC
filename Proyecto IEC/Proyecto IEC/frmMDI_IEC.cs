@@ -226,5 +226,14 @@ namespace Proyecto_IEC
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
+
+		private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            try
+            {
+                Help.ShowHelp(this, "C:/AYUDAGH/AYUDA.chm", "C:/AYUDAGH/AYUDA.html");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+        }
 	}
 }
